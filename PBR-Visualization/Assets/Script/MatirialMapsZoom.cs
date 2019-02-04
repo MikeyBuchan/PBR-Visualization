@@ -4,13 +4,13 @@ using UnityEngine;
 
 public class MatirialMapsZoom : MonoBehaviour
 {
+    public Vector3 adjustCam;
+    public float speed;
     GameObject mainCamera;
     Vector3 newPosCamera;
     Vector3 cameraBasePos;
-    public Vector3 adjustCam;
     float camMoveSpeed;
     float stoppingDis;
-    public float speed;
     bool mayZoom;
 
     void Start()
@@ -28,9 +28,7 @@ public class MatirialMapsZoom : MonoBehaviour
         {
             if (mayZoom == true)
             {
-                //moving
                 StartCoroutine(Spread(newPosCamera));
-                //UItrue
                 GameObject.FindWithTag("UiManager").GetComponent<UIManager>().backButton.SetActive(true);
                 mayZoom = false;
             }
@@ -39,10 +37,9 @@ public class MatirialMapsZoom : MonoBehaviour
 
     public void ZoomOut()
     {
-        mainCamera.transform.position = cameraBasePos;
+        StartCoroutine(Spread(cameraBasePos));
         GameObject.FindWithTag("UiManager").GetComponent<UIManager>().backButton.SetActive(false);
         mayZoom = true;
-        //same zoomout
     }
 
     IEnumerator Spread(Vector3 v)
@@ -53,6 +50,5 @@ public class MatirialMapsZoom : MonoBehaviour
             mainCamera.transform.position = Vector3.MoveTowards(mainCamera.transform.position, v, camMoveSpeed);
             yield return null;
         }
-        Debug.Log("done");
     }
 }
