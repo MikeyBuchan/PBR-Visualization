@@ -6,14 +6,17 @@ public class MatirialMapsZoom : MonoBehaviour
 {
     GameObject mainCamera;
     Vector3 newPosCamera;
+    Vector3 cameraBasePos;
     public Vector3 adjustCam;
-    Vector3 mainCameraBasePos;
+    float camMoveSpeed;
+    public float speed;
+    public float stoppingDis;
 
     void Start()
     {
         mainCamera = GameObject.FindWithTag("MainCamera");
         newPosCamera = transform.position + adjustCam;
-        mainCameraBasePos = mainCamera.transform.position;
+        cameraBasePos = mainCamera.transform.position;
     }
 
     void OnMouseDown()
@@ -21,15 +24,28 @@ public class MatirialMapsZoom : MonoBehaviour
         if (Input.GetButtonDown("Fire1"))
         {
             Debug.Log("click " + gameObject.name);
-            //zoom
-            mainCamera.transform.position = newPosCamera;
+            Debug.Log(Vector3.Distance(cameraBasePos, newPosCamera));
+            //moving
+            StartCoroutine(Spread(newPosCamera));
+            //mainCamera.transform.position = newPosCamera;
+            //UItrue
             GameObject.FindWithTag("UiManager").GetComponent<UIManager>().backButton.SetActive(true);
         }
     }
 
     public void ZoomOut()
     {
-        mainCamera.transform.position = mainCameraBasePos;
+        mainCamera.transform.position = cameraBasePos;
         GameObject.FindWithTag("UiManager").GetComponent<UIManager>().backButton.SetActive(false);
+    }
+
+    IEnumerator Spread(Vector3 v)
+    {
+        while (Vector3.Distance(cameraBasePos, v) >= stoppingDis)
+        {
+            camMoveSpeed = speed * Time.deltaTime;
+            mainCamera.transform.position = Vector3.MoveTowards(cameraBasePos, newPosCamera, camMoveSpeed);
+            yield return null;
+        }
     }
 }
