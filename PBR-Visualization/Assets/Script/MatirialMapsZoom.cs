@@ -6,6 +6,7 @@ public class MatirialMapsZoom : MonoBehaviour
 {
     public Vector3 adjustCam;
     public float speed;
+    public Transform parent;
     GameObject mainCamera;
     GameObject uiManager;
     Vector3 newPosCamera;
@@ -13,6 +14,7 @@ public class MatirialMapsZoom : MonoBehaviour
     float camMoveSpeed;
     float stoppingDis;
     bool advancedBool;
+    bool mayZoom;
 
     void Start()
     {
@@ -22,9 +24,9 @@ public class MatirialMapsZoom : MonoBehaviour
         cameraBasePos = mainCamera.transform.position;
         stoppingDis = 0.01f;
     }
-
     void OnMouseDown()
     {
+
         if (Input.GetButtonDown("Fire1"))
         {
             StartCoroutine(Spread(newPosCamera));
