@@ -5,11 +5,15 @@ using UnityEngine.UI;
 
 public class UIManager : MonoBehaviour
 {
-    public GameObject backButton;
+    public GameObject infoPbr;
+    public GameObject infoPbrAdvanced;
+    public GameObject advancedButton;
 
     void Start()
     {
-        backButton.SetActive(false);
+        infoPbr.SetActive(false);
+        infoPbrAdvanced.SetActive(false);
+        advancedButton.SetActive(false);
     }
 
 }

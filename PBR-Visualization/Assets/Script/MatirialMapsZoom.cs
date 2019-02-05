@@ -7,18 +7,19 @@ public class MatirialMapsZoom : MonoBehaviour
     public Vector3 adjustCam;
     public float speed;
     GameObject mainCamera;
+    GameObject uiManager;
     Vector3 newPosCamera;
     Vector3 cameraBasePos;
     float camMoveSpeed;
     float stoppingDis;
-    bool mayZoom;
+    bool advancedBool;
 
     void Start()
     {
         mainCamera = GameObject.FindWithTag("MainCamera");
+        uiManager = GameObject.FindWithTag("UiManager");
         newPosCamera = transform.position + adjustCam;
         cameraBasePos = mainCamera.transform.position;
-        mayZoom = true;
         stoppingDis = 0.01f;
     }
 
@@ -26,20 +27,30 @@ public class MatirialMapsZoom : MonoBehaviour
     {
         if (Input.GetButtonDown("Fire1"))
         {
-            if (mayZoom == true)
-            {
-                StartCoroutine(Spread(newPosCamera));
-                GameObject.FindWithTag("UiManager").GetComponent<UIManager>().backButton.SetActive(true);
-                mayZoom = false;
-            }
+            StartCoroutine(Spread(newPosCamera));
         }
+    }
+
+    public void AdvanceTextButton()
+    {
+        uiManager.GetComponent<UIManager>().infoPbrAdvanced.SetActive(true);
+        uiManager.GetComponent<UIManager>().advancedButton.SetActive(false);
+        advancedBool = true;
     }
 
     public void ZoomOut()
     {
-        StartCoroutine(Spread(cameraBasePos));
-        GameObject.FindWithTag("UiManager").GetComponent<UIManager>().backButton.SetActive(false);
-        mayZoom = true;
+        if (advancedBool == false)
+        {
+            StartCoroutine(Spread(cameraBasePos));
+        }
+        else
+        {
+            uiManager.GetComponent<UIManager>().infoPbrAdvanced.SetActive(false);
+            uiManager.GetComponent<UIManager>().advancedButton.SetActive(true);
+            advancedBool = false;
+        }
+
     }
 
     IEnumerator Spread(Vector3 v)
@@ -49,6 +60,12 @@ public class MatirialMapsZoom : MonoBehaviour
             camMoveSpeed = speed * Time.deltaTime;
             mainCamera.transform.position = Vector3.MoveTowards(mainCamera.transform.position, v, camMoveSpeed);
             yield return null;
+        }
+        GameObject panel = uiManager.GetComponent<UIManager>().infoPbr;
+        panel.SetActive(!panel.activeSelf);
+        if (stoppingDis <= 0.01)
+        {
+            uiManager.GetComponent<UIManager>().advancedButton.SetActive(true);
         }
     }
 }
