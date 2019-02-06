@@ -14,18 +14,23 @@ public class Interaction : MonoBehaviour
 
     void InteractionFunction()
     {
-        Debug.DrawRay(transform.position, transform.forward, Color.green);
+        Debug.DrawRay(transform.position, transform.forward * range, Color.green);
         if (Physics.Raycast(transform.position, transform.forward, out hit, range))
         {
             if (hit.transform.tag == "Interaction")
             {
+                GameObject.FindWithTag("UiManager").GetComponent<UIManager>().interactDisplay.SetActive(true);
                 if (Input.GetButtonDown("Interaction"))
                 {
-                    GameObject.FindWithTag("Uimanager").GetComponent<UIManager>().interactDisplay.SetActive(true);
                     gameObject.GetComponent<PlayerLook>().free = false;
-                    //gameObject.transform.position = 
+                    gameObject.transform.position = GameObject.FindWithTag("Interaction").GetComponent<MatirialMapsZoom>().cameraBasePos;
                 }
             }
+
+        }
+        else
+        {
+            GameObject.FindWithTag("UiManager").GetComponent<UIManager>().interactDisplay.SetActive(false);
         }
     }
 }
