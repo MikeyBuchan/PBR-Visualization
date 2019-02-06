@@ -1,0 +1,1 @@
+This map controls the sharpness of the reflections.
