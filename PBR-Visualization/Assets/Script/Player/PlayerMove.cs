@@ -6,8 +6,7 @@ public class PlayerMove : MonoBehaviour
 {
     public float moveSpeed;
     Vector3 direction;
-    float horizontal;
-    float vertical;
+
 
     void Start()
     {
@@ -24,8 +23,8 @@ public class PlayerMove : MonoBehaviour
 
     void PLayerMovement()
     {
-        direction.x = -Input.GetAxis("Horizontal");
-        direction.z = -Input.GetAxis("Vertical");
+        direction.x = Input.GetAxis("Horizontal");
+        direction.z = Input.GetAxis("Vertical");
         transform.Translate(direction * moveSpeed * Time.deltaTime);
     }
 }
