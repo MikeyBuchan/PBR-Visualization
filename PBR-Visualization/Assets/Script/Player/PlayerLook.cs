@@ -35,5 +35,9 @@ public class PlayerLook : MonoBehaviour
             float addValue = (rotY >= clampMaxY) ? 0 : (rotY <= clampMinY) ? 0 : -Input.GetAxis("Mouse Y");
             gameObject.transform.Rotate(new Vector3(addValue, 0, 0));
         }
+        else
+        {
+            Debug.Log("FreeMove == false");
+        }
     }
 }

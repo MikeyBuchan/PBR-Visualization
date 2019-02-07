@@ -21,6 +21,7 @@ public class MatirialMapsZoom : MonoBehaviour
         uiManager = GameObject.FindWithTag("UiManager");
         newPosCamera = transform.position + adjustCam;
         cameraBasePos = gameObject.transform.parent.gameObject.transform.position;
+        print(cameraBasePos);
         stoppingDis = 0.01f;
     }
     void OnMouseDown()
@@ -36,6 +37,7 @@ public class MatirialMapsZoom : MonoBehaviour
     {
         uiManager.GetComponent<UIManager>().infoPbrAdvanced.SetActive(true);
         uiManager.GetComponent<UIManager>().advancedButton.SetActive(false);
+        uiManager.GetComponent<UIManager>().infoNormal.SetActive(false);
         advancedBool = true;
     }
 
@@ -49,6 +51,7 @@ public class MatirialMapsZoom : MonoBehaviour
         {
             uiManager.GetComponent<UIManager>().infoPbrAdvanced.SetActive(false);
             uiManager.GetComponent<UIManager>().advancedButton.SetActive(true);
+            uiManager.GetComponent<UIManager>().infoNormal.SetActive(true);
             advancedBool = false;
         }
 
@@ -67,6 +70,7 @@ public class MatirialMapsZoom : MonoBehaviour
         if (stoppingDis <= 0.01)
         {
             uiManager.GetComponent<UIManager>().advancedButton.SetActive(true);
+            uiManager.GetComponent<UIManager>().infoNormal.SetActive(true);
         }
     }
 }

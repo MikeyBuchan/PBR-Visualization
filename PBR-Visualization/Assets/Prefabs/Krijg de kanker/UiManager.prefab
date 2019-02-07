@@ -44,5 +44,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   infoPbr: {fileID: 0}
+  infoNormal: {fileID: 0}
   infoPbrAdvanced: {fileID: 0}
   advancedButton: {fileID: 0}
+  interactDisplay: {fileID: 0}
