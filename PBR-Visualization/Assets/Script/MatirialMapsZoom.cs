@@ -13,10 +13,9 @@ public class MatirialMapsZoom : MonoBehaviour
         baseClass = gameObject.transform.parent.gameObject.GetComponent<MatirialMapsZoomBase>();
     }
 
-    // geef index mee welke jij bent en welke
     void OnMouseDown()
     {
-        if (GameObject.FindWithTag("Player").GetComponentInChildren<PlayerLook>().freeMove == false)
+        if (GameObject.FindWithTag("Player").GetComponent<PlayerMove>().freeMove == false)
         {
             if (Input.GetButtonDown("Fire1"))
             {

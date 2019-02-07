@@ -11,7 +11,6 @@ public class PlayerLook : MonoBehaviour
     float rotY;
     public float clampMaxY;
     public float clampMinY;
-    public bool freeMove = true;
 
     void Start()
     {
@@ -20,7 +19,7 @@ public class PlayerLook : MonoBehaviour
 
     void Update()
     {
-        if (freeMove == true)
+        if (gameObject.transform.parent.GetComponent<PlayerMove>().freeMove == true)
         {
             rotX = Input.GetAxis("Mouse X") * sensitivityX * Time.deltaTime;
             player.transform.Rotate(Vector3.up * rotX);

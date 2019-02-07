@@ -6,7 +6,7 @@ public class PlayerMove : MonoBehaviour
 {
     public float moveSpeed;
     Vector3 direction;
-
+    public bool freeMove = true;
 
     void Start()
     {
@@ -17,7 +17,7 @@ public class PlayerMove : MonoBehaviour
     {
         if (Input.GetAxis("Horizontal") != 0 || Input.GetAxis("Vertical") != 0)
         {
-            if (gameObject.GetComponentInChildren<PlayerLook>().freeMove == true)
+            if (freeMove == true)
             {
                 PLayerMovement();
             }

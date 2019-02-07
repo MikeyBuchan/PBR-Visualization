@@ -6,9 +6,10 @@ public class MatirialMapsZoomBase : MonoBehaviour
 {
     [Header("Camera")]
     public Vector3 adjustCam;
+    public GameObject interactCamera;
     Vector3 cameraBasePos;
+    Vector3 cameraBaseRot;
     public float speed;
-    GameObject mainCamera;
     Vector3 newPosCamera;
     float camMoveSpeed;
 
@@ -19,30 +20,27 @@ public class MatirialMapsZoomBase : MonoBehaviour
 
     public void SeroundPress(string name, string info, Transform t)
     {
-        //als die is ingedrukt info moet hier
-        Debug.Log("start co");
         newPosCamera = t.position + adjustCam;
-        StartCoroutine(Spread(t.position));
-
+        StartCoroutine(Spread(newPosCamera));
     }
 
     void Start()
     {
-        mainCamera = GameObject.FindWithTag("MainCamera");
         uiManager = GameObject.FindWithTag("UiManager");
- 
-        cameraBasePos = gameObject.transform.position;
+        interactCamera.SetActive(false);
+
+        cameraBasePos = transform.position + new Vector3(0, 0, -1.5f);
 
         stoppingDis = 0.01f;
     }
 
     IEnumerator Spread(Vector3 v)
     {
-        while (Vector3.Distance(mainCamera.transform.position, v) >= stoppingDis)
+        while (Vector3.Distance(interactCamera.transform.position, v) >= stoppingDis)
         {
             Debug.Log("na while");
             camMoveSpeed = speed * Time.deltaTime;
-            mainCamera.transform.position = Vector3.MoveTowards(mainCamera.transform.position, v, camMoveSpeed);
+            interactCamera.transform.position = Vector3.MoveTowards(interactCamera.transform.position, v, camMoveSpeed);
             yield return null;
         }
         GameObject panel = uiManager.GetComponent<UIManager>().infoAllPbr;
@@ -54,21 +52,19 @@ public class MatirialMapsZoomBase : MonoBehaviour
         }
     }
 
-}
-
-
-/*
-        public void AdvanceTextButton()
+    public void ButtonAdvanceTextButton()
     {
+        Debug.Log("Clicked the button Advanced");
         uiManager.GetComponent<UIManager>().infoPbrAdvanced.SetActive(true);
-        uiManager.GetComponent<UIManager>().advancedButton.SetActive(false);
         uiManager.GetComponent<UIManager>().infoNormal.SetActive(false);
+
+        uiManager.GetComponent<UIManager>().advancedButton.SetActive(false);
         advancedBool = true;
     }
 
-
-        public void ZoomOut()
+    public void ButtomZoomOut()
     {
+        Debug.Log("clicked the button Back");
         if (advancedBool == false)
         {
             StartCoroutine(Spread(cameraBasePos));
@@ -76,12 +72,11 @@ public class MatirialMapsZoomBase : MonoBehaviour
         else
         {
             uiManager.GetComponent<UIManager>().infoPbrAdvanced.SetActive(false);
-            uiManager.GetComponent<UIManager>().advancedButton.SetActive(true);
             uiManager.GetComponent<UIManager>().infoNormal.SetActive(true);
+
+            uiManager.GetComponent<UIManager>().advancedButton.SetActive(true);
             advancedBool = false;
         }
 
     }
-
-
-*/
+}
