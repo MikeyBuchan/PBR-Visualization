@@ -23,7 +23,7 @@ public class Interaction : MonoBehaviour
                 if (Input.GetButtonDown("Interaction"))
                 {
                     gameObject.GetComponent<PlayerLook>().freeMove = false;
-                    gameObject.transform.position = GameObject.FindWithTag("Interaction").GetComponentInChildren<MatirialMapsZoom>().cameraBasePos;
+                    gameObject.transform.position = GameObject.FindWithTag("Interaction").GetComponentInChildren<MatirialMapsZoom>().cameraBasePos += new Vector3(1,0,0);
                 }
             }
 

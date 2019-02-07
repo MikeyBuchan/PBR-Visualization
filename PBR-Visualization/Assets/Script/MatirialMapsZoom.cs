@@ -21,15 +21,20 @@ public class MatirialMapsZoom : MonoBehaviour
         uiManager = GameObject.FindWithTag("UiManager");
         newPosCamera = transform.position + adjustCam;
         cameraBasePos = gameObject.transform.parent.gameObject.transform.position;
-        print(cameraBasePos);
         stoppingDis = 0.01f;
     }
     void OnMouseDown()
     {
-
-        if (Input.GetButtonDown("Fire1"))
+        if (gameObject.GetComponentInChildren<PlayerLook>().freeMove == false)
         {
-            StartCoroutine(Spread(newPosCamera));
+            if (Input.GetButtonDown("Fire1"))
+            {
+                StartCoroutine(Spread(newPosCamera));
+            }
+        }
+        else
+        {
+            Debug.Log("false");
         }
     }
 
