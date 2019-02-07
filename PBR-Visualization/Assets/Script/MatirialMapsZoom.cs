@@ -65,7 +65,7 @@ public class MatirialMapsZoom : MonoBehaviour
             mainCamera.transform.position = Vector3.MoveTowards(mainCamera.transform.position, v, camMoveSpeed);
             yield return null;
         }
-        GameObject panel = uiManager.GetComponent<UIManager>().infoPbr;
+        GameObject panel = uiManager.GetComponent<UIManager>().infoAllPbr;
         panel.SetActive(!panel.activeSelf);
         if (stoppingDis <= 0.01)
         {

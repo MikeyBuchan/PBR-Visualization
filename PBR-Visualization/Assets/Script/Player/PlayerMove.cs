@@ -17,7 +17,10 @@ public class PlayerMove : MonoBehaviour
     {
         if (Input.GetAxis("Horizontal") != 0 || Input.GetAxis("Vertical") != 0)
         {
-            PLayerMovement();
+            if (gameObject.GetComponentInChildren<PlayerLook>().freeMove == true)
+            {
+                PLayerMovement();
+            }
         }
     }
 

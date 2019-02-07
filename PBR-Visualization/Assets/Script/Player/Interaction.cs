@@ -22,8 +22,8 @@ public class Interaction : MonoBehaviour
                 GameObject.FindWithTag("UiManager").GetComponent<UIManager>().interactDisplay.SetActive(true);
                 if (Input.GetButtonDown("Interaction"))
                 {
-                    gameObject.GetComponent<PlayerLook>().free = false;
-                    gameObject.transform.position = GameObject.FindWithTag("Interaction").GetComponent<MatirialMapsZoom>().cameraBasePos;
+                    gameObject.GetComponent<PlayerLook>().freeMove = false;
+                    gameObject.transform.position = GameObject.FindWithTag("Interaction").GetComponentInChildren<MatirialMapsZoom>().cameraBasePos;
                 }
             }
 

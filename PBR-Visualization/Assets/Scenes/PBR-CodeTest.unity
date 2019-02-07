@@ -2562,6 +2562,11 @@ PrefabInstance:
       propertyPath: interactDisplay
       value: 
       objectReference: {fileID: 1870482887}
+    - target: {fileID: 527364422445115781, guid: 761b287f62b4e294ebe1b278e6928bfe,
+        type: 3}
+      propertyPath: infoAllPbr
+      value: 
+      objectReference: {fileID: 753769420}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 761b287f62b4e294ebe1b278e6928bfe, type: 3}
 --- !u!1001 &3474008413445074943
@@ -2888,6 +2893,26 @@ PrefabInstance:
         type: 3}
       propertyPath: m_CastShadows
       value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 5336765190540290564, guid: 02c54fcf444a8f245bd1feb89bb88f4a,
+        type: 3}
+      propertyPath: sensitivityX
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5336765190540290564, guid: 02c54fcf444a8f245bd1feb89bb88f4a,
+        type: 3}
+      propertyPath: sensitivityY
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5336765190540290564, guid: 02c54fcf444a8f245bd1feb89bb88f4a,
+        type: 3}
+      propertyPath: clampMaxY
+      value: 90
+      objectReference: {fileID: 0}
+    - target: {fileID: 5336765190540290564, guid: 02c54fcf444a8f245bd1feb89bb88f4a,
+        type: 3}
+      propertyPath: clampMinY
+      value: -90
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 02c54fcf444a8f245bd1feb89bb88f4a, type: 3}

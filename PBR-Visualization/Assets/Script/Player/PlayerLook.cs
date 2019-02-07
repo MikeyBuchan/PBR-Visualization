@@ -4,13 +4,14 @@ using UnityEngine;
 
 public class PlayerLook : MonoBehaviour
 {
-    public float sensitivity;
+    public float sensitivityX;
+    public float sensitivityY;
     Transform player;
     float rotX;
     float rotY;
     public float clampMaxY;
     public float clampMinY;
-    public bool free = true;
+    public bool freeMove = true;
 
     void Start()
     {
@@ -19,12 +20,12 @@ public class PlayerLook : MonoBehaviour
 
     void Update()
     {
-        if (free == true)
+        if (freeMove == true)
         {
-            rotX = Input.GetAxis("Mouse X") * sensitivity * Time.deltaTime;
+            rotX = Input.GetAxis("Mouse X") * sensitivityX * Time.deltaTime;
             player.transform.Rotate(Vector3.up * rotX);
-            rotY += Input.GetAxis("Mouse Y") * sensitivity * Time.deltaTime;
 
+            rotY += Input.GetAxis("Mouse Y") * sensitivityY * Time.deltaTime;
             if (rotY >= clampMaxY)
                 rotY += (Input.GetAxis("Mouse Y") <= 0) ? Input.GetAxis("Mouse Y") : 0;
 
@@ -32,7 +33,7 @@ public class PlayerLook : MonoBehaviour
                 rotY += (Input.GetAxis("Mouse Y") >= 0) ? Input.GetAxis("Mouse Y") : 0;
             else
                 rotY += Input.GetAxis("Mouse Y");
-            float addValue = (rotY >= clampMaxY) ? 0 : (rotY <= clampMinY) ? 0 : -Input.GetAxis("Mouse Y");
+            float addValue = (rotY >= clampMaxY) ? 0 : (rotY <= clampMinY) ? 0 : -Input.GetAxis("Mouse Y") * sensitivityY * Time.deltaTime;
             gameObject.transform.Rotate(new Vector3(addValue, 0, 0));
         }
         else
