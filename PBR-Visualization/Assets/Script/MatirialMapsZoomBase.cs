@@ -54,7 +54,6 @@ public class MatirialMapsZoomBase : MonoBehaviour
 
     public void ButtonAdvanceTextButton()
     {
-        Debug.Log("Clicked the button Advanced");
         uiManager.GetComponent<UIManager>().infoPbrAdvanced.SetActive(true);
         uiManager.GetComponent<UIManager>().infoNormal.SetActive(false);
 
@@ -64,7 +63,6 @@ public class MatirialMapsZoomBase : MonoBehaviour
 
     public void ButtomZoomOut()
     {
-        Debug.Log("clicked the button Back");
         if (advancedBool == false)
         {
             StartCoroutine(Spread(cameraBasePos));
