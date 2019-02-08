@@ -16,7 +16,7 @@ public class MatirialMapsZoomBase : MonoBehaviour
     [Header("Other")]
     GameObject uiManager;
     float stoppingDis;
-    bool advancedBool;
+
 
     public void SeroundPress(string name, string info, Transform t)
     {
@@ -34,7 +34,7 @@ public class MatirialMapsZoomBase : MonoBehaviour
         stoppingDis = 0.01f;
     }
 
-    IEnumerator Spread(Vector3 v)
+    public IEnumerator Spread(Vector3 v)
     {
         while (Vector3.Distance(interactCamera.transform.position, v) >= stoppingDis)
         {
@@ -49,32 +49,11 @@ public class MatirialMapsZoomBase : MonoBehaviour
         {
             uiManager.GetComponent<UIManager>().advancedButton.SetActive(true);
             uiManager.GetComponent<UIManager>().infoNormal.SetActive(true);
+            uiManager.GetComponent<UIManager>().zoomOutButton.SetActive(true);
         }
     }
-
-    public void ButtonAdvanceTextButton()
+    public void StartTheSpreadBack()
     {
-        uiManager.GetComponent<UIManager>().infoPbrAdvanced.SetActive(true);
-        uiManager.GetComponent<UIManager>().infoNormal.SetActive(false);
-
-        uiManager.GetComponent<UIManager>().advancedButton.SetActive(false);
-        advancedBool = true;
-    }
-
-    public void ButtomZoomOut()
-    {
-        if (advancedBool == false)
-        {
-            StartCoroutine(Spread(cameraBasePos));
-        }
-        else
-        {
-            uiManager.GetComponent<UIManager>().infoPbrAdvanced.SetActive(false);
-            uiManager.GetComponent<UIManager>().infoNormal.SetActive(true);
-
-            uiManager.GetComponent<UIManager>().advancedButton.SetActive(true);
-            advancedBool = false;
-        }
-
+        StartCoroutine(Spread(cameraBasePos));
     }
 }
