@@ -7,10 +7,22 @@ public class MatirialMapsZoom : MonoBehaviour
     MatirialMapsZoomBase baseClass;
     public string nameObj;
     public string infoObj;
+    public Material normalMaterial,hightLightMaterial;
 
     void Start()
     {
         baseClass = gameObject.transform.parent.gameObject.GetComponent<MatirialMapsZoomBase>();
+    }
+
+    public void OnMouseEnter()
+    {
+        if(baseClass.allowRotation)
+            GetComponent<Renderer>().material = hightLightMaterial;
+    }
+
+    public void OnMouseExit()
+    {
+        GetComponent<Renderer>().material = normalMaterial;
     }
 
     void OnMouseDown()
@@ -20,6 +32,7 @@ public class MatirialMapsZoom : MonoBehaviour
             if (Input.GetButtonDown("Fire1"))
             {
                 baseClass.SeroundPress(nameObj, infoObj, transform);
+                GetComponent<Renderer>().material = normalMaterial;
             }
         }
     }

@@ -25,6 +25,7 @@ public class Interaction : MonoBehaviour
                     gameObject.transform.parent.GetComponent<PlayerMove>().freeMove = false;
                     GameObject.FindWithTag("UiManager").GetComponent<UIManager>().interactDisplay.SetActive(false);
                     hit.transform.GetComponent<MatirialMapsZoomBase>().interactCamera.SetActive(true);
+                    hit.transform.GetComponent<MatirialMapsZoomBase>().allowRotation = true;
                     GameObject.FindWithTag("MainCamera").SetActive(false);
                 }
             }
