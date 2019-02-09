@@ -7,6 +7,7 @@ public class MatirialMapsZoomBase : MonoBehaviour
     [Header("Camera")]
     public Vector3 adjustCam;
     public GameObject interactCamera;
+    public float camRotationOfset;
     Vector3 cameraBasePos;
     Vector3 cameraBaseRot;
     public float speed;
@@ -26,7 +27,7 @@ public class MatirialMapsZoomBase : MonoBehaviour
     {
         if (allowRotation)
         {
-            Vector3 lookOffset = new Vector3((Input.mousePosition.x - (Screen.width / 2)) / Screen.width, (-Input.mousePosition.y - (Screen.height / 2)) / Screen.height, 20);
+            Vector3 lookOffset = new Vector3((Input.mousePosition.x - (Screen.width / 2)) / Screen.width, (-Input.mousePosition.y - (Screen.height / 2)) / Screen.height, camMoveSpeed);
             interactCamera.transform.LookAt(transform.position - (lookOffset * camRotationAmount));
         }
         else

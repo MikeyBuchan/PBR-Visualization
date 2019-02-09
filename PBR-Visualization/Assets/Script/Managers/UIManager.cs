@@ -8,13 +8,16 @@ public class UIManager : MonoBehaviour
     public GameObject infoAllPbr;
     public GameObject infoNormal;
     public GameObject infoPbrAdvanced;
+
     public GameObject interactDisplay;
 
     public GameObject advancedButton;
     public GameObject normalInfoButton;
     public GameObject zoomOutButton;
+    public GameObject backToPlayerButton;
 
     public GameObject mBase;
+    GameObject mainCamera;
     bool advancedBool;
 
     void Start()
@@ -27,6 +30,8 @@ public class UIManager : MonoBehaviour
         advancedButton.SetActive(false);
         normalInfoButton.SetActive(false);
         zoomOutButton.SetActive(false);
+        backToPlayerButton.SetActive(false);
+        mainCamera = GameObject.FindWithTag("MainCamera");
     }
 
     public void ButtomZoomOut()
@@ -41,9 +46,11 @@ public class UIManager : MonoBehaviour
     {
         infoPbrAdvanced.SetActive(true);
         infoNormal.SetActive(false);
+
         zoomOutButton.SetActive(false);
         advancedButton.SetActive(false);
         normalInfoButton.SetActive(true);
+        backToPlayerButton.SetActive(false);
 
         advancedBool = true;
     }
@@ -55,7 +62,18 @@ public class UIManager : MonoBehaviour
         normalInfoButton.SetActive(false);
         zoomOutButton.SetActive(true);
 
+        backToPlayerButton.SetActive(false);
         advancedButton.SetActive(true);
         advancedBool = false;
+    }
+
+    public void ButtonBackToPlayer()
+    {
+        GameObject.FindWithTag("Player").GetComponent<PlayerMove>().freeMove = true;
+        interactDisplay.SetActive(false);
+        mBase.GetComponent<MatirialMapsZoomBase>().interactCamera.SetActive(false);
+        mBase.GetComponent<MatirialMapsZoomBase>().allowRotation = true;
+        mainCamera.SetActive(true);
+        infoAllPbr.SetActive(false);
     }
 }

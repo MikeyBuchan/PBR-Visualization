@@ -27,6 +27,8 @@ public class Interaction : MonoBehaviour
                     hit.transform.GetComponent<MatirialMapsZoomBase>().interactCamera.SetActive(true);
                     hit.transform.GetComponent<MatirialMapsZoomBase>().allowRotation = true;
                     GameObject.FindWithTag("MainCamera").SetActive(false);
+
+                    GameObject.FindWithTag("UiManager").GetComponent<UIManager>().backToPlayerButton.SetActive(true);
                 }
             }
 
