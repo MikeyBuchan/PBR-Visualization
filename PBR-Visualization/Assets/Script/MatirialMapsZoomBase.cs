@@ -53,11 +53,7 @@ public class MatirialMapsZoomBase : MonoBehaviour
             extraDiscriptionPanel.GetComponentInChildren<Text>().text = extraInfo;
             otherName.GetComponentInChildren<Text>().text = name;
 
-            StartCoroutine(Spread(newPosCamera));
-        }
-        else
-        {
-            Debug.Log("al ingezoomed");
+            StartCoroutine(Spread(newPosCamera,false));
         }
     }
 
@@ -72,8 +68,25 @@ public class MatirialMapsZoomBase : MonoBehaviour
         stoppingDis = 0.01f;
     }
 
-    public IEnumerator Spread(Vector3 v)
+    public IEnumerator Spread(Vector3 v, bool b)
     {
+        if (b)
+        {
+            GameObject panel = uiManager.GetComponent<UIManager>().infoAllPbr;
+            panel.SetActive(!panel.activeSelf);
+            mayZoom = !mayZoom;
+
+            GameObject g = uiManager.GetComponent<UIManager>().backToPlayerButton;
+            g.SetActive(!g.activeSelf);
+            if (stoppingDis <= 0.01)
+            {
+                uiManager.GetComponent<UIManager>().advancedButton.SetActive(true);
+                uiManager.GetComponent<UIManager>().infoNormal.SetActive(true);
+                uiManager.GetComponent<UIManager>().zoomOutButton.SetActive(true);
+
+            }
+        }
+
         allowRotation = !allowRotation;
         while (Vector3.Distance(interactCamera.transform.position, v) >= stoppingDis)
         {
@@ -82,24 +95,27 @@ public class MatirialMapsZoomBase : MonoBehaviour
             yield return null;
         }
 
-        GameObject panel = uiManager.GetComponent<UIManager>().infoAllPbr;
-        panel.SetActive(!panel.activeSelf);
-        mayZoom = !mayZoom;
-        //ergens bool 
-        //als je trug gaat de ui uit
-        if (stoppingDis <= 0.01)
+        if (!b)
         {
-            uiManager.GetComponent<UIManager>().advancedButton.SetActive(true);
-            uiManager.GetComponent<UIManager>().infoNormal.SetActive(true);
-            uiManager.GetComponent<UIManager>().zoomOutButton.SetActive(true);
+            GameObject panel = uiManager.GetComponent<UIManager>().infoAllPbr;
+            panel.SetActive(!panel.activeSelf);
+            mayZoom = !mayZoom;
 
             GameObject g = uiManager.GetComponent<UIManager>().backToPlayerButton;
             g.SetActive(!g.activeSelf);
+            if (stoppingDis <= 0.01)
+            {
+                uiManager.GetComponent<UIManager>().advancedButton.SetActive(true);
+                uiManager.GetComponent<UIManager>().infoNormal.SetActive(true);
+                uiManager.GetComponent<UIManager>().zoomOutButton.SetActive(true);
+
+            }
         }
+
     }
     public void StartTheSpreadBack()
     {
-        StartCoroutine(Spread(cameraBasePos));
+        StartCoroutine(Spread(cameraBasePos,true));
     }
 
     public void OnDrawGizmos()
