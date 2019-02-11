@@ -1,1 +1,2 @@
-A normal map is great for small to medium size bumps.
+A Normal map is a type of map where you can add a small detail to your object. 
+It is a special kind of texture that allows you to add surface detail such as bumps, grooves, and scratches to a model which catch the light as if they are represented by real geometry.

@@ -1,0 +1,1 @@
+You only use a Metallic map if your object is made out of metal.

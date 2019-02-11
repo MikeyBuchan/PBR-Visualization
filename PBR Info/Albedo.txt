@@ -1,1 +1,1 @@
-An albedo texture is very similar to a diffuse map, but with one extra benefit: all the shadows and highlights have been removed.
+An Albedo map has all the primary colors of the object.
