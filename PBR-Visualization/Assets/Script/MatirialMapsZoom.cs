@@ -6,7 +6,7 @@ public class MatirialMapsZoom : MonoBehaviour
 {
     MatirialMapsZoomBase baseClass;
     [TextArea]
-    public string nameObj, infoObj;
+    public string nameObj, infoObj, extraInfoObj;
 
     public Material normalMaterial,hightLightMaterial;
 
@@ -32,7 +32,7 @@ public class MatirialMapsZoom : MonoBehaviour
         {
             if (Input.GetButtonDown("Fire1"))
             {
-                baseClass.SeroundPress(nameObj, infoObj, transform);
+                baseClass.SeroundPress(nameObj, infoObj, extraInfoObj, transform);
                 GetComponent<Renderer>().material = normalMaterial;
             }
         }

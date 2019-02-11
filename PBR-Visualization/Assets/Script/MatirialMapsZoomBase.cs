@@ -28,6 +28,8 @@ public class MatirialMapsZoomBase : MonoBehaviour
     [Header("UI")]
     public GameObject namePanel;
     public GameObject discriptionPanel;
+    public GameObject extraDiscriptionPanel;
+    public GameObject otherName;
 
     public void Update()
     {
@@ -40,7 +42,7 @@ public class MatirialMapsZoomBase : MonoBehaviour
             interactCamera.transform.rotation = standardcamRotation;
     }
 
-    public void SeroundPress(string name, string info, Transform t)
+    public void SeroundPress(string name, string info, string extraInfo, Transform t)
     {
         newPosCamera = t.position + adjustCam;
 
@@ -48,6 +50,8 @@ public class MatirialMapsZoomBase : MonoBehaviour
         {
             namePanel.GetComponentInChildren<Text>().text = name;
             discriptionPanel.GetComponentInChildren<Text>().text = info;
+            extraDiscriptionPanel.GetComponentInChildren<Text>().text = extraInfo;
+            otherName.GetComponentInChildren<Text>().text = name;
 
             StartCoroutine(Spread(newPosCamera));
         }
