@@ -5,6 +5,7 @@ using UnityEngine;
 public class MatirialMapsZoom : MonoBehaviour
 {
     MatirialMapsZoomBase baseClass;
+    public float speed;
     [TextArea]
     public string nameObj, infoObj, extraInfoObj;
 
@@ -13,6 +14,14 @@ public class MatirialMapsZoom : MonoBehaviour
     void Start()
     {
         baseClass = gameObject.transform.parent.gameObject.GetComponent<MatirialMapsZoomBase>();
+    }
+
+    void Update()
+    {
+        if (baseClass.mayZoom == false)
+        {
+            RotateObject();
+        }
     }
 
     public void OnMouseEnter()
@@ -35,6 +44,14 @@ public class MatirialMapsZoom : MonoBehaviour
                 baseClass.SeroundPress(nameObj, infoObj, extraInfoObj, transform);
                 GetComponent<Renderer>().material = normalMaterial;
             }
+        }
+    }
+
+    void RotateObject()
+    {
+        if (Input.GetButton("Fire1"))
+        {
+            transform.Rotate(Input.GetAxis("Mouse Y"), -Input.GetAxis("Mouse X"), 0 * Time.deltaTime * speed, Space.World);
         }
     }
 }

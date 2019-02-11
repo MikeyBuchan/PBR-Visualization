@@ -5,17 +5,17 @@ using UnityEngine.UI;
 
 public class UIManager : MonoBehaviour
 {
+    [Header("Panels")]
     public GameObject infoAllPbr;
     public GameObject infoNormal;
     public GameObject infoPbrAdvanced;
-
-    public GameObject interactDisplay;
-
+    [Header("Buttons")]
     public GameObject advancedButton;
     public GameObject normalInfoButton;
     public GameObject zoomOutButton;
     public GameObject backToPlayerButton;
-
+    [Header("Other")]
+    public GameObject interactDisplay;
     public GameObject mBase;
     GameObject mainCamera;
     bool advancedBool;
@@ -30,8 +30,8 @@ public class UIManager : MonoBehaviour
         advancedButton.SetActive(false);
         normalInfoButton.SetActive(false);
         zoomOutButton.SetActive(false);
-        backToPlayerButton.SetActive(false);
         mainCamera = GameObject.FindWithTag("MainCamera");
+        backToPlayerButton.SetActive(false);
     }
 
     public void ButtomZoomOut()
@@ -50,9 +50,10 @@ public class UIManager : MonoBehaviour
         zoomOutButton.SetActive(false);
         advancedButton.SetActive(false);
         normalInfoButton.SetActive(true);
-        backToPlayerButton.SetActive(false);
 
         advancedBool = true;
+
+        backToPlayerButton.SetActive(false);
     }
 
     public void ButtonBackToNormalUI()
@@ -62,9 +63,10 @@ public class UIManager : MonoBehaviour
         normalInfoButton.SetActive(false);
         zoomOutButton.SetActive(true);
 
-        backToPlayerButton.SetActive(false);
         advancedButton.SetActive(true);
         advancedBool = false;
+
+        backToPlayerButton.SetActive(false);
     }
 
     public void ButtonBackToPlayer()
@@ -75,5 +77,7 @@ public class UIManager : MonoBehaviour
         mBase.GetComponent<MatirialMapsZoomBase>().allowRotation = true;
         mainCamera.SetActive(true);
         infoAllPbr.SetActive(false);
+
+        backToPlayerButton.SetActive(false);
     }
 }

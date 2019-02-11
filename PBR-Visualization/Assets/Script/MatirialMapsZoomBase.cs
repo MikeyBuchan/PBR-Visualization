@@ -23,7 +23,7 @@ public class MatirialMapsZoomBase : MonoBehaviour
     [HideInInspector]
     public bool allowRotation;
     Quaternion standardcamRotation;
-    bool mayZoom = true;
+    public bool mayZoom = true;
 
     [Header("UI")]
     public GameObject namePanel;
@@ -61,6 +61,7 @@ public class MatirialMapsZoomBase : MonoBehaviour
         }
     }
 
+
     void Start()
     {
         uiManager = GameObject.FindWithTag("UiManager");
@@ -76,19 +77,24 @@ public class MatirialMapsZoomBase : MonoBehaviour
         allowRotation = !allowRotation;
         while (Vector3.Distance(interactCamera.transform.position, v) >= stoppingDis)
         {
-            Debug.Log("na while");
             camMoveSpeed = speed * Time.deltaTime;
             interactCamera.transform.position = Vector3.MoveTowards(interactCamera.transform.position, v, camMoveSpeed);
             yield return null;
         }
+
         GameObject panel = uiManager.GetComponent<UIManager>().infoAllPbr;
         panel.SetActive(!panel.activeSelf);
         mayZoom = !mayZoom;
+        //ergens bool 
+        //als je trug gaat de ui uit
         if (stoppingDis <= 0.01)
         {
             uiManager.GetComponent<UIManager>().advancedButton.SetActive(true);
             uiManager.GetComponent<UIManager>().infoNormal.SetActive(true);
             uiManager.GetComponent<UIManager>().zoomOutButton.SetActive(true);
+
+            GameObject g = uiManager.GetComponent<UIManager>().backToPlayerButton;
+            g.SetActive(!g.activeSelf);
         }
     }
     public void StartTheSpreadBack()
