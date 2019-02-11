@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class MatirialMapsZoomBase : MonoBehaviour
 {
@@ -22,7 +23,12 @@ public class MatirialMapsZoomBase : MonoBehaviour
     [HideInInspector]
     public bool allowRotation;
     Quaternion standardcamRotation;
-    
+    bool mayZoom = true;
+
+    [Header("UI")]
+    public GameObject namePanel;
+    public GameObject discriptionPanel;
+
     public void Update()
     {
         if (allowRotation)
@@ -37,7 +43,18 @@ public class MatirialMapsZoomBase : MonoBehaviour
     public void SeroundPress(string name, string info, Transform t)
     {
         newPosCamera = t.position + adjustCam;
-        StartCoroutine(Spread(newPosCamera));
+
+        if (mayZoom == true)
+        {
+            namePanel.GetComponentInChildren<Text>().text = name;
+            discriptionPanel.GetComponentInChildren<Text>().text = info;
+
+            StartCoroutine(Spread(newPosCamera));
+        }
+        else
+        {
+            Debug.Log("al ingezoomed");
+        }
     }
 
     void Start()
@@ -62,6 +79,7 @@ public class MatirialMapsZoomBase : MonoBehaviour
         }
         GameObject panel = uiManager.GetComponent<UIManager>().infoAllPbr;
         panel.SetActive(!panel.activeSelf);
+        mayZoom = !mayZoom;
         if (stoppingDis <= 0.01)
         {
             uiManager.GetComponent<UIManager>().advancedButton.SetActive(true);

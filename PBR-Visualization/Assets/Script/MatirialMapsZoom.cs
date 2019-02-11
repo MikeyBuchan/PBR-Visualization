@@ -5,8 +5,9 @@ using UnityEngine;
 public class MatirialMapsZoom : MonoBehaviour
 {
     MatirialMapsZoomBase baseClass;
-    public string nameObj;
-    public string infoObj;
+    [TextArea]
+    public string nameObj, infoObj;
+
     public Material normalMaterial,hightLightMaterial;
 
     void Start()
