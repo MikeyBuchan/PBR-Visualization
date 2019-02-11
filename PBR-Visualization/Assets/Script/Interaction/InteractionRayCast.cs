@@ -2,17 +2,17 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Interaction : MonoBehaviour
+public class InteractionRayCast : MonoBehaviour
 {
     public float range;
     RaycastHit hit;
 
     void Update()
     {
-        InteractionFunction();
+        RayCastFunction();
     }
 
-    void InteractionFunction()
+    void RayCastFunction()
     {
         Debug.DrawRay(transform.position, transform.forward * range, Color.green);
         if (Physics.Raycast(transform.position, transform.forward, out hit, range))
@@ -22,16 +22,9 @@ public class Interaction : MonoBehaviour
                 GameObject.FindWithTag("UiManager").GetComponent<UIManager>().interactDisplay.SetActive(true);
                 if (Input.GetButtonDown("Interaction"))
                 {
-                    gameObject.transform.parent.GetComponent<PlayerMove>().freeMove = false;
-                    GameObject.FindWithTag("UiManager").GetComponent<UIManager>().interactDisplay.SetActive(false);
-                    hit.transform.GetComponent<MatirialMapsZoomBase>().interactCamera.SetActive(true);
-                    hit.transform.GetComponent<MatirialMapsZoomBase>().allowRotation = true;
-                    GameObject.FindWithTag("MainCamera").SetActive(false);
-
-                    GameObject.FindWithTag("UiManager").GetComponent<UIManager>().backToPlayerButton.SetActive(true);
+                    hit.transform.GetComponent<InteractionBase>().Interact();
                 }
             }
-
         }
         else
         {
