@@ -11,9 +11,13 @@ public class MatirialMapsZoom : MonoBehaviour
 
     public Material normalMaterial,hightLightMaterial;
 
+    public float lerpSpeed;
+    Quaternion startRotation;
+
     void Start()
     {
         baseClass = gameObject.transform.parent.gameObject.GetComponent<MatirialMapsZoomBase>();
+        startRotation = gameObject.transform.rotation;
     }
 
     void Update()
@@ -21,6 +25,10 @@ public class MatirialMapsZoom : MonoBehaviour
         if (baseClass.mayZoom == false)
         {
             RotateObject();
+        }
+        else if(gameObject.transform.rotation != startRotation)
+        {
+            transform.rotation = Quaternion.Lerp(transform.rotation, startRotation, Time.deltaTime * lerpSpeed);
         }
     }
 

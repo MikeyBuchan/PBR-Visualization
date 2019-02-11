@@ -31,6 +31,7 @@ public class MatirialMapsZoomBase : MonoBehaviour
     public GameObject extraDiscriptionPanel;
     public GameObject otherName;
 
+    //alouw the rotation
     public void Update()
     {
         if (allowRotation)
@@ -41,7 +42,7 @@ public class MatirialMapsZoomBase : MonoBehaviour
         else
             interactCamera.transform.rotation = standardcamRotation;
     }
-
+    //witch one is pressed and set the text
     public void SeroundPress(string name, string info, string extraInfo, Transform t)
     {
         newPosCamera = t.position + adjustCam;
@@ -56,8 +57,7 @@ public class MatirialMapsZoomBase : MonoBehaviour
             StartCoroutine(Spread(newPosCamera,false));
         }
     }
-
-
+    //set values
     void Start()
     {
         uiManager = GameObject.FindWithTag("UiManager");
@@ -67,7 +67,7 @@ public class MatirialMapsZoomBase : MonoBehaviour
         standardcamRotation = interactCamera.transform.rotation;
         stoppingDis = 0.01f;
     }
-
+    //zoom in and out
     public IEnumerator Spread(Vector3 v, bool b)
     {
         if (b)
@@ -113,11 +113,12 @@ public class MatirialMapsZoomBase : MonoBehaviour
         }
 
     }
+    //start te rotation back
     public void StartTheSpreadBack()
     {
         StartCoroutine(Spread(cameraBasePos,true));
     }
-
+    //realtime check wheare the camera is
     public void OnDrawGizmos()
     {
         Gizmos.DrawSphere(transform.position + baseCamAdjustment, 0.2f);
