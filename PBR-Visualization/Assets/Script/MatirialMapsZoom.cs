@@ -59,7 +59,8 @@ public class MatirialMapsZoom : MonoBehaviour
     {
         if (Input.GetButton("Fire1"))
         {
-            transform.Rotate(new Vector3(Input.GetAxis("Mouse Y"), -Input.GetAxis("Mouse X"), 0) * Time.deltaTime * speed, Space.World);
+            transform.Rotate(new Vector3(-Input.GetAxis("Mouse Y"), -Input.GetAxis("Mouse X"), 0) * Time.deltaTime * speed, Space.World);
         }
+
     }
 }
