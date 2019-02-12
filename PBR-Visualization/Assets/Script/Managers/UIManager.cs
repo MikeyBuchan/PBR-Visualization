@@ -74,7 +74,7 @@ public class UIManager : MonoBehaviour
         GameObject.FindWithTag("Player").GetComponent<PlayerMove>().freeMove = true;
         interactDisplay.SetActive(false);
         mBase.GetComponent<MatirialMapsZoomBase>().interactCamera.SetActive(false);
-        mBase.GetComponent<MatirialMapsZoomBase>().allowRotation = true;
+        mBase.GetComponent<MatirialMapsZoomBase>().allowRotation = false;
         mainCamera.SetActive(true);
         infoAllPbr.SetActive(false);
 

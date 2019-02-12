@@ -34,8 +34,10 @@ public class MatirialMapsZoom : MonoBehaviour
 
     public void OnMouseEnter()
     {
-        if(baseClass.allowRotation)
+        if (baseClass.allowRotation == true)
+        {
             GetComponent<Renderer>().material = hightLightMaterial;
+        }
     }
 
     public void OnMouseExit()

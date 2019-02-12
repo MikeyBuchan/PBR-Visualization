@@ -21,7 +21,7 @@ public class MatirialMapsZoomBase : MonoBehaviour
     GameObject uiManager;
     float stoppingDis;
     [HideInInspector]
-    public bool allowRotation;
+    public bool allowRotation = false;
     Quaternion standardcamRotation;
     public bool mayZoom = true;
 
@@ -34,6 +34,7 @@ public class MatirialMapsZoomBase : MonoBehaviour
     //alouw the rotation
     public void Update()
     {
+        Debug.Log("AllowR = "+ allowRotation);
         if (allowRotation)
         {
             Vector3 lookOffset = new Vector3((Input.mousePosition.x - (Screen.width / 2)) / Screen.width, (-Input.mousePosition.y - (Screen.height / 2)) / Screen.height, camRotationOfset);
