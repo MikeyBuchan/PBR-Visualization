@@ -1,1 +1,3 @@
-You only use a Metallic map if your object is made out of metal.
+A  metallic map is used to mimic metal characteristics.
+
+You can use a Metallic map if you want a specific part made out of metal.
