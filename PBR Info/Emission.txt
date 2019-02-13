@@ -1,1 +1,1 @@
-You can give objects emission what creates a light effect.
+You can give objects emission that creates a light effect.
