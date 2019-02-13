@@ -5356,6 +5356,31 @@ PrefabInstance:
       propertyPath: lerpSpeed
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 6684350586981387601, guid: a2a4252d5eb8269439ffe24e66867baf,
+        type: 3}
+      propertyPath: extraInfoObj
+      value: Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo
+        ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis
+        parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec,
+        pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec
+        pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo,
+        rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede
+        mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper
+        nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat
+        vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat
+        a, tellus. Phasellus viverra nulla ut metus varius laoreet. Quisque rutrum.
+        Aenean imperdiet. Etiam ultricies nisi vel augue. Curabitur ullamcorper ultricies
+        nisi. Nam eget dui.
+      objectReference: {fileID: 0}
+    - target: {fileID: 6684350586981387601, guid: a2a4252d5eb8269439ffe24e66867baf,
+        type: 3}
+      propertyPath: infoObj
+      value: "Ambient Occlusion(AO) is a shading and rendering technique used to calculate
+        how exposed each point in the scene is to the world light.\r\nThe interior
+        of a tube is typically more occluded (and hence darker) than the exposed outer
+        surfaces, and the deeper you go inside the tube, the more occluded (and darker)
+        the lighting becomes. "
+      objectReference: {fileID: 0}
     - target: {fileID: 4583862333491715422, guid: a2a4252d5eb8269439ffe24e66867baf,
         type: 3}
       propertyPath: speed
@@ -5365,6 +5390,27 @@ PrefabInstance:
         type: 3}
       propertyPath: lerpSpeed
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4583862333491715422, guid: a2a4252d5eb8269439ffe24e66867baf,
+        type: 3}
+      propertyPath: extraInfoObj
+      value: Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo
+        ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis
+        parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec,
+        pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec
+        pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo,
+        rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede
+        mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper
+        nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat
+        vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat
+        a, tellus. Phasellus viverra nulla ut metus varius laoreet. Quisque rutrum.
+        Aenean imperdiet. Etiam ultricies nisi vel augue. Curabitur ullamcorper ultricies
+        nisi. Nam eget dui.
+      objectReference: {fileID: 0}
+    - target: {fileID: 4583862333491715422, guid: a2a4252d5eb8269439ffe24e66867baf,
+        type: 3}
+      propertyPath: infoObj
+      value: An Albedo map has all the primary colors of the object.
       objectReference: {fileID: 0}
     - target: {fileID: 4583862333401125348, guid: a2a4252d5eb8269439ffe24e66867baf,
         type: 3}
@@ -5376,6 +5422,30 @@ PrefabInstance:
       propertyPath: lerpSpeed
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 4583862333401125348, guid: a2a4252d5eb8269439ffe24e66867baf,
+        type: 3}
+      propertyPath: extraInfoObj
+      value: Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo
+        ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis
+        parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec,
+        pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec
+        pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo,
+        rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede
+        mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper
+        nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat
+        vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat
+        a, tellus. Phasellus viverra nulla ut metus varius laoreet. Quisque rutrum.
+        Aenean imperdiet. Etiam ultricies nisi vel augue. Curabitur ullamcorper ultricies
+        nisi. Nam eget dui.
+      objectReference: {fileID: 0}
+    - target: {fileID: 4583862333401125348, guid: a2a4252d5eb8269439ffe24e66867baf,
+        type: 3}
+      propertyPath: infoObj
+      value: "A Normal map is a type of map where you can add a small detail to your
+        object. \r\nIt is a special kind of texture that allows you to add surface
+        detail such as bumps, grooves, and scratches to a model which catch the light
+        as if they are represented by real geometry."
+      objectReference: {fileID: 0}
     - target: {fileID: 4583862333674727839, guid: a2a4252d5eb8269439ffe24e66867baf,
         type: 3}
       propertyPath: speed
@@ -5385,6 +5455,22 @@ PrefabInstance:
         type: 3}
       propertyPath: lerpSpeed
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4583862333674727839, guid: a2a4252d5eb8269439ffe24e66867baf,
+        type: 3}
+      propertyPath: extraInfoObj
+      value: Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo
+        ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis
+        parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec,
+        pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec
+        pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo,
+        rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede
+        mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper
+        nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat
+        vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat
+        a, tellus. Phasellus viverra nulla ut metus varius laoreet. Quisque rutrum.
+        Aenean imperdiet. Etiam ultricies nisi vel augue. Curabitur ullamcorper ultricies
+        nisi. Nam eget dui.
       objectReference: {fileID: 0}
     - target: {fileID: 4583862334903639043, guid: a2a4252d5eb8269439ffe24e66867baf,
         type: 3}
@@ -5396,6 +5482,27 @@ PrefabInstance:
       propertyPath: lerpSpeed
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 4583862334903639043, guid: a2a4252d5eb8269439ffe24e66867baf,
+        type: 3}
+      propertyPath: extraInfoObj
+      value: Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo
+        ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis
+        parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec,
+        pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec
+        pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo,
+        rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede
+        mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper
+        nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat
+        vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat
+        a, tellus. Phasellus viverra nulla ut metus varius laoreet. Quisque rutrum.
+        Aenean imperdiet. Etiam ultricies nisi vel augue. Curabitur ullamcorper ultricies
+        nisi. Nam eget dui.
+      objectReference: {fileID: 0}
+    - target: {fileID: 4583862334903639043, guid: a2a4252d5eb8269439ffe24e66867baf,
+        type: 3}
+      propertyPath: infoObj
+      value: You only use a Metallic map if your object is made out of metal.
+      objectReference: {fileID: 0}
     - target: {fileID: 4583862335406566452, guid: a2a4252d5eb8269439ffe24e66867baf,
         type: 3}
       propertyPath: speed
@@ -5405,6 +5512,27 @@ PrefabInstance:
         type: 3}
       propertyPath: lerpSpeed
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4583862335406566452, guid: a2a4252d5eb8269439ffe24e66867baf,
+        type: 3}
+      propertyPath: extraInfoObj
+      value: Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo
+        ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis
+        parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec,
+        pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec
+        pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo,
+        rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede
+        mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper
+        nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat
+        vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat
+        a, tellus. Phasellus viverra nulla ut metus varius laoreet. Quisque rutrum.
+        Aenean imperdiet. Etiam ultricies nisi vel augue. Curabitur ullamcorper ultricies
+        nisi. Nam eget dui.
+      objectReference: {fileID: 0}
+    - target: {fileID: 4583862335406566452, guid: a2a4252d5eb8269439ffe24e66867baf,
+        type: 3}
+      propertyPath: infoObj
+      value: This map controls the sharpness of the reflections.
       objectReference: {fileID: 0}
     - target: {fileID: 2141016910, guid: a2a4252d5eb8269439ffe24e66867baf, type: 3}
       propertyPath: interactCamera
