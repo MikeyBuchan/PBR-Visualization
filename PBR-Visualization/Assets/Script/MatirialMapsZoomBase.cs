@@ -24,6 +24,7 @@ public class MatirialMapsZoomBase : MonoBehaviour
     public bool allowRotation = false;
     Quaternion standardcamRotation;
     public bool mayZoom = true;
+    public bool zoom = true;
 
     [Header("UI")]
     public GameObject namePanel;
@@ -34,7 +35,7 @@ public class MatirialMapsZoomBase : MonoBehaviour
     //alouw the rotation
     public void Update()
     {
-        Debug.Log("AllowR = "+ allowRotation);
+        Debug.Log("zoom = " + zoom);
         if (allowRotation)
         {
             Vector3 lookOffset = new Vector3((Input.mousePosition.x - (Screen.width / 2)) / Screen.width, (-Input.mousePosition.y - (Screen.height / 2)) / Screen.height, camRotationOfset);
@@ -55,7 +56,11 @@ public class MatirialMapsZoomBase : MonoBehaviour
             extraDiscriptionPanel.GetComponentInChildren<Text>().text = extraInfo;
             otherName.GetComponentInChildren<Text>().text = name;
 
-            StartCoroutine(Spread(newPosCamera,false));
+            if (zoom == true)
+            {
+                StartCoroutine(Spread(newPosCamera,false));
+                zoom = false;
+            }
         }
     }
     //set values
@@ -112,12 +117,15 @@ public class MatirialMapsZoomBase : MonoBehaviour
 
             }
         }
-
+        zoom = !zoom;
     }
     //start te rotation back
     public void StartTheSpreadBack()
     {
-        StartCoroutine(Spread(cameraBasePos,true));
+        if (zoom == true)
+        {
+            StartCoroutine(Spread(cameraBasePos,true));
+        }
     }
     //realtime check wheare the camera is
     public void OnDrawGizmos()
