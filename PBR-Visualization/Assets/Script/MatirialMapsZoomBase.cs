@@ -25,6 +25,7 @@ public class MatirialMapsZoomBase : MonoBehaviour
     Quaternion standardcamRotation;
     public bool mayZoom = true;
     public bool zoom = true;
+    public List<GameObject> childeren = new List<GameObject>();
 
     [Header("UI")]
     public GameObject namePanel;
@@ -72,6 +73,11 @@ public class MatirialMapsZoomBase : MonoBehaviour
         cameraBasePos = transform.position + baseCamAdjustment;
         standardcamRotation = interactCamera.transform.rotation;
         stoppingDis = 0.01f;
+
+        foreach (GameObject g in transform)
+        {
+            childeren.Add(g);
+        }
     }
     //zoom in and out
     public IEnumerator Spread(Vector3 v, bool b)
@@ -127,6 +133,16 @@ public class MatirialMapsZoomBase : MonoBehaviour
             StartCoroutine(Spread(cameraBasePos,true));
         }
     }
+
+    //switch whit the button or arrow keys
+    void Next()
+    {
+        if (zoom == false)
+        {
+            //if input || knop
+        }
+    }
+
     //realtime check wheare the camera is
     public void OnDrawGizmos()
     {
