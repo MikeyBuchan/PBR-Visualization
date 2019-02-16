@@ -9,13 +9,11 @@ public class InteractionTutorial : InteractionBase
     {
         Debug.Log("Interaction Tutorial");
 
-        GameObject.FindWithTag("Player").GetComponent<PlayerMove>().freeMove = false;
-        GameObject.FindWithTag("UiManager").GetComponent<UIManager>().interactDisplay.SetActive(false);
-        gameObject.GetComponent<MatirialMapsZoomBase>().interactCamera.SetActive(true);
-        gameObject.GetComponent<MatirialMapsZoomBase>().allowRotation = true;
-        GameObject.FindWithTag("MainCamera").SetActive(false);
+        gameObject.GetComponent<MaterialMapsZoomBase>().interactCamera.SetActive(true);
+        gameObject.GetComponent<MaterialMapsZoomBase>().allowRotation = true;
 
         GameObject.FindWithTag("UiManager").GetComponent<UIManager>().backToPlayerButton.SetActive(true);
-
+        base.Interact();
     }
+    
 }

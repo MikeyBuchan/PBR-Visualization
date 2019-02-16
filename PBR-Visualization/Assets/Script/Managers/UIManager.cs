@@ -38,8 +38,8 @@ public class UIManager : MonoBehaviour
     {
         if (advancedBool == false)
         {
-            mBase.GetComponent<MatirialMapsZoomBase>().StartTheSpreadBack();
-            mBase.GetComponent<MatirialMapsZoomBase>().zoom = false;
+            mBase.GetComponent<MaterialMapsZoomBase>().StartTheSpreadBack();
+            mBase.GetComponent<MaterialMapsZoomBase>().zoom = false;
         }
     }
 
@@ -74,8 +74,8 @@ public class UIManager : MonoBehaviour
     {
         GameObject.FindWithTag("Player").GetComponent<PlayerMove>().freeMove = true;
         interactDisplay.SetActive(false);
-        mBase.GetComponent<MatirialMapsZoomBase>().interactCamera.SetActive(false);
-        mBase.GetComponent<MatirialMapsZoomBase>().allowRotation = false;
+        mBase.GetComponent<MaterialMapsZoomBase>().interactCamera.SetActive(false);
+        mBase.GetComponent<MaterialMapsZoomBase>().allowRotation = false;
         mainCamera.SetActive(true);
         infoAllPbr.SetActive(false);
 

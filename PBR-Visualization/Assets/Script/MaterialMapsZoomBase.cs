@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class MatirialMapsZoomBase : MonoBehaviour
+public class MaterialMapsZoomBase : MonoBehaviour
 {
     [Header("Camera")]
     public Vector3 adjustCam;

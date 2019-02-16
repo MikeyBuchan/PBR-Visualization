@@ -2,9 +2,9 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class MatirialMapsZoom : MonoBehaviour
+public class MaterialMapsZoom : MonoBehaviour
 {
-    MatirialMapsZoomBase baseClass;
+    MaterialMapsZoomBase baseClass;
     public float speed;
     [TextArea]
     public string nameObj, infoObj, extraInfoObj;
@@ -16,7 +16,7 @@ public class MatirialMapsZoom : MonoBehaviour
 
     void Start()
     {
-        baseClass = gameObject.transform.parent.gameObject.GetComponent<MatirialMapsZoomBase>();
+        baseClass = gameObject.transform.parent.gameObject.GetComponent<MaterialMapsZoomBase>();
         startRotation = gameObject.transform.rotation;
     }
 
