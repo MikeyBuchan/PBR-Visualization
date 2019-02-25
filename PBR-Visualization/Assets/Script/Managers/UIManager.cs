@@ -88,12 +88,13 @@ public class UIManager : MonoBehaviour
 
     public void ButtonSwitchMat()
     {
-        mChange.GetComponent<MaterialMapsChange>().SwitchMat();
+       // mChange.GetComponent<MaterialMapsChange>().SwitchMat();
     }
 
-    public void ModelSwitch()
+    public void ButtonModelSwitch()
     {
-        //nog even doordenken
+        mChange.GetComponent<MaterialMapsChange>().ChangeModel();
+        Debug.Log("Clicked Button ModelSwitch");
     }
 
 }

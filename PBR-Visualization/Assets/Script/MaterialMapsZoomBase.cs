@@ -25,8 +25,8 @@ public class MaterialMapsZoomBase : MonoBehaviour
     Quaternion standardcamRotation;
     public bool mayZoom = true;
     public bool zoom = true;
-    public List<GameObject> childeren = new List<GameObject>();
 
+    public List<GameObject> childeren = new List<GameObject>();
     //list moddels
 
     [Header("UI")]

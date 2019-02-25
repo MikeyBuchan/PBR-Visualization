@@ -63,6 +63,5 @@ public class MaterialMapsZoom : MonoBehaviour
         {
             transform.Rotate(new Vector3(-Input.GetAxis("Mouse Y"), -Input.GetAxis("Mouse X"), 0) * Time.deltaTime * speed, Space.World);
         }
-
     }
 }
