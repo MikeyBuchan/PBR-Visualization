@@ -1,9 +1,10 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using UnityEngine.UI;
 public class MaterialMapsChange : MonoBehaviour
 {
+    //JELMER BEDOELD MET ALPHAS DE TEXTURE MAPS
     Renderer mesh;
     int currIndex;
 
@@ -14,21 +15,33 @@ public class MaterialMapsChange : MonoBehaviour
 
     [Header("Models")]
     public List<Mesh> modelList = new List<Mesh>();
-    
+    public List<NamedTexture> AlphasList = new List<NamedTexture>();
+
+    [Header("CustomColor")]
+    public Color currentColor;
+    public Gradient gradient;
+    public Slider ColorSlider, multiplySlider;
+
+    [Header("ShaderNames")]
+    public string albedoName;
+    public string albedoColorName;
+    public string albedoColorMultiplyName;
+
     [Header("Other")]
-    public Material mat1;
-    public Material mat2;
+    public Dropdown alphaDropdown;
 
     void Start()
     {
         mesh = GetComponent<Renderer>();
-        //mesh.material = mat1;
         startRot = gameObject.transform.rotation;
         gameObject.GetComponent<MeshFilter>().mesh = modelList[0];
+
+        CoppleDropdownList();
     }
 
     void Update()
     {
+        //rotate
         if (gameObject.GetComponent<InteractionMaterialChanger>().mayMatChange == true)
         {
             RotateObject();
@@ -57,11 +70,43 @@ public class MaterialMapsChange : MonoBehaviour
         transform.GetComponent<MeshFilter>().mesh = modelList[currIndex];
     }
 
-    public void AdjustAlbedoBase()
+    public void SwitchMaterialMap(int amount)
     {
-        //verander de kleur
+        mesh.material.SetTexture(albedoName, AlphasList[amount].texture);
     }
-    
+
+    public void ChangeSlider()
+    {
+        Color color = gradient.Evaluate(ColorSlider.value);
+        Color tempColor = new Color(color.r * multiplySlider.value, color.g * multiplySlider.value, color.b * multiplySlider.value);
+        currentColor = tempColor;
+        Debug.Log(gradient.Evaluate(ColorSlider.value));
+    }
+
+    public void CoppleDropdownList()
+    {
+        List<string> fillName = new List<string>();
+        foreach (var name in AlphasList)
+        {
+            fillName.Add(name.name);
+        }
+
+        alphaDropdown.AddOptions(fillName);
+    }
+
+    [System.Serializable]
+    public class NamedTexture
+    {
+        public string name;
+        public Texture2D texture;
+
+        public NamedTexture(string _name, Texture2D _texture)
+        {
+            name = _name;
+            texture = _texture;
+        }
+    }
+
     /*public void SwitchMat()
     {
         if (gameObject.GetComponent<InteractionMaterialChanger>().mayMatChange == true)
@@ -81,5 +126,10 @@ public class MaterialMapsChange : MonoBehaviour
     {
         mesh.material.SetFloat("_Metallic", metallic);
     }
+
+
+
+}
+
     */
 }
