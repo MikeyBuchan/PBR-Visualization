@@ -15,7 +15,7 @@ public class UIManager : MonoBehaviour
     public GameObject zoomOutButton;
     public GameObject backToPlayerButton;
 
-    public GameObject switchMatButton;
+    public GameObject switchValueEmpty;
     [Header("Other")]
     public GameObject interactDisplay;
     public GameObject mBase;
@@ -35,7 +35,7 @@ public class UIManager : MonoBehaviour
         zoomOutButton.SetActive(false);
         mainCamera = GameObject.FindWithTag("MainCamera");
         backToPlayerButton.SetActive(false);
-        switchMatButton.SetActive(false);
+        switchValueEmpty.SetActive(false);
     }
 
     public void ButtomZoomOut()
@@ -90,4 +90,10 @@ public class UIManager : MonoBehaviour
     {
         mChange.GetComponent<MaterialMapsChange>().SwitchMat();
     }
+
+    public void ModelSwitch()
+    {
+        //nog even doordenken
+    }
+
 }

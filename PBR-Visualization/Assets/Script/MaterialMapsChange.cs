@@ -28,4 +28,9 @@ public class MaterialMapsChange : MonoBehaviour
             }
         }
     }
+
+    public void ChangeMatelic(float metallic)
+    {
+        mesh.material.SetFloat("_Metallic", metallic);
+    }
 }

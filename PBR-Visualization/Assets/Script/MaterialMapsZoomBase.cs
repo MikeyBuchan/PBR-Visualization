@@ -27,6 +27,8 @@ public class MaterialMapsZoomBase : MonoBehaviour
     public bool zoom = true;
     public List<GameObject> childeren = new List<GameObject>();
 
+    //list moddels
+
     [Header("UI")]
     public GameObject namePanel;
     public GameObject discriptionPanel;

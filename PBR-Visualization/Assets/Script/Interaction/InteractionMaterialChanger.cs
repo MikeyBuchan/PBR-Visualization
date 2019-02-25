@@ -17,8 +17,7 @@ public class InteractionMaterialChanger : InteractionBase
         Debug.Log("MChager");
         interactCamera.SetActive(true);
         mayMatChange = true;
-        GameObject.FindWithTag("UiManager").GetComponent<UIManager>().switchMatButton.SetActive(true);
+        GameObject.FindWithTag("UiManager").GetComponent<UIManager>().switchValueEmpty.SetActive(true);
         base.Interact();
     }
-
 }
