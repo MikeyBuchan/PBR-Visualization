@@ -22,7 +22,7 @@ public class MaterialMapsChange : MonoBehaviour
     void Start()
     {
         mesh = GetComponent<Renderer>();
-        mesh.material = mat1;
+        //mesh.material = mat1;
         startRot = gameObject.transform.rotation;
         gameObject.GetComponent<MeshFilter>().mesh = modelList[0];
     }
@@ -55,6 +55,11 @@ public class MaterialMapsChange : MonoBehaviour
             currIndex = 0;
         }
         transform.GetComponent<MeshFilter>().mesh = modelList[currIndex];
+    }
+
+    public void AdjustAlbedoBase()
+    {
+        //verander de kleur
     }
     
     /*public void SwitchMat()
