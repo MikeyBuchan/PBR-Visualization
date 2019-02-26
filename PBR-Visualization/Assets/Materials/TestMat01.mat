@@ -44,6 +44,10 @@ Material:
         m_Texture: {fileID: 2800000, guid: 59fb81ed703947c47a17786dcbcf9a62, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
+    - Texture2D_EA105EFC:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
     - _AnisotropyMap:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
@@ -132,10 +136,12 @@ Material:
     - Boolean_2AFEAC72: 0
     - Boolean_2D5C2A80: 0
     - Boolean_4FB0D8F5: 0
+    - Boolean_83A13C5E: 0
     - Boolean_C6DD4D50: 0
     - Vector1_166DF3CA: 1
     - Vector1_1DC07E28: 0
     - Vector1_8B6A4B61: 0
+    - Vector1_9452DAB3: 1
     - Vector1_AE9D8FBB: 0
     - _AORemapMax: 1
     - _AORemapMin: 0
@@ -247,7 +253,7 @@ Material:
     - _ZTestModeDistortion: 4
     - _ZWrite: 1
     m_Colors:
-    - Color_6416DE66: {r: 0.26188144, g: 0.3417014, b: 0.5188679, a: 1}
+    - Color_6416DE66: {r: 0.14017446, g: 0.6603774, b: 0.63867533, a: 1}
     - Color_86E9141: {r: 1, g: 1, b: 1, a: 0}
     - Color_D2C589B7: {r: 1, g: 0, b: 0, a: 1}
     - _BaseColor: {r: 1, g: 1, b: 1, a: 1}

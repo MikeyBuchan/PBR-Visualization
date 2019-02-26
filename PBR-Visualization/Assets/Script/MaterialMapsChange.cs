@@ -10,24 +10,22 @@ public class MaterialMapsChange : MonoBehaviour
 
     [Header("Rotation")]
     public float speed;
-    Quaternion startRot;
     public float lerpSpeed;
+    Quaternion startRot;
 
     [Header("Models")]
     public List<Mesh> modelList = new List<Mesh>();
-    public List<NamedTexture> AlphasList = new List<NamedTexture>();
+    public List<NamedTexture> alphasList = new List<NamedTexture>();
+
+    public List<Sliders> sliderList = new List<Sliders>();
 
     [Header("CustomColor")]
-    public Color currentColor;
     public Gradient gradient;
-    public Slider ColorSlider, multiplySlider;
 
     [Header("ShaderNames")]
     public string albedoName;
-    public string albedoColorName;
-    public string albedoColorMultiplyName;
 
-    [Header("Other")]
+    [Header("Dropdown")]
     public Dropdown alphaDropdown;
 
     void Start()
@@ -72,21 +70,25 @@ public class MaterialMapsChange : MonoBehaviour
 
     public void SwitchMaterialMap(int amount)
     {
-        mesh.material.SetTexture(albedoName, AlphasList[amount].texture);
+        mesh.material.SetTexture(albedoName, alphasList[amount].texture);
     }
 
-    public void ChangeSlider()
+    public void ChangeSliderColor(int listNeeded)
     {
-        Color color = gradient.Evaluate(ColorSlider.value);
+        Slider colorSlider = sliderList[listNeeded].slider;
+        Slider multiplySlider = sliderList[listNeeded].amount;
+
+        Color color = gradient.Evaluate(colorSlider.value);
         Color tempColor = new Color(color.r * multiplySlider.value, color.g * multiplySlider.value, color.b * multiplySlider.value);
-        currentColor = tempColor;
-        Debug.Log(gradient.Evaluate(ColorSlider.value));
+        mesh.material.SetColor(sliderList[listNeeded].shaderName, tempColor);
     }
+
+    //iets met de muis en de slider
 
     public void CoppleDropdownList()
     {
         List<string> fillName = new List<string>();
-        foreach (var name in AlphasList)
+        foreach (var name in alphasList)
         {
             fillName.Add(name.name);
         }
@@ -107,7 +109,17 @@ public class MaterialMapsChange : MonoBehaviour
         }
     }
 
-    /*public void SwitchMat()
+    [System.Serializable]
+    public class Sliders
+    {
+        public Slider slider, amount;
+        public string shaderName;
+
+    }
+    /*
+
+
+    public void SwitchMat()
     {
         if (gameObject.GetComponent<InteractionMaterialChanger>().mayMatChange == true)
         {
@@ -126,7 +138,6 @@ public class MaterialMapsChange : MonoBehaviour
     {
         mesh.material.SetFloat("_Metallic", metallic);
     }
-
 
 
 }
