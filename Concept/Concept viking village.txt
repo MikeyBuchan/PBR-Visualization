@@ -1,0 +1,36 @@
+Wooden house
+House skeleton:
+skeleton single door
+skeleton double door
+skeleton Roof
+
+Wall segments:
+Wall
+Wall Windowframe	Separate Small, Medium, Large
+Wall Doorframe		Single door, Double door
+
+House section:
+Roof extension
+House extension
+Roof ventilation		Top, Side
+Overhang 		Single door, Double door
+
+
+
+Monument
+Viking longship		Paddle, Rope
+Magic Tree
+Smith			Anvil, Forge, Hammer, Ore, Tongs, Water container
+Firepit			Cooking pot, Spit, Pig
+
+
+
+Props
+Robe
+Weapons			Sword, Shield, Spear, Harpoon, Bow, Arrow, Quiver
+Armor			Helmet, Chestplate,
+Barrel
+Crate
+Bucket
+Skeleton			Human head, Animal head, Bone, Horn
+Pine tree
