@@ -13,20 +13,25 @@ public class MaterialMapsChange : MonoBehaviour
     public float lerpSpeed;
     Quaternion startRot;
 
-    [Header("Models")]
+    [Header("lists")]
     public List<Mesh> modelList = new List<Mesh>();
     public List<NamedTexture> alphasList = new List<NamedTexture>();
 
+    public List<NamedTexture> metallicMapList = new List<NamedTexture>();
+
     public List<Sliders> sliderList = new List<Sliders>();
+    public List<OneSlider> oneSliderList = new List<OneSlider>();
 
     [Header("CustomColor")]
     public Gradient gradient;
 
     [Header("ShaderNames")]
     public string albedoName;
+    public string metallicName;
 
     [Header("Dropdown")]
     public Dropdown alphaDropdown;
+    public Dropdown metallicDropDown;
 
     void Start()
     {
@@ -34,7 +39,8 @@ public class MaterialMapsChange : MonoBehaviour
         startRot = gameObject.transform.rotation;
         gameObject.GetComponent<MeshFilter>().mesh = modelList[0];
 
-        CoppleDropdownList();
+        CoppleDropdownListAlbedoMaps();
+        CoppleDropdownListmatellicMaps();
     }
 
     void Update()
@@ -57,7 +63,7 @@ public class MaterialMapsChange : MonoBehaviour
             transform.Rotate(new Vector3(Input.GetAxis("Mouse Y"), -Input.GetAxis("Mouse X"), 0) * Time.deltaTime * speed, Space.World);
         }
     }
-
+    //model switch
     public void ChangeModel()
     {
         currIndex++;
@@ -67,7 +73,7 @@ public class MaterialMapsChange : MonoBehaviour
         }
         transform.GetComponent<MeshFilter>().mesh = modelList[currIndex];
     }
-
+    //albedo Maps
     public void SwitchMaterialMap(int amount)
     {
         mesh.material.SetTexture(albedoName, alphasList[amount].texture);
@@ -82,10 +88,25 @@ public class MaterialMapsChange : MonoBehaviour
         Color tempColor = new Color(color.r * multiplySlider.value, color.g * multiplySlider.value, color.b * multiplySlider.value);
         mesh.material.SetColor(sliderList[listNeeded].shaderName, tempColor);
     }
+    //matelic Maps
+    public void SwitchMatelicMap(int amount)
+    {
+        mesh.material.SetTexture(metallicName, metallicMapList[amount].texture);
+    }
+
+    public void ChangeMatelValue(int list)
+    {
+        Slider matel = oneSliderList[list].slider;
+
+        mesh.material.SetFloat(oneSliderList[list].nameShader, matel.value);
+        Debug.Log(matel.value);
+        Debug.Log(oneSliderList[list].nameShader);
+    }
 
     //iets met de muis en de slider
 
-    public void CoppleDropdownList()
+    //droplist difred albedo
+    public void CoppleDropdownListAlbedoMaps()
     {
         List<string> fillName = new List<string>();
         foreach (var name in alphasList)
@@ -95,7 +116,16 @@ public class MaterialMapsChange : MonoBehaviour
 
         alphaDropdown.AddOptions(fillName);
     }
-
+    public void CoppleDropdownListmatellicMaps()
+    {
+        List<string> temp = new List<string>();
+        foreach (var item in metallicMapList)
+        {
+            temp.Add(item.name);
+        }
+        metallicDropDown.AddOptions(temp);
+    }
+    //albedo
     [System.Serializable]
     public class NamedTexture
     {
@@ -108,12 +138,20 @@ public class MaterialMapsChange : MonoBehaviour
             texture = _texture;
         }
     }
-
+    //two slider
     [System.Serializable]
     public class Sliders
     {
         public Slider slider, amount;
         public string shaderName;
+
+    }
+    //one slider
+    [System.Serializable]
+    public class OneSlider
+    {
+        public Slider slider;
+        public string nameShader;
 
     }
     /*
@@ -132,11 +170,6 @@ public class MaterialMapsChange : MonoBehaviour
                 mesh.material = mat1;
             }
         }
-    }
-
-    public void ChangeMatelic(float metallic)
-    {
-        mesh.material.SetFloat("_Metallic", metallic);
     }
 
 
