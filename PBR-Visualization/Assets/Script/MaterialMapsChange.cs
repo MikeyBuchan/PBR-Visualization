@@ -6,6 +6,7 @@ public class MaterialMapsChange : MonoBehaviour
 {
     //JELMER BEDOELD MET ALPHAS DE TEXTURE MAPS
     Renderer mesh;
+    MeshRenderer RMesh
     int currIndex;
 
     [Header("Rotation")]
@@ -16,8 +17,9 @@ public class MaterialMapsChange : MonoBehaviour
     [Header("lists")]
     public List<Mesh> modelList = new List<Mesh>();
     public List<NamedTexture> alphasList = new List<NamedTexture>();
-
     public List<NamedTexture> metallicMapList = new List<NamedTexture>();
+
+    public List<InvertBoolClass> invertBoolList = new List<InvertBoolClass>();
 
     public List<Sliders> sliderList = new List<Sliders>();
     public List<OneSlider> oneSliderList = new List<OneSlider>();
@@ -36,6 +38,7 @@ public class MaterialMapsChange : MonoBehaviour
     void Start()
     {
         mesh = GetComponent<Renderer>();
+        RMesh = GetComponent<MeshRenderer>();
         startRot = gameObject.transform.rotation;
         gameObject.GetComponent<MeshFilter>().mesh = modelList[0];
 
@@ -92,6 +95,10 @@ public class MaterialMapsChange : MonoBehaviour
     public void SwitchMatelicMap(int amount)
     {
         mesh.material.SetTexture(metallicName, metallicMapList[amount].texture);
+
+        Debug.Log(metallicName);
+        Debug.Log(metallicMapList[amount]);
+        Debug.Log(metallicMapList[amount].texture);
     }
 
     public void ChangeMatelValue(int list)
@@ -99,8 +106,7 @@ public class MaterialMapsChange : MonoBehaviour
         Slider matel = oneSliderList[list].slider;
 
         mesh.material.SetFloat(oneSliderList[list].nameShader, matel.value);
-        Debug.Log(matel.value);
-        Debug.Log(oneSliderList[list].nameShader);
+        //doet het maar niet extreem genoeg
     }
 
     //iets met de muis en de slider
@@ -118,13 +124,22 @@ public class MaterialMapsChange : MonoBehaviour
     }
     public void CoppleDropdownListmatellicMaps()
     {
-        List<string> temp = new List<string>();
-        foreach (var item in metallicMapList)
+        List<string> tempName = new List<string>();
+        foreach (var itemName in metallicMapList)
         {
-            temp.Add(item.name);
+            tempName.Add(itemName.name);
         }
-        metallicDropDown.AddOptions(temp);
+        metallicDropDown.AddOptions(tempName);
     }
+
+    //invert the bool
+    public void InvertBoolian(int whichOne)
+    {
+        //RMesh.material.Set
+        //invertBoolList[whichOne].invert =! invertBoolList[whichOne].invert;
+        
+    }
+    
     //albedo
     [System.Serializable]
     public class NamedTexture
@@ -154,7 +169,24 @@ public class MaterialMapsChange : MonoBehaviour
         public string nameShader;
 
     }
+    //bool invert
+    [System.Serializable]
+    public class InvertBoolClass
+    {
+        public bool invert;
+        public string boolNameShader;
+
+    }
+
     /*
+    ///
+    invert bool list //cons
+    copple names to list
+    ///
+    function knop
+    die juiste aanropet
+    revert
+    ///
 
 
     public void SwitchMat()
