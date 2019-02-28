@@ -6,7 +6,7 @@ public class MaterialMapsChange : MonoBehaviour
 {
     //JELMER BEDOELD MET ALPHAS DE TEXTURE MAPS
     Renderer mesh;
-    MeshRenderer RMesh
+    MeshRenderer RMesh;
     int currIndex;
 
     [Header("Rotation")]
@@ -135,7 +135,7 @@ public class MaterialMapsChange : MonoBehaviour
     //invert the bool
     public void InvertBoolian(int whichOne)
     {
-        //RMesh.material.Set
+        //RMesh.material.set
         //invertBoolList[whichOne].invert =! invertBoolList[whichOne].invert;
         
     }
