@@ -13910,26 +13910,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4992920941300016793, guid: c9d842e457f0aa94f9833cb46be6fdb8,
         type: 3}
-      propertyPath: invertBoolList.Array.size
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 4992920941300016793, guid: c9d842e457f0aa94f9833cb46be6fdb8,
-        type: 3}
-      propertyPath: sliderList.Array.size
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 4992920941300016793, guid: c9d842e457f0aa94f9833cb46be6fdb8,
-        type: 3}
-      propertyPath: oneSliderList.Array.size
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 4992920941300016793, guid: c9d842e457f0aa94f9833cb46be6fdb8,
-        type: 3}
-      propertyPath: smoothnessMapList.Array.size
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 4992920941300016793, guid: c9d842e457f0aa94f9833cb46be6fdb8,
-        type: 3}
       propertyPath: sliderList.Array.data[0].slider
       value: 
       objectReference: {fileID: 1930323817}
@@ -13950,31 +13930,6 @@ PrefabInstance:
       objectReference: {fileID: 486873545}
     - target: {fileID: 4992920941300016793, guid: c9d842e457f0aa94f9833cb46be6fdb8,
         type: 3}
-      propertyPath: oneSliderList.Array.data[0].slider
-      value: 
-      objectReference: {fileID: 285665099}
-    - target: {fileID: 4992920941300016793, guid: c9d842e457f0aa94f9833cb46be6fdb8,
-        type: 3}
-      propertyPath: alphaDropdown
-      value: 
-      objectReference: {fileID: 310473725}
-    - target: {fileID: 4992920941300016793, guid: c9d842e457f0aa94f9833cb46be6fdb8,
-        type: 3}
-      propertyPath: metallicDropdown
-      value: 
-      objectReference: {fileID: 1389595512}
-    - target: {fileID: 4992920941300016793, guid: c9d842e457f0aa94f9833cb46be6fdb8,
-        type: 3}
-      propertyPath: emissionDropdown
-      value: 
-      objectReference: {fileID: 2122971900}
-    - target: {fileID: 4992920941300016793, guid: c9d842e457f0aa94f9833cb46be6fdb8,
-        type: 3}
-      propertyPath: invertBoolList.Array.data[1].boolNameShader
-      value: Vector1_3936505B
-      objectReference: {fileID: 0}
-    - target: {fileID: 4992920941300016793, guid: c9d842e457f0aa94f9833cb46be6fdb8,
-        type: 3}
       propertyPath: sliderList.Array.data[2].slider
       value: 
       objectReference: {fileID: 559502866}
@@ -13985,9 +13940,9 @@ PrefabInstance:
       objectReference: {fileID: 765066241}
     - target: {fileID: 4992920941300016793, guid: c9d842e457f0aa94f9833cb46be6fdb8,
         type: 3}
-      propertyPath: sliderList.Array.data[2].shaderName
-      value: Color_86E9141
-      objectReference: {fileID: 0}
+      propertyPath: oneSliderList.Array.data[0].slider
+      value: 
+      objectReference: {fileID: 285665099}
     - target: {fileID: 4992920941300016793, guid: c9d842e457f0aa94f9833cb46be6fdb8,
         type: 3}
       propertyPath: oneSliderList.Array.data[1].slider
@@ -13995,49 +13950,24 @@ PrefabInstance:
       objectReference: {fileID: 561103639}
     - target: {fileID: 4992920941300016793, guid: c9d842e457f0aa94f9833cb46be6fdb8,
         type: 3}
-      propertyPath: oneSliderList.Array.data[1].nameShader
-      value: Vector1_8B6A4B61
-      objectReference: {fileID: 0}
+      propertyPath: alphaDorpdownList.Array.data[0]
+      value: 
+      objectReference: {fileID: 310473725}
     - target: {fileID: 4992920941300016793, guid: c9d842e457f0aa94f9833cb46be6fdb8,
         type: 3}
-      propertyPath: smoothnessDropdown
+      propertyPath: alphaDorpdownList.Array.data[1]
+      value: 
+      objectReference: {fileID: 1389595512}
+    - target: {fileID: 4992920941300016793, guid: c9d842e457f0aa94f9833cb46be6fdb8,
+        type: 3}
+      propertyPath: alphaDorpdownList.Array.data[2]
+      value: 
+      objectReference: {fileID: 2122971900}
+    - target: {fileID: 4992920941300016793, guid: c9d842e457f0aa94f9833cb46be6fdb8,
+        type: 3}
+      propertyPath: alphaDorpdownList.Array.data[3]
       value: 
       objectReference: {fileID: 665604717}
-    - target: {fileID: 4992920941300016793, guid: c9d842e457f0aa94f9833cb46be6fdb8,
-        type: 3}
-      propertyPath: smoothnessName
-      value: Texture2D_277D805
-      objectReference: {fileID: 0}
-    - target: {fileID: 4992920941300016793, guid: c9d842e457f0aa94f9833cb46be6fdb8,
-        type: 3}
-      propertyPath: smoothnessMapList.Array.data[0].name
-      value: SmoothnessMap1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4992920941300016793, guid: c9d842e457f0aa94f9833cb46be6fdb8,
-        type: 3}
-      propertyPath: smoothnessMapList.Array.data[1].name
-      value: SmoothnessMap2
-      objectReference: {fileID: 0}
-    - target: {fileID: 4992920941300016793, guid: c9d842e457f0aa94f9833cb46be6fdb8,
-        type: 3}
-      propertyPath: smoothnessMapList.Array.data[2].name
-      value: SmoothnessMap3
-      objectReference: {fileID: 0}
-    - target: {fileID: 4992920941300016793, guid: c9d842e457f0aa94f9833cb46be6fdb8,
-        type: 3}
-      propertyPath: smoothnessMapList.Array.data[0].texture
-      value: 
-      objectReference: {fileID: 2800000, guid: f015d37aff67a1a498e7c021535409d4, type: 3}
-    - target: {fileID: 4992920941300016793, guid: c9d842e457f0aa94f9833cb46be6fdb8,
-        type: 3}
-      propertyPath: smoothnessMapList.Array.data[1].texture
-      value: 
-      objectReference: {fileID: 2800000, guid: 5ec22b40ea723884981ae36765fc1c4a, type: 3}
-    - target: {fileID: 4992920941300016793, guid: c9d842e457f0aa94f9833cb46be6fdb8,
-        type: 3}
-      propertyPath: smoothnessMapList.Array.data[2].texture
-      value: 
-      objectReference: {fileID: 2800000, guid: b191fac2b43523a43a1e0db607df23cc, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c9d842e457f0aa94f9833cb46be6fdb8, type: 3}
 --- !u!1001 &5737767817599548039
