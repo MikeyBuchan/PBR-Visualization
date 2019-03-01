@@ -138,11 +138,16 @@ Material:
     - Boolean_4FB0D8F5: 0
     - Boolean_83A13C5E: 0
     - Boolean_C6DD4D50: 0
+    - Vector1_12BB3F07: 0
     - Vector1_166DF3CA: 1
     - Vector1_1DC07E28: 0
+    - Vector1_3936505B: 0
     - Vector1_8B6A4B61: 0
     - Vector1_9452DAB3: 1
     - Vector1_AE9D8FBB: 0
+    - Vector1_B99AA124: 0
+    - Vector1_C2CC494F: 0
+    - Vector1_DE568F78: 0
     - _AORemapMax: 1
     - _AORemapMin: 0
     - _ATDistance: 1
