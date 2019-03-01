@@ -19,6 +19,7 @@ public class MaterialMapsChange : MonoBehaviour
     public List<NamedTexture> alphasList = new List<NamedTexture>();
     public List<NamedTexture> metallicMapList = new List<NamedTexture>();
     public List<NamedTexture> emissionMapList = new List<NamedTexture>();
+    public List<NamedTexture> smoothnessMapList = new List<NamedTexture>();
 
     public List<InvertBoolClass> invertBoolList = new List<InvertBoolClass>();
 
@@ -32,11 +33,13 @@ public class MaterialMapsChange : MonoBehaviour
     public string albedoName;
     public string metallicName;
     public string emissionName;
+    public string smoothnessName;
 
     [Header("Dropdown")]
     public Dropdown alphaDropdown;
     public Dropdown metallicDropdown;
     public Dropdown emissionDropdown;
+    public Dropdown smoothnessDropdown;
 
     void Start()
     {
@@ -48,6 +51,7 @@ public class MaterialMapsChange : MonoBehaviour
         CoppleDropdownListAlbedoMaps();
         CoppleDropdownListmatellicMaps();
         CoppleDropdownListEmissionMaps();
+        CoppleDropdownListSmoothness();
     }
 
     void Update()
@@ -118,7 +122,13 @@ public class MaterialMapsChange : MonoBehaviour
         Debug.Log(emissionName);
         Debug.Log(metallicMapList[amount].texture);
     }
-
+    //smoothness maps
+    public void SwitchSmoothnessMap(int amount)
+    {
+        mesh.material.SetTexture(smoothnessName, smoothnessMapList[amount].texture);
+        Debug.Log(albedoName);
+        Debug.Log(metallicMapList[amount].texture);
+    }
     //iets met de muis en de slider
 
     //droplist difred albedo
@@ -149,6 +159,15 @@ public class MaterialMapsChange : MonoBehaviour
             vs.Add(item.name);
         }
         emissionDropdown.AddOptions(vs);
+    }
+    public void CoppleDropdownListSmoothness()
+    {
+        List<string> vs = new List<string>();
+        foreach (var item in smoothnessMapList)
+        {
+            vs.Add(item.name);
+        }
+        smoothnessDropdown.AddOptions(vs);
     }
 
     //invert the bool
