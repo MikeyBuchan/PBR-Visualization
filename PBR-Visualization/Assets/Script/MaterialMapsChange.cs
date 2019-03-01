@@ -17,7 +17,10 @@ public class MaterialMapsChange : MonoBehaviour
     [Header("lists")]
     public List<Mesh> modelList = new List<Mesh>();
     public List<NamedTexture> alphasList = new List<NamedTexture>();
-    public List<NamedTexture> metallicMapList = new List<NamedTexture>();
+
+    //public List<NamedTexture> metallicMapList = new List<NamedTexture>();
+    //public List<NamedTexture> emissionMapList = new List<NamedTexture>();
+    //public List<NamedTexture> smoothnessMapList = new List<NamedTexture>();
 
     public List<InvertBoolClass> invertBoolList = new List<InvertBoolClass>();
 
@@ -30,10 +33,15 @@ public class MaterialMapsChange : MonoBehaviour
     [Header("ShaderNames")]
     public string albedoName;
     public string metallicName;
+    public string emissionName;
+    public string smoothnessName;
 
     [Header("Dropdown")]
-    public Dropdown alphaDropdown;
-    public Dropdown metallicDropDown;
+    public List<Dropdown> alphaDorpdownList = new List<Dropdown>();
+    //public Dropdown alphaDropdown;
+    //public Dropdown metallicDropdown;
+    //public Dropdown emissionDropdown;
+    //public Dropdown smoothnessDropdown;
 
     void Start()
     {
@@ -42,8 +50,10 @@ public class MaterialMapsChange : MonoBehaviour
         startRot = gameObject.transform.rotation;
         gameObject.GetComponent<MeshFilter>().mesh = modelList[0];
 
-        CoppleDropdownListAlbedoMaps();
-        CoppleDropdownListmatellicMaps();
+        CoppleDropdownList();
+        //CoppleDropdownListmatellicMaps();
+        //CoppleDropdownListEmissionMaps();
+        //CoppleDropdownListSmoothness();
     }
 
     void Update()
@@ -80,6 +90,7 @@ public class MaterialMapsChange : MonoBehaviour
     public void SwitchMaterialMap(int amount)
     {
         mesh.material.SetTexture(albedoName, alphasList[amount].texture);
+        Debug.Log(albedoName);
     }
 
     public void ChangeSliderColor(int listNeeded)
@@ -94,11 +105,9 @@ public class MaterialMapsChange : MonoBehaviour
     //matelic Maps
     public void SwitchMatelicMap(int amount)
     {
-        mesh.material.SetTexture(metallicName, metallicMapList[amount].texture);
-
+        mesh.material.SetTexture(metallicName, alphasList[amount].texture);
         Debug.Log(metallicName);
-        Debug.Log(metallicMapList[amount]);
-        Debug.Log(metallicMapList[amount].texture);
+        Debug.Log(alphasList[amount].texture);
     }
 
     public void ChangeMatelValue(int list)
@@ -106,39 +115,79 @@ public class MaterialMapsChange : MonoBehaviour
         Slider matel = oneSliderList[list].slider;
 
         mesh.material.SetFloat(oneSliderList[list].nameShader, matel.value);
-        //doet het maar niet extreem genoeg
     }
-
+    //emission Maps
+    public void SwitchEmissionMap(int amount)
+    {
+        mesh.material.SetTexture(emissionName, alphasList[amount].texture);
+        Debug.Log(emissionName);
+    }
+    //smoothness maps
+    public void SwitchSmoothnessMap(int amount)
+    {
+        mesh.material.SetTexture(smoothnessName, alphasList[amount].texture);
+        Debug.Log(smoothnessName);
+    }
     //iets met de muis en de slider
 
     //droplist difred albedo
-    public void CoppleDropdownListAlbedoMaps()
+    public void CoppleDropdownList()
     {
         List<string> fillName = new List<string>();
         foreach (var name in alphasList)
         {
             fillName.Add(name.name);
         }
-
-        alphaDropdown.AddOptions(fillName);
+        foreach (var dropDown in alphaDorpdownList)
+        {
+            dropDown.AddOptions(fillName);
+        }
     }
+
+    /*
     public void CoppleDropdownListmatellicMaps()
     {
         List<string> tempName = new List<string>();
-        foreach (var itemName in metallicMapList)
+        foreach (var itemName in alphasList)
         {
             tempName.Add(itemName.name);
         }
-        metallicDropDown.AddOptions(tempName);
+        metallicDropdown.AddOptions(tempName);
+    }
+    public void CoppleDropdownListEmissionMaps()
+    {
+        List<string> vs = new List<string>();
+        foreach (var item in alphasList)
+        {
+            vs.Add(item.name);
+        }
+        emissionDropdown.AddOptions(vs);
+    }
+    public void CoppleDropdownListSmoothness()
+    {
+        List<string> vs = new List<string>();
+        foreach (var item in alphasList)
+        {
+            vs.Add(item.name);
+        }
+        smoothnessDropdown.AddOptions(vs);
     }
 
     //invert the bool
     public void InvertBoolian(int whichOne)
     {
-        //RMesh.material.set
-        //invertBoolList[whichOne].invert =! invertBoolList[whichOne].invert;
-        
+        if (invertBoolList[whichOne].invert == 0)
+        {
+            invertBoolList[whichOne].invert = 1;
+            mesh.material.SetInt(invertBoolList[whichOne].boolNameShader, invertBoolList[whichOne].invert);
+        }
+        else
+        {
+            invertBoolList[whichOne].invert = 0;
+            mesh.material.SetInt(invertBoolList[whichOne].boolNameShader, invertBoolList[whichOne].invert);
+        }
     }
+    */
     
     //albedo
     [System.Serializable]
@@ -169,11 +218,11 @@ public class MaterialMapsChange : MonoBehaviour
         public string nameShader;
 
     }
-    //bool invert
+    //invert
     [System.Serializable]
     public class InvertBoolClass
     {
-        public bool invert;
+        public int invert;
         public string boolNameShader;
 
     }
