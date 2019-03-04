@@ -301,6 +301,12 @@ MonoBehaviour:
     boolNameShader: Vector1_12BB3F07
   - invert: 0
     boolNameShader: Vector1_3936505B
+  - invert: 0
+    boolNameShader: Vector1_DE568F78
+  - invert: 0
+    boolNameShader: Vector1_C2CC494F
+  - invert: 0
+    boolNameShader: Vector1_B99AA124
   sliderList:
   - slider: {fileID: 0}
     amount: {fileID: 0}
@@ -316,6 +322,10 @@ MonoBehaviour:
     nameShader: Vector1_1DC07E28
   - slider: {fileID: 0}
     nameShader: Vector1_8B6A4B61
+  - slider: {fileID: 0}
+    nameShader: Vector1_AE9D8FBB
+  - slider: {fileID: 0}
+    nameShader: Vector1_166DF3CA
   gradient:
     serializedVersion: 2
     key0: {r: 1, g: 0, b: 0, a: 1}
@@ -349,7 +359,11 @@ MonoBehaviour:
   metallicName: Texture2D_4062675
   emissionName: Texture2D_4C521A2
   smoothnessName: Texture2D_277D805
+  normalName: Texture2D_B766188
+  ambientOcclusionName: Texture2D_EA105EF
   alphaDorpdownList:
+  - {fileID: 0}
+  - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
