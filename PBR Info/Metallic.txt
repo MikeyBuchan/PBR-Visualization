@@ -1,3 +1,8 @@
 A  metallic map is used to mimic metal characteristics.
 
 You can use a Metallic map if you want a specific part made out of metal.
+
+
+
+The metallic map is used to define which areas of a material denote raw metal.
+As a grayscale map, it operates in a manner similar to a mask, as it tells the shader how it should interpret data found in the base color.

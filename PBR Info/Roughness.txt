@@ -1,1 +1,8 @@
 This map controls the sharpness of the reflections.
+
+
+The roughness map describes the surface irregularites that cause light diffusion.
+The reflected direction will vary randomly based on the surface roughness.
+This changes light direction, but the light intensity remains constant.
+Rougher surfaces will have larger and dimmer-looking highlights.
+Smoother surfaces will keep specular reflections focused, which can appear to look brighter or more intense even though the same total amount of light is reflected.

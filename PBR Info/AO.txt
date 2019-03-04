@@ -1,2 +1,11 @@
 Ambient Occlusion(AO) is a shading and rendering technique used to calculate how exposed each point in the scene is to the world light.
-The interior of a tube is typically more occluded (and hence darker) than the exposed outer surfaces, and the deeper you go inside the tube, the more occluded (and darker) the lighting becomes. 
+The interior of a tube is typically more occluded (and hence darker) than the exposed outer surfaces, and the deeper you go inside the tube, the more occluded (and darker) the lighting becomes.
+
+
+
+
+
+The ambient occlusion map defines how much of the ambient environment lighting is accessible to a surface point.
+It only affects the diffuse contribution and should not occlude the specular contribution.
+Some engines, such as Unreal Engine 4, have an option for screen space reflection to simulate local reflections.
+The best combination is to use AO with screen space reflections.
