@@ -18,10 +18,6 @@ public class MaterialMapsChange : MonoBehaviour
     public List<Mesh> modelList = new List<Mesh>();
     public List<NamedTexture> alphasList = new List<NamedTexture>();
 
-    //public List<NamedTexture> metallicMapList = new List<NamedTexture>();
-    //public List<NamedTexture> emissionMapList = new List<NamedTexture>();
-    //public List<NamedTexture> smoothnessMapList = new List<NamedTexture>();
-
     public List<InvertBoolClass> invertBoolList = new List<InvertBoolClass>();
 
     public List<Sliders> sliderList = new List<Sliders>();
@@ -35,13 +31,11 @@ public class MaterialMapsChange : MonoBehaviour
     public string metallicName;
     public string emissionName;
     public string smoothnessName;
+    public string normalName;
+    public string ambientOcclusionName;
 
     [Header("Dropdown")]
     public List<Dropdown> alphaDorpdownList = new List<Dropdown>();
-    //public Dropdown alphaDropdown;
-    //public Dropdown metallicDropdown;
-    //public Dropdown emissionDropdown;
-    //public Dropdown smoothnessDropdown;
 
     void Start()
     {
@@ -51,9 +45,6 @@ public class MaterialMapsChange : MonoBehaviour
         gameObject.GetComponent<MeshFilter>().mesh = modelList[0];
 
         CoppleDropdownList();
-        //CoppleDropdownListmatellicMaps();
-        //CoppleDropdownListEmissionMaps();
-        //CoppleDropdownListSmoothness();
     }
 
     void Update()
@@ -110,11 +101,11 @@ public class MaterialMapsChange : MonoBehaviour
         Debug.Log(alphasList[amount].texture);
     }
 
-    public void ChangeMatelValue(int list)
+    public void ChangeOneSliderValue(int list)
     {
-        Slider matel = oneSliderList[list].slider;
+        Slider one = oneSliderList[list].slider;
 
-        mesh.material.SetFloat(oneSliderList[list].nameShader, matel.value);
+        mesh.material.SetFloat(oneSliderList[list].nameShader, one.value);
     }
     //emission Maps
     public void SwitchEmissionMap(int amount)
@@ -122,12 +113,26 @@ public class MaterialMapsChange : MonoBehaviour
         mesh.material.SetTexture(emissionName, alphasList[amount].texture);
         Debug.Log(emissionName);
     }
+
     //smoothness maps
     public void SwitchSmoothnessMap(int amount)
     {
         mesh.material.SetTexture(smoothnessName, alphasList[amount].texture);
         Debug.Log(smoothnessName);
     }
+    //Normal maps
+    public void SwitchNormalMap(int amount)
+    {
+        mesh.material.SetTexture(normalName, alphasList[amount].texture);
+        Debug.Log(normalName);
+    }
+    //Ambient Occulusion
+    public void SwitchAmbientOcclusion(int amount)
+    {
+        mesh.material.SetTexture(ambientOcclusionName, alphasList[amount].texture);
+        Debug.Log(ambientOcclusionName);
+    }
+
     //iets met de muis en de slider
 
     //droplist difred albedo
@@ -143,36 +148,6 @@ public class MaterialMapsChange : MonoBehaviour
             dropDown.AddOptions(fillName);
         }
     }
-
-    /*
-    public void CoppleDropdownListmatellicMaps()
-    {
-        List<string> tempName = new List<string>();
-        foreach (var itemName in alphasList)
-        {
-            tempName.Add(itemName.name);
-        }
-        metallicDropdown.AddOptions(tempName);
-    }
-    public void CoppleDropdownListEmissionMaps()
-    {
-        List<string> vs = new List<string>();
-        foreach (var item in alphasList)
-        {
-            vs.Add(item.name);
-        }
-        emissionDropdown.AddOptions(vs);
-    }
-    public void CoppleDropdownListSmoothness()
-    {
-        List<string> vs = new List<string>();
-        foreach (var item in alphasList)
-        {
-            vs.Add(item.name);
-        }
-        smoothnessDropdown.AddOptions(vs);
-    }
-
     //invert the bool
     public void InvertBoolian(int whichOne)
     {
@@ -187,8 +162,7 @@ public class MaterialMapsChange : MonoBehaviour
             mesh.material.SetInt(invertBoolList[whichOne].boolNameShader, invertBoolList[whichOne].invert);
         }
     }
-    */
-    
+
     //albedo
     [System.Serializable]
     public class NamedTexture
@@ -226,35 +200,4 @@ public class MaterialMapsChange : MonoBehaviour
         public string boolNameShader;
 
     }
-
-    /*
-    ///
-    invert bool list //cons
-    copple names to list
-    ///
-    function knop
-    die juiste aanropet
-    revert
-    ///
-
-
-    public void SwitchMat()
-    {
-        if (gameObject.GetComponent<InteractionMaterialChanger>().mayMatChange == true)
-        {
-            if (mesh.sharedMaterial == mat1)
-            {
-                mesh.material = mat2;
-            }
-            else
-            {
-                mesh.material = mat1;
-            }
-        }
-    }
-
-
-}
-
-    */
 }
