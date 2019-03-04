@@ -6,7 +6,6 @@ public class MaterialMapsChange : MonoBehaviour
 {
     //JELMER BEDOELD MET ALPHAS DE TEXTURE MAPS
     Renderer mesh;
-    MeshRenderer RMesh;
     int currIndex;
 
     [Header("Rotation")]
@@ -40,7 +39,6 @@ public class MaterialMapsChange : MonoBehaviour
     void Start()
     {
         mesh = GetComponent<Renderer>();
-        RMesh = GetComponent<MeshRenderer>();
         startRot = gameObject.transform.rotation;
         gameObject.GetComponent<MeshFilter>().mesh = modelList[0];
 
