@@ -389,11 +389,11 @@ MonoBehaviour:
     m_NumColorKeys: 8
     m_NumAlphaKeys: 2
   albedoName: Texture2D_121FAB6
-  metallicName: Texture2D_4062675
-  emissionName: Texture2D_4C521A2
-  smoothnessName: Texture2D_277D805
-  normalName: Texture2D_B766188
-  ambientOcclusionName: Texture2D_EA105EF
+  metallicName: Texture2D_40626755
+  emissionName: Texture2D_4C521A2B
+  smoothnessName: Texture2D_277D8050
+  normalName: Texture2D_B766188D
+  ambientOcclusionName: Texture2D_EA105EFC
   alphaDorpdownList:
   - {fileID: 0}
   - {fileID: 0}
