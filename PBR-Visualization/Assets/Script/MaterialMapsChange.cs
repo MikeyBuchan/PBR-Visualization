@@ -4,8 +4,8 @@ using UnityEngine;
 using UnityEngine.UI;
 public class MaterialMapsChange : MonoBehaviour
 {
-    //JELMER BEDOELD MET ALPHAS DE TEXTURE MAPS
     Renderer mesh;
+    MeshRenderer RMesh;
     int currIndex;
 
     [Header("Rotation")]
@@ -14,8 +14,8 @@ public class MaterialMapsChange : MonoBehaviour
     Quaternion startRot;
 
     [Header("lists")]
-    public List<Mesh> modelList = new List<Mesh>();
-    public List<NamedTexture> alphasList = new List<NamedTexture>();
+    public List<SwitchModel> modelList = new List<SwitchModel>();
+
 
     public List<InvertBoolClass> invertBoolList = new List<InvertBoolClass>();
 
@@ -39,10 +39,13 @@ public class MaterialMapsChange : MonoBehaviour
     void Start()
     {
         mesh = GetComponent<Renderer>();
+        RMesh = GetComponent<MeshRenderer>();
         startRot = gameObject.transform.rotation;
-        gameObject.GetComponent<MeshFilter>().mesh = modelList[0];
+        gameObject.GetComponent<MeshFilter>().mesh = modelList[currIndex].model;
 
         CoppleDropdownList();
+
+        mesh.material.EnableKeyword(metallicName);
     }
 
     void Update()
@@ -73,12 +76,24 @@ public class MaterialMapsChange : MonoBehaviour
         {
             currIndex = 0;
         }
-        transform.GetComponent<MeshFilter>().mesh = modelList[currIndex];
+        transform.GetComponent<MeshFilter>().mesh = modelList[currIndex].model;
+        CoppleDropdownList();
+        ResetStuff(5);
     }
+    void ResetStuff(int i)
+    {
+        SwitchMaterialMap(i);
+        SwitchMatelicMap(i);
+        SwitchEmissionMap(i);
+        SwitchSmoothnessMap(i);
+        SwitchNormalMap(i);
+        SwitchAmbientOcclusion(i);
+    }
+
     //albedo Maps
     public void SwitchMaterialMap(int amount)
     {
-        mesh.material.SetTexture(albedoName, alphasList[amount].texture);
+        mesh.material.SetTexture(albedoName, modelList[currIndex].alphasList[amount].texture);
         Debug.Log(albedoName);
     }
 
@@ -94,9 +109,9 @@ public class MaterialMapsChange : MonoBehaviour
     //matelic Maps
     public void SwitchMatelicMap(int amount)
     {
-        mesh.material.SetTexture(metallicName, alphasList[amount].texture);
+        mesh.material.SetTexture(metallicName, modelList[currIndex].alphasList[amount].texture);
         Debug.Log(metallicName);
-        Debug.Log(alphasList[amount].texture);
+        Debug.Log(modelList[currIndex].alphasList[amount].texture);
     }
 
     public void ChangeOneSliderValue(int list)
@@ -108,26 +123,26 @@ public class MaterialMapsChange : MonoBehaviour
     //emission Maps
     public void SwitchEmissionMap(int amount)
     {
-        mesh.material.SetTexture(emissionName, alphasList[amount].texture);
+        mesh.material.SetTexture(emissionName, modelList[currIndex].alphasList[amount].texture);
         Debug.Log(emissionName);
     }
 
     //smoothness maps
     public void SwitchSmoothnessMap(int amount)
     {
-        mesh.material.SetTexture(smoothnessName, alphasList[amount].texture);
+        mesh.material.SetTexture(smoothnessName, modelList[currIndex].alphasList[amount].texture);
         Debug.Log(smoothnessName);
     }
     //Normal maps
     public void SwitchNormalMap(int amount)
     {
-        mesh.material.SetTexture(normalName, alphasList[amount].texture);
+        mesh.material.SetTexture(normalName, modelList[currIndex].alphasList[amount].texture);
         Debug.Log(normalName);
     }
     //Ambient Occulusion
     public void SwitchAmbientOcclusion(int amount)
     {
-        mesh.material.SetTexture(ambientOcclusionName, alphasList[amount].texture);
+        mesh.material.SetTexture(ambientOcclusionName, modelList[currIndex].alphasList[amount].texture);
         Debug.Log(ambientOcclusionName);
     }
 
@@ -137,13 +152,15 @@ public class MaterialMapsChange : MonoBehaviour
     public void CoppleDropdownList()
     {
         List<string> fillName = new List<string>();
-        foreach (var name in alphasList)
+        foreach (var name in modelList[currIndex].alphasList)
         {
             fillName.Add(name.name);
         }
         foreach (var dropDown in alphaDorpdownList)
         {
+            dropDown.ClearOptions();
             dropDown.AddOptions(fillName);
+            dropDown.value = 5;
         }
     }
     //invert the bool
@@ -198,4 +215,13 @@ public class MaterialMapsChange : MonoBehaviour
         public string boolNameShader;
 
     }
+    //switch model
+    [System.Serializable]
+    public class SwitchModel
+    {
+        public Mesh model;
+        public List<NamedTexture> alphasList = new List<NamedTexture>();
+
+    }
+
 }

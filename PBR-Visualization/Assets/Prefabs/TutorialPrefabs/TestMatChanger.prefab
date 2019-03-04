@@ -287,15 +287,48 @@ MonoBehaviour:
   speed: 250
   lerpSpeed: 10
   modelList:
-  - {fileID: 4300000, guid: d936d38471cc54d4e9863d7241017c15, type: 3}
-  - {fileID: 4300000, guid: 7d7b64c6021be4749b73eb5e0952e1db, type: 3}
-  alphasList:
-  - name: Alpha1
-    texture: {fileID: 2800000, guid: 8c0e5da73a9b10e4ebb26c68326fee48, type: 3}
-  - name: Alpha2
-    texture: {fileID: 2800000, guid: 59fb81ed703947c47a17786dcbcf9a62, type: 3}
-  - name: Alpha3
-    texture: {fileID: 2800000, guid: b321403fffe39cf44a08f87956a92d58, type: 3}
+  - model: {fileID: 4300000, guid: d936d38471cc54d4e9863d7241017c15, type: 3}
+    alphasList:
+    - name: Stripes
+      texture: {fileID: 2800000, guid: 813a968e5abceeb409fda28d2cc2667a, type: 3}
+    - name: WallPaper
+      texture: {fileID: 2800000, guid: 78d7bf28e19d4a441b4b0a3a4e7cf9dd, type: 3}
+    - name: Lines
+      texture: {fileID: 2800000, guid: 1c004e7f86985f243ba35e7882a4e91e, type: 3}
+    - name: Center
+      texture: {fileID: 2800000, guid: 2451df20e21609144a25ef14277063ac, type: 3}
+    - name: Scratches
+      texture: {fileID: 2800000, guid: d9f7516eccaebbb4bb2d92f6cfd77aca, type: 3}
+    - name: None
+      texture: {fileID: 0}
+  - model: {fileID: 4300000, guid: 7d7b64c6021be4749b73eb5e0952e1db, type: 3}
+    alphasList:
+    - name: Celtic
+      texture: {fileID: 2800000, guid: 2082ab248c0dbec479424efb20c52826, type: 3}
+    - name: Cross
+      texture: {fileID: 2800000, guid: 456a2791a212cd149b55e31eda113178, type: 3}
+    - name: Edges
+      texture: {fileID: 2800000, guid: 11552656a31825b45909bbd7915be086, type: 3}
+    - name: Scratches
+      texture: {fileID: 2800000, guid: 64603139dc41d42408f71807dab84c96, type: 3}
+    - name: Wheel
+      texture: {fileID: 2800000, guid: 3eef533f8016251448c0399347d312b3, type: 3}
+    - name: None
+      texture: {fileID: 0}
+  - model: {fileID: 4300000, guid: 671397beebed3b941be193a97577c994, type: 3}
+    alphasList:
+    - name: Hive
+      texture: {fileID: 2800000, guid: 1eecf6b38115ace428d4bc704fbe77e5, type: 3}
+    - name: Marble
+      texture: {fileID: 2800000, guid: 57423f795b59167469a67dac09a177c7, type: 3}
+    - name: Scratches
+      texture: {fileID: 2800000, guid: 415431cd231e7bd49bea433cd2015a06, type: 3}
+    - name: BlackAndWhite
+      texture: {fileID: 2800000, guid: c9e57064a4b4a8348a1840108041d7cd, type: 3}
+    - name: Edges
+      texture: {fileID: 2800000, guid: ab1ec54585572684aaf88657b016c378, type: 3}
+    - name: None
+      texture: {fileID: 0}
   invertBoolList:
   - invert: 0
     boolNameShader: Vector1_12BB3F07
@@ -313,7 +346,7 @@ MonoBehaviour:
     shaderName: Color_D2C589B7
   - slider: {fileID: 0}
     amount: {fileID: 0}
-    shaderName: Color_6146DE66
+    shaderName: Color_6416DE66
   - slider: {fileID: 0}
     amount: {fileID: 0}
     shaderName: Color_86E9141

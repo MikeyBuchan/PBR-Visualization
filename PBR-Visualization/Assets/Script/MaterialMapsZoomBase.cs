@@ -27,7 +27,6 @@ public class MaterialMapsZoomBase : MonoBehaviour
     public bool zoom = true;
 
     public List<GameObject> childeren = new List<GameObject>();
-    //list moddels
 
     [Header("UI")]
     public GameObject namePanel;
@@ -38,7 +37,11 @@ public class MaterialMapsZoomBase : MonoBehaviour
     //alouw the rotation
     public void Update()
     {
-        Debug.Log("zoom = " + zoom);
+        if (mayZoom == false)
+        {
+            Next();
+        }
+        Debug.Log("mayzoom = " + mayZoom);
         if (allowRotation)
         {
             Vector3 lookOffset = new Vector3((Input.mousePosition.x - (Screen.width / 2)) / Screen.width, (-Input.mousePosition.y - (Screen.height / 2)) / Screen.height, camRotationOfset);
@@ -75,11 +78,6 @@ public class MaterialMapsZoomBase : MonoBehaviour
         cameraBasePos = transform.position + baseCamAdjustment;
         standardcamRotation = interactCamera.transform.rotation;
         stoppingDis = 0.01f;
-
-        foreach (GameObject g in transform)
-        {
-            childeren.Add(g);
-        }
     }
     //zoom in and out
     public IEnumerator Spread(Vector3 v, bool b)
@@ -139,9 +137,17 @@ public class MaterialMapsZoomBase : MonoBehaviour
     //switch whit the button or arrow keys
     void Next()
     {
-        if (zoom == false)
+        if (Input.GetAxisRaw("Horizontal") > 0)
         {
-            //if input || knop
+            Debug.Log("Test right");
+            /*while (Vector3.Distance(interactCamera.transform.position, childeren[].transform.position) >= stoppingDis)
+            {
+                Debug.Log("test");
+            }*/
+        }
+        if (Input.GetAxisRaw("Horizontal") < 0)
+        {
+            Debug.Log("Test left");
         }
     }
 
