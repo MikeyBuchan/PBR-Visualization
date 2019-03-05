@@ -25,8 +25,10 @@ public class MaterialMapsZoomBase : MonoBehaviour
     Quaternion standardcamRotation;
     public bool mayZoom = true;
     public bool zoom = true;
+    public int myChildNumber;
+    bool maySwitchSmallBalls = false;
 
-    public List<GameObject> childeren = new List<GameObject>();
+    public List<Transform> childList = new List<Transform>();
 
     [Header("UI")]
     public GameObject namePanel;
@@ -34,13 +36,29 @@ public class MaterialMapsZoomBase : MonoBehaviour
     public GameObject extraDiscriptionPanel;
     public GameObject otherName;
 
+    //set values
+    void Start()
+    {
+        uiManager = GameObject.FindWithTag("UiManager");
+        interactCamera.SetActive(false);
+
+        cameraBasePos = transform.position + baseCamAdjustment;
+        standardcamRotation = interactCamera.transform.rotation;
+        stoppingDis = 0.01f;
+
+        foreach (Transform item in transform)
+        {
+            childList.Add(item);
+        }
+    }
     //alouw the rotation
     public void Update()
     {
-        if (mayZoom == false)
-        {
+       if (maySwitchSmallBalls == true)
+       {
             Next();
-        }
+       }
+
         Debug.Log("mayzoom = " + mayZoom);
         if (allowRotation)
         {
@@ -51,33 +69,25 @@ public class MaterialMapsZoomBase : MonoBehaviour
             interactCamera.transform.rotation = standardcamRotation;
     }
     //witch one is pressed and set the text
-    public void SeroundPress(string name, string info, string extraInfo, Transform t)
+    public void SeroundPress(int t)
     {
-        newPosCamera = t.position + adjustCam;
+        newPosCamera = childList[t].transform.position + adjustCam;
+        MaterialMapsZoom point = childList[t].GetComponent<MaterialMapsZoom>();
 
         if (mayZoom == true)
         {
-            namePanel.GetComponentInChildren<Text>().text = name;
-            discriptionPanel.GetComponentInChildren<Text>().text = info;
-            extraDiscriptionPanel.GetComponentInChildren<Text>().text = extraInfo;
-            otherName.GetComponentInChildren<Text>().text = name;
+            namePanel.GetComponentInChildren<Text>().text = point.nameObj;
+            discriptionPanel.GetComponentInChildren<Text>().text = point.infoObj;
+            extraDiscriptionPanel.GetComponentInChildren<Text>().text = point.extraInfoObj;
+            otherName.GetComponentInChildren<Text>().text = point.nameObj;
 
             if (zoom == true)
             {
-                StartCoroutine(Spread(newPosCamera,false));
+                StartCoroutine(Spread(newPosCamera, false));
                 zoom = false;
             }
         }
-    }
-    //set values
-    void Start()
-    {
-        uiManager = GameObject.FindWithTag("UiManager");
-        interactCamera.SetActive(false);
 
-        cameraBasePos = transform.position + baseCamAdjustment;
-        standardcamRotation = interactCamera.transform.rotation;
-        stoppingDis = 0.01f;
     }
     //zoom in and out
     public IEnumerator Spread(Vector3 v, bool b)
@@ -120,11 +130,14 @@ public class MaterialMapsZoomBase : MonoBehaviour
                 uiManager.GetComponent<UIManager>().advancedButton.SetActive(true);
                 uiManager.GetComponent<UIManager>().infoNormal.SetActive(true);
                 uiManager.GetComponent<UIManager>().zoomOutButton.SetActive(true);
-
+                mayZoom = !mayZoom;
             }
         }
+            maySwitchSmallBalls = !maySwitchSmallBalls;
+        
         zoom = !zoom;
     }
+
     //start te rotation back
     public void StartTheSpreadBack()
     {
@@ -137,17 +150,34 @@ public class MaterialMapsZoomBase : MonoBehaviour
     //switch whit the button or arrow keys
     void Next()
     {
-        if (Input.GetAxisRaw("Horizontal") > 0)
+        if (Input.GetAxisRaw("Horizontal") > 0 && Input.GetButtonDown("Horizontal"))
         {
-            Debug.Log("Test right");
-            /*while (Vector3.Distance(interactCamera.transform.position, childeren[].transform.position) >= stoppingDis)
+            Debug.Log(myChildNumber + "Right");
+            if (myChildNumber < childList.Count)
             {
-                Debug.Log("test");
-            }*/
+                myChildNumber++;
+                SeroundPress(myChildNumber);
+            }
+            else
+            {
+                myChildNumber = 0;
+                SeroundPress(myChildNumber);
+            }
+
         }
-        if (Input.GetAxisRaw("Horizontal") < 0)
+        if (Input.GetAxisRaw("Horizontal") < 0 && Input.GetButtonDown("Horizontal"))
         {
             Debug.Log("Test left");
+            if (myChildNumber > 0)
+            {
+                myChildNumber--;
+                SeroundPress(myChildNumber);
+            }
+            else
+            {
+                myChildNumber = childList.Count;
+                SeroundPress(myChildNumber);
+            }
         }
     }
 

@@ -86,11 +86,6 @@ public class UIManager : MonoBehaviour
         backToPlayerButton.SetActive(false);
     }
 
-    public void ButtonSwitchMat()
-    {
-       // mChange.GetComponent<MaterialMapsChange>().SwitchMat();
-    }
-
     public void ButtonModelSwitch()
     {
         mChange.GetComponent<MaterialMapsChange>().ChangeModel();

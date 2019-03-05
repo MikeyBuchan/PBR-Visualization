@@ -16,7 +16,6 @@ public class MaterialMapsChange : MonoBehaviour
     [Header("lists")]
     public List<SwitchModel> modelList = new List<SwitchModel>();
 
-
     public List<InvertBoolClass> invertBoolList = new List<InvertBoolClass>();
 
     public List<Sliders> sliderList = new List<Sliders>();
@@ -94,7 +93,6 @@ public class MaterialMapsChange : MonoBehaviour
     public void SwitchMaterialMap(int amount)
     {
         mesh.material.SetTexture(albedoName, modelList[currIndex].alphasList[amount].texture);
-        Debug.Log(albedoName);
     }
 
     public void ChangeSliderColor(int listNeeded)
@@ -110,8 +108,6 @@ public class MaterialMapsChange : MonoBehaviour
     public void SwitchMatelicMap(int amount)
     {
         mesh.material.SetTexture(metallicName, modelList[currIndex].alphasList[amount].texture);
-        Debug.Log(metallicName);
-        Debug.Log(modelList[currIndex].alphasList[amount].texture);
     }
 
     public void ChangeOneSliderValue(int list)
@@ -124,26 +120,22 @@ public class MaterialMapsChange : MonoBehaviour
     public void SwitchEmissionMap(int amount)
     {
         mesh.material.SetTexture(emissionName, modelList[currIndex].alphasList[amount].texture);
-        Debug.Log(emissionName);
     }
 
     //smoothness maps
     public void SwitchSmoothnessMap(int amount)
     {
         mesh.material.SetTexture(smoothnessName, modelList[currIndex].alphasList[amount].texture);
-        Debug.Log(smoothnessName);
     }
     //Normal maps
     public void SwitchNormalMap(int amount)
     {
         mesh.material.SetTexture(normalName, modelList[currIndex].alphasList[amount].texture);
-        Debug.Log(normalName);
     }
     //Ambient Occulusion
     public void SwitchAmbientOcclusion(int amount)
     {
         mesh.material.SetTexture(ambientOcclusionName, modelList[currIndex].alphasList[amount].texture);
-        Debug.Log(ambientOcclusionName);
     }
 
     //iets met de muis en de slider

@@ -10,9 +10,11 @@ public class MaterialMapsZoom : MonoBehaviour
     public string nameObj, infoObj, extraInfoObj;
 
     public Material normalMaterial,hightLightMaterial;
+    public int myNumber;
 
     public float lerpSpeed;
     Quaternion startRotation;
+    
 
     void Start()
     {
@@ -51,8 +53,9 @@ public class MaterialMapsZoom : MonoBehaviour
         {
             if (Input.GetButtonDown("Fire1"))
             {
-                baseClass.SeroundPress(nameObj, infoObj, extraInfoObj, transform);
+                baseClass.SeroundPress(myNumber);
                 GetComponent<Renderer>().material = normalMaterial;
+                baseClass.myChildNumber = myNumber;
             }
         }
     }
