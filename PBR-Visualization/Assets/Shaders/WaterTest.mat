@@ -7,8 +7,8 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Portal
-  m_Shader: {fileID: 4800000, guid: 1b21c1fcaa2d30b4b892184596cb60de, type: 3}
+  m_Name: WaterTest
+  m_Shader: {fileID: 4800000, guid: c140b508d9c96754986f33440e0af7f4, type: 3}
   m_ShaderKeywords: 
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
@@ -19,10 +19,6 @@ Material:
   m_SavedProperties:
     serializedVersion: 3
     m_TexEnvs:
-    - Texture2D_7FFAB:
-        m_Texture: {fileID: 2800000, guid: a367624131e72a8489e37af23fe53b7d, type: 3}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
     - _AnisotropyMap:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
@@ -108,7 +104,6 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     m_Floats:
-    - Vector1_3B41624B: 0.24
     - _AORemapMax: 1
     - _AORemapMin: 0
     - _ATDistance: 1
@@ -219,8 +214,10 @@ Material:
     - _ZTestModeDistortion: 8
     - _ZWrite: 1
     m_Colors:
-    - Color_49BEF708: {r: 1, g: 1, b: 1, a: 0}
-    - Color_B396596C: {r: 0, g: 2.3843138, b: 2.9960785, a: 0}
+    - Color_5665FB7F: {r: 0.14631541, g: 0.18102528, b: 0.2264151, a: 0}
+    - Color_B7DCAE5: {r: 0.080382355, g: 0.3741434, b: 1.5491871, a: 0}
+    - Color_C7E45F33: {r: 0.120149516, g: 0.23745404, b: 0.33962262, a: 1}
+    - Color_D0892602: {r: 0.1792453, g: 0.1466005, b: 0.14627092, a: 0}
     - _BaseColor: {r: 1, g: 1, b: 1, a: 1}
     - _Color: {r: 1, g: 1, b: 1, a: 1}
     - _DoubleSidedConstants: {r: 1, g: 1, b: -1, a: 0}
