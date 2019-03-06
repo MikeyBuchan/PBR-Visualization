@@ -58,7 +58,7 @@ public class MaterialMapsZoomBase : MonoBehaviour
        {
             Next();
        }
-
+        Debug.Log("zoom = " + zoom);
         Debug.Log("mayzoom = " + mayZoom);
         if (allowRotation)
         {
@@ -73,6 +73,7 @@ public class MaterialMapsZoomBase : MonoBehaviour
     {
         newPosCamera = childList[t].transform.position + adjustCam;
         MaterialMapsZoom point = childList[t].GetComponent<MaterialMapsZoom>();
+        Debug.Log(newPosCamera);
 
         if (mayZoom == true)
         {
@@ -105,7 +106,6 @@ public class MaterialMapsZoomBase : MonoBehaviour
                 uiManager.GetComponent<UIManager>().advancedButton.SetActive(true);
                 uiManager.GetComponent<UIManager>().infoNormal.SetActive(true);
                 uiManager.GetComponent<UIManager>().zoomOutButton.SetActive(true);
-
             }
         }
 
@@ -130,11 +130,11 @@ public class MaterialMapsZoomBase : MonoBehaviour
                 uiManager.GetComponent<UIManager>().advancedButton.SetActive(true);
                 uiManager.GetComponent<UIManager>().infoNormal.SetActive(true);
                 uiManager.GetComponent<UIManager>().zoomOutButton.SetActive(true);
-                mayZoom = !mayZoom;
             }
-        }
-            maySwitchSmallBalls = !maySwitchSmallBalls;
         
+        }
+
+        maySwitchSmallBalls = true;
         zoom = !zoom;
     }
 
@@ -144,40 +144,22 @@ public class MaterialMapsZoomBase : MonoBehaviour
         if (zoom == true)
         {
             StartCoroutine(Spread(cameraBasePos,true));
+
         }
     }
 
     //switch whit the button or arrow keys
     void Next()
     {
-        if (Input.GetAxisRaw("Horizontal") > 0 && Input.GetButtonDown("Horizontal"))
+        if (Input.GetButtonDown("Horizontal"))
         {
-            Debug.Log(myChildNumber + "Right");
-            if (myChildNumber < childList.Count)
-            {
-                myChildNumber++;
-                SeroundPress(myChildNumber);
-            }
-            else
-            {
+            myChildNumber += ((Input.GetAxisRaw("Horizontal") > 0) ? 1 : -1);
+            if (myChildNumber >= childList.Count)
                 myChildNumber = 0;
-                SeroundPress(myChildNumber);
-            }
-
-        }
-        if (Input.GetAxisRaw("Horizontal") < 0 && Input.GetButtonDown("Horizontal"))
-        {
-            Debug.Log("Test left");
-            if (myChildNumber > 0)
-            {
-                myChildNumber--;
-                SeroundPress(myChildNumber);
-            }
-            else
-            {
-                myChildNumber = childList.Count;
-                SeroundPress(myChildNumber);
-            }
+            else if (myChildNumber < 0)
+                myChildNumber = childList.Count - 1;
+            SeroundPress(myChildNumber);
+            Debug.Log(myChildNumber);
         }
     }
 
