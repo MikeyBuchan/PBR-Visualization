@@ -72,21 +72,22 @@ public class MaterialMapsZoomBase : MonoBehaviour
     public void SeroundPress(int t)
     {
         newPosCamera = childList[t].transform.position + adjustCam;
-        MaterialMapsZoom point = childList[t].GetComponent<MaterialMapsZoom>();
+        MaterialMapsZoom MMZ = childList[t].GetComponent<MaterialMapsZoom>();
         Debug.Log(newPosCamera);
 
         if (mayZoom == true)
         {
-            namePanel.GetComponentInChildren<Text>().text = point.nameObj;
-            discriptionPanel.GetComponentInChildren<Text>().text = point.infoObj;
-            extraDiscriptionPanel.GetComponentInChildren<Text>().text = point.extraInfoObj;
-            otherName.GetComponentInChildren<Text>().text = point.nameObj;
+            namePanel.GetComponentInChildren<Text>().text = MMZ.nameObj;
+            discriptionPanel.GetComponentInChildren<Text>().text = MMZ.infoObj;
+            extraDiscriptionPanel.GetComponentInChildren<Text>().text = MMZ.extraInfoObj;
+            otherName.GetComponentInChildren<Text>().text = MMZ.nameObj;
 
-            if (zoom == true)
-            {
-                StartCoroutine(Spread(newPosCamera, false));
-                zoom = false;
-            }
+
+        }
+        if (zoom == true)
+        {
+            StartCoroutine(Spread(newPosCamera, false));
+            zoom = false;
         }
 
     }
@@ -98,6 +99,7 @@ public class MaterialMapsZoomBase : MonoBehaviour
             GameObject panel = uiManager.GetComponent<UIManager>().infoAllPbr;
             panel.SetActive(!panel.activeSelf);
             mayZoom = !mayZoom;
+            zoom = !zoom;
 
             GameObject g = uiManager.GetComponent<UIManager>().backToPlayerButton;
             g.SetActive(!g.activeSelf);
@@ -121,7 +123,8 @@ public class MaterialMapsZoomBase : MonoBehaviour
         {
             GameObject panel = uiManager.GetComponent<UIManager>().infoAllPbr;
             panel.SetActive(!panel.activeSelf);
-            mayZoom = !mayZoom;
+            mayZoom = true;//!mayZoom;
+            zoom = true;//!zoom;
 
             GameObject g = uiManager.GetComponent<UIManager>().backToPlayerButton;
             g.SetActive(!g.activeSelf);
@@ -135,7 +138,6 @@ public class MaterialMapsZoomBase : MonoBehaviour
         }
 
         maySwitchSmallBalls = true;
-        zoom = !zoom;
     }
 
     //start te rotation back
