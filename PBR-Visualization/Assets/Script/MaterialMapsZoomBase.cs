@@ -100,6 +100,7 @@ public class MaterialMapsZoomBase : MonoBehaviour
             panel.SetActive(!panel.activeSelf);
             mayZoom = !mayZoom;
             zoom = !zoom;
+            maySwitchSmallBalls = false;
 
             GameObject g = uiManager.GetComponent<UIManager>().backToPlayerButton;
             g.SetActive(!g.activeSelf);
@@ -125,6 +126,7 @@ public class MaterialMapsZoomBase : MonoBehaviour
             panel.SetActive(!panel.activeSelf);
             mayZoom = true;//!mayZoom;
             zoom = true;//!zoom;
+            maySwitchSmallBalls = true;
 
             GameObject g = uiManager.GetComponent<UIManager>().backToPlayerButton;
             g.SetActive(!g.activeSelf);
@@ -136,8 +138,6 @@ public class MaterialMapsZoomBase : MonoBehaviour
             }
         
         }
-
-        maySwitchSmallBalls = true;
     }
 
     //start te rotation back
@@ -164,6 +164,7 @@ public class MaterialMapsZoomBase : MonoBehaviour
                     myChildNumber = childList.Count - 1;
                 SeroundPress(myChildNumber);
                 Debug.Log(myChildNumber);
+                //moet nog iets voor als je op index 0 inzoomd en dan naar index 6 gaat
             }
         }
     }
