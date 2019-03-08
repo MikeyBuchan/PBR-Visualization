@@ -153,15 +153,18 @@ public class MaterialMapsZoomBase : MonoBehaviour
     //switch whit the button or arrow keys
     void Next()
     {
-        if (Input.GetButtonDown("Horizontal"))
+        if (maySwitchSmallBalls == true)
         {
-            myChildNumber += ((Input.GetAxisRaw("Horizontal") > 0) ? 1 : -1);
-            if (myChildNumber >= childList.Count)
-                myChildNumber = 0;
-            else if (myChildNumber < 0)
-                myChildNumber = childList.Count - 1;
-            SeroundPress(myChildNumber);
-            Debug.Log(myChildNumber);
+            if (Input.GetButtonDown("Horizontal"))
+            {
+                myChildNumber += ((Input.GetAxisRaw("Horizontal") > 0) ? 1 : -1);
+                if (myChildNumber >= childList.Count)
+                    myChildNumber = 0;
+                else if (myChildNumber < 0)
+                    myChildNumber = childList.Count - 1;
+                SeroundPress(myChildNumber);
+                Debug.Log(myChildNumber);
+            }
         }
     }
 
