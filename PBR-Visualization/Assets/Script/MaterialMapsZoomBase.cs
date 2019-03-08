@@ -98,8 +98,8 @@ public class MaterialMapsZoomBase : MonoBehaviour
         {
             GameObject panel = uiManager.GetComponent<UIManager>().infoAllPbr;
             panel.SetActive(!panel.activeSelf);
-            mayZoom = !mayZoom;
-            zoom = !zoom;
+            mayZoom = true;//!mayZoom;
+            zoom = true;//!zoom;
             maySwitchSmallBalls = false;
 
             GameObject g = uiManager.GetComponent<UIManager>().backToPlayerButton;
@@ -138,6 +138,11 @@ public class MaterialMapsZoomBase : MonoBehaviour
             }
         
         }
+
+        if(zoom == false)
+        {
+            zoom = true;
+        }
     }
 
     //start te rotation back
@@ -146,7 +151,7 @@ public class MaterialMapsZoomBase : MonoBehaviour
         if (zoom == true)
         {
             StartCoroutine(Spread(cameraBasePos,true));
-
+            zoom = false;
         }
     }
 
