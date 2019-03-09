@@ -24,7 +24,7 @@ public class MaterialMapsZoom : MonoBehaviour
 
     void Update()
     {
-        if (baseClass.mayZoom == false)
+        if (baseClass.zoom/*mayZoom*/ == false)
         {
             RotateObject();
         }

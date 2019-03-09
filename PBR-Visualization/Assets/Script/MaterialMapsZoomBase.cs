@@ -23,10 +23,11 @@ public class MaterialMapsZoomBase : MonoBehaviour
     [HideInInspector]
     public bool allowRotation = false;
     Quaternion standardcamRotation;
-    public bool mayZoom = true;
+
     public bool zoom = true;
-    public int myChildNumber;
     bool maySwitchSmallBalls = false;
+
+    public int myChildNumber;
 
     public List<Transform> childList = new List<Transform>();
 
@@ -54,12 +55,11 @@ public class MaterialMapsZoomBase : MonoBehaviour
     //alouw the rotation
     public void Update()
     {
-       if (maySwitchSmallBalls == true)
-       {
+        if (maySwitchSmallBalls == true)
+        {
             Next();
-       }
+        }
         Debug.Log("zoom = " + zoom);
-        Debug.Log("mayzoom = " + mayZoom);
         if (allowRotation)
         {
             Vector3 lookOffset = new Vector3((Input.mousePosition.x - (Screen.width / 2)) / Screen.width, (-Input.mousePosition.y - (Screen.height / 2)) / Screen.height, camRotationOfset);
@@ -75,15 +75,12 @@ public class MaterialMapsZoomBase : MonoBehaviour
         MaterialMapsZoom MMZ = childList[t].GetComponent<MaterialMapsZoom>();
         Debug.Log(newPosCamera);
 
-        if (mayZoom == true)
-        {
-            namePanel.GetComponentInChildren<Text>().text = MMZ.nameObj;
-            discriptionPanel.GetComponentInChildren<Text>().text = MMZ.infoObj;
-            extraDiscriptionPanel.GetComponentInChildren<Text>().text = MMZ.extraInfoObj;
-            otherName.GetComponentInChildren<Text>().text = MMZ.nameObj;
+        //if
+        namePanel.GetComponentInChildren<Text>().text = MMZ.nameObj;
+        discriptionPanel.GetComponentInChildren<Text>().text = MMZ.infoObj;
+        extraDiscriptionPanel.GetComponentInChildren<Text>().text = MMZ.extraInfoObj;
+        otherName.GetComponentInChildren<Text>().text = MMZ.nameObj;
 
-
-        }
         if (zoom == true)
         {
             StartCoroutine(Spread(newPosCamera, false));
@@ -97,10 +94,11 @@ public class MaterialMapsZoomBase : MonoBehaviour
         if (b)
         {
             GameObject panel = uiManager.GetComponent<UIManager>().infoAllPbr;
-            panel.SetActive(!panel.activeSelf);
-            mayZoom = true;//!mayZoom;
-            zoom = true;//!zoom;
+            panel.SetActive(false); //panel.SetActive(!panel.activeSelf);
+            zoom = true;
             maySwitchSmallBalls = false;
+
+            Debug.Log("panel 2 =" + panel.activeSelf);
 
             GameObject g = uiManager.GetComponent<UIManager>().backToPlayerButton;
             g.SetActive(!g.activeSelf);
@@ -123,10 +121,11 @@ public class MaterialMapsZoomBase : MonoBehaviour
         if (!b)
         {
             GameObject panel = uiManager.GetComponent<UIManager>().infoAllPbr;
-            panel.SetActive(!panel.activeSelf);
-            mayZoom = true;//!mayZoom;
-            zoom = true;//!zoom;
+            panel.SetActive(true);
+            zoom = true;
             maySwitchSmallBalls = true;
+
+            Debug.Log("panel 1 =" + panel.activeSelf);
 
             GameObject g = uiManager.GetComponent<UIManager>().backToPlayerButton;
             g.SetActive(!g.activeSelf);
@@ -138,8 +137,7 @@ public class MaterialMapsZoomBase : MonoBehaviour
             }
         
         }
-
-        if(zoom == false)
+        if (zoom == false)
         {
             zoom = true;
         }
@@ -170,6 +168,7 @@ public class MaterialMapsZoomBase : MonoBehaviour
                 SeroundPress(myChildNumber);
                 Debug.Log(myChildNumber);
                 //moet nog iets voor als je op index 0 inzoomd en dan naar index 6 gaat
+                //ook voor iest met index 5,6,0
             }
         }
     }

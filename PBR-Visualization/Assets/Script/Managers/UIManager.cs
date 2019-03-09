@@ -43,7 +43,6 @@ public class UIManager : MonoBehaviour
         if (advancedBool == false)
         {
             mBase.GetComponent<MaterialMapsZoomBase>().StartTheSpreadBack();
-            //mBase.GetComponent<MaterialMapsZoomBase>().zoom = false;
         }
     }
 
