@@ -16634,6 +16634,46 @@ PrefabInstance:
       propertyPath: otherName
       value: 
       objectReference: {fileID: 406169100973963511}
+    - target: {fileID: 4583862333674727839, guid: a2a4252d5eb8269439ffe24e66867baf,
+        type: 3}
+      propertyPath: nameObj
+      value: t6
+      objectReference: {fileID: 0}
+    - target: {fileID: 4583862333674727839, guid: a2a4252d5eb8269439ffe24e66867baf,
+        type: 3}
+      propertyPath: infoObj
+      value: hello6
+      objectReference: {fileID: 0}
+    - target: {fileID: 4583862333674727839, guid: a2a4252d5eb8269439ffe24e66867baf,
+        type: 3}
+      propertyPath: extraInfoObj
+      value: Extra Hello t6
+      objectReference: {fileID: 0}
+    - target: {fileID: 4583862333674727839, guid: a2a4252d5eb8269439ffe24e66867baf,
+        type: 3}
+      propertyPath: myNumber
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4583862335406566452, guid: a2a4252d5eb8269439ffe24e66867baf,
+        type: 3}
+      propertyPath: nameObj
+      value: t5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4583862335406566452, guid: a2a4252d5eb8269439ffe24e66867baf,
+        type: 3}
+      propertyPath: infoObj
+      value: hello5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4583862335406566452, guid: a2a4252d5eb8269439ffe24e66867baf,
+        type: 3}
+      propertyPath: extraInfoObj
+      value: Extra Hello t5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4583862335406566452, guid: a2a4252d5eb8269439ffe24e66867baf,
+        type: 3}
+      propertyPath: myNumber
+      value: 4
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a2a4252d5eb8269439ffe24e66867baf, type: 3}
 --- !u!1001 &4198577761062102464

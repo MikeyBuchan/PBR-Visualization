@@ -49,7 +49,10 @@ public class MaterialMapsZoomBase : MonoBehaviour
 
         foreach (Transform item in transform)
         {
-            childList.Add(item);
+            if (item.GetComponent<MaterialMapsZoom>())
+            {
+                childList.Add(item);
+            }
         }
     }
     //alouw the rotation
@@ -75,7 +78,6 @@ public class MaterialMapsZoomBase : MonoBehaviour
         MaterialMapsZoom MMZ = childList[t].GetComponent<MaterialMapsZoom>();
         Debug.Log(newPosCamera);
 
-        //if
         namePanel.GetComponentInChildren<Text>().text = MMZ.nameObj;
         discriptionPanel.GetComponentInChildren<Text>().text = MMZ.infoObj;
         extraDiscriptionPanel.GetComponentInChildren<Text>().text = MMZ.extraInfoObj;
@@ -167,8 +169,7 @@ public class MaterialMapsZoomBase : MonoBehaviour
                     myChildNumber = childList.Count - 1;
                 SeroundPress(myChildNumber);
                 Debug.Log(myChildNumber);
-                //moet nog iets voor als je op index 0 inzoomd en dan naar index 6 gaat
-                //ook voor iest met index 5,6,0
+
             }
         }
     }
