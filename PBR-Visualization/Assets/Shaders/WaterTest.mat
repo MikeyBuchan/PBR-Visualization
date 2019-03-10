@@ -8,7 +8,7 @@ Material:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: WaterTest
-  m_Shader: {fileID: 4800000, guid: c140b508d9c96754986f33440e0af7f4, type: 3}
+  m_Shader: {fileID: 4800000, guid: 59d8fe2d34467994ca2dd84627a3dc49, type: 3}
   m_ShaderKeywords: 
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
@@ -95,6 +95,14 @@ Material:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
+    - _Texture2DAsset_142D9_Out:
+        m_Texture: {fileID: 2800000, guid: 81d2efbdcccedba469bd62f103b85584, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _Texture2DAsset_9877A16F_Out:
+        m_Texture: {fileID: 2800000, guid: 8c803e3e85924bb42835bcbeb1b4be88, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
     - _ThicknessMap:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
@@ -104,6 +112,12 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     m_Floats:
+    - Vector1_18246E30: 0.43
+    - Vector1_98D81FEE: 5.78
+    - Vector1_ADF0863D: 2.23
+    - Vector1_AEF25112: 0.15
+    - Vector1_EE1D49B7: 0.73
+    - Vector1_F6A2E966: 1
     - _AORemapMax: 1
     - _AORemapMin: 0
     - _ATDistance: 1
@@ -214,9 +228,11 @@ Material:
     - _ZTestModeDistortion: 8
     - _ZWrite: 1
     m_Colors:
+    - Color_2C69D9AF: {r: 0.11307405, g: 0.118030235, b: 0.31132078, a: 0}
     - Color_5665FB7F: {r: 0.14631541, g: 0.18102528, b: 0.2264151, a: 0}
     - Color_B7DCAE5: {r: 0.080382355, g: 0.3741434, b: 1.5491871, a: 0}
     - Color_C7E45F33: {r: 0.120149516, g: 0.23745404, b: 0.33962262, a: 1}
+    - Color_CEB13A1B: {r: 0.7971698, g: 0.8006076, b: 1, a: 0}
     - Color_D0892602: {r: 0.1792453, g: 0.1466005, b: 0.14627092, a: 0}
     - _BaseColor: {r: 1, g: 1, b: 1, a: 1}
     - _Color: {r: 1, g: 1, b: 1, a: 1}
