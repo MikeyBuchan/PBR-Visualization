@@ -19,7 +19,7 @@ public class ChallengeManager : MonoBehaviour
     {
         var temp = Random.Range(0, challengeList.Count);
         currentChallenge = challengeList[temp];
-        uiString.GetComponent<Text>().text = currentChallenge;
+        uiString.GetComponent<Text>().text = "Challenge: " + currentChallenge;
     }
 
 }

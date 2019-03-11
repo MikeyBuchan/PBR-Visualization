@@ -99,6 +99,7 @@ public class MaterialMapsZoomBase : MonoBehaviour
             panel.SetActive(false); //panel.SetActive(!panel.activeSelf);
             zoom = true;
             maySwitchSmallBalls = false;
+            allowRotation = true;//
 
             Debug.Log("panel 2 =" + panel.activeSelf);
 
@@ -112,7 +113,7 @@ public class MaterialMapsZoomBase : MonoBehaviour
             }
         }
 
-        allowRotation = !allowRotation;
+        //allowRotation = !allowRotation;
         while (Vector3.Distance(interactCamera.transform.position, v) >= stoppingDis)
         {
             camMoveSpeed = speed * Time.deltaTime;
@@ -126,6 +127,7 @@ public class MaterialMapsZoomBase : MonoBehaviour
             panel.SetActive(true);
             zoom = true;
             maySwitchSmallBalls = true;
+            allowRotation = false;//
 
             Debug.Log("panel 1 =" + panel.activeSelf);
 
