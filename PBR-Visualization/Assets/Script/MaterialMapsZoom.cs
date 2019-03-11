@@ -51,12 +51,15 @@ public class MaterialMapsZoom : MonoBehaviour
     {
         if (GameObject.FindWithTag("Player").GetComponent<PlayerMove>().freeMove == false)
         {
-            if (Input.GetButtonDown("Fire1"))
+            if (baseClass.zoomdIn == false)
             {
-                baseClass.SeroundPress(myNumber);
-                GetComponent<Renderer>().material = normalMaterial;
-                baseClass.myChildNumber = myNumber;
-                baseClass.zoomdIn = true;
+                if (Input.GetButtonDown("Fire1"))
+                {
+                    baseClass.SeroundPress(myNumber);
+                    GetComponent<Renderer>().material = normalMaterial;
+                    baseClass.myChildNumber = myNumber;
+                    baseClass.zoomdIn = true;
+                }
             }
         }
     }

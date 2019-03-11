@@ -80,7 +80,6 @@ public class UIManager : MonoBehaviour
         mBase.GetComponent<MaterialMapsZoomBase>().interactCamera.SetActive(false);
         mBase.GetComponent<MaterialMapsZoomBase>().allowRotation = false;
         mainCamera.SetActive(true);
-
         infoAllPbr.SetActive(false);
 
         backToPlayerButton.SetActive(false);
