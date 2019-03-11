@@ -8,6 +8,7 @@ public class ChallengeManager : MonoBehaviour
     public string currentChallenge;
 
     public List<string> challengeList = new List<string>();
+
     public GameObject uiString;
 
     void Start()
@@ -18,6 +19,10 @@ public class ChallengeManager : MonoBehaviour
     public void RamdomChallenge()
     {
         var temp = Random.Range(0, challengeList.Count);
+        while (currentChallenge == challengeList[temp])
+        {
+            temp = Random.Range(0, challengeList.Count);
+        }
         currentChallenge = challengeList[temp];
         uiString.GetComponent<Text>().text = "Challenge: " + currentChallenge;
     }

@@ -24,7 +24,7 @@ public class MaterialMapsZoom : MonoBehaviour
 
     void Update()
     {
-        if (baseClass.zoom/*mayZoom*/ == true)
+        if (baseClass.zoomdIn/*mayZoom*/ == true)
         {
             RotateObject();
         }
@@ -56,6 +56,7 @@ public class MaterialMapsZoom : MonoBehaviour
                 baseClass.SeroundPress(myNumber);
                 GetComponent<Renderer>().material = normalMaterial;
                 baseClass.myChildNumber = myNumber;
+                baseClass.zoomdIn = true;
             }
         }
     }

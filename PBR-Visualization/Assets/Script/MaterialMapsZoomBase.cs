@@ -22,6 +22,7 @@ public class MaterialMapsZoomBase : MonoBehaviour
     float stoppingDis;
     [HideInInspector]
     public bool allowRotation = false;
+    public bool zoomdIn = false;
     Quaternion standardcamRotation;
 
     public bool zoom = true;
@@ -100,6 +101,7 @@ public class MaterialMapsZoomBase : MonoBehaviour
             zoom = true;
             maySwitchSmallBalls = false;
             allowRotation = true;//
+            zoomdIn = false;
 
             Debug.Log("panel 2 =" + panel.activeSelf);
 
