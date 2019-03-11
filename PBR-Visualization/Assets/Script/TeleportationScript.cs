@@ -1,15 +1,19 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class TeleportationScript : MonoBehaviour
 {
     public GameObject popUp;
+    public string sceneToLoad;
+
+    bool freeMonePlayer;
 
     private void Start()
     {
         popUp.SetActive(false);
+        freeMonePlayer = GameObject.FindWithTag("Player").GetComponent<PlayerMove>().freeMove;
     }
 
     private void OnCollisionEnter(Collision c)
@@ -18,7 +22,7 @@ public class TeleportationScript : MonoBehaviour
         {
             Debug.Log("col");
             popUp.SetActive(true);
-            
+            freeMonePlayer = false;
         }
     }
 
@@ -32,14 +36,16 @@ public class TeleportationScript : MonoBehaviour
         }
     }
 
-    void YesSwitch()
+    public void YesSwitch()
     {
         Debug.Log("YES PLZ");
+        SceneManager.LoadScene(sceneToLoad);
     }
 
-    void NoSwitch()
+    public void NoSwitch()
     {
         Debug.Log("NO PLZ");
         popUp.SetActive(false);
+        freeMonePlayer = false;
     }
 }
