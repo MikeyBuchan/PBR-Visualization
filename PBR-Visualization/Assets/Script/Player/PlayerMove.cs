@@ -7,6 +7,7 @@ public class PlayerMove : MonoBehaviour
     public float moveSpeed;
     Vector3 direction;
     public bool freeMove = true;
+    public AudioSource source;
 
     void Start()
     {
@@ -22,6 +23,10 @@ public class PlayerMove : MonoBehaviour
                 PLayerMovement();
             }
         }
+        if (Input.GetButtonDown("Horizontal") || Input.GetButtonDown("Vertical"))
+            source.enabled = true;
+        else if (Input.GetButtonUp("Horizontal") && !Input.GetButton("Vertical") || Input.GetButtonUp("Vertical") && !Input.GetButton("Horizontal"))
+            source.enabled = false;
     }
 
     void PLayerMovement()
