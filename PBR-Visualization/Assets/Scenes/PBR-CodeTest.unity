@@ -1217,6 +1217,7 @@ GameObject:
   m_Component:
   - component: {fileID: 118121007}
   - component: {fileID: 118121009}
+  - component: {fileID: 118121011}
   - component: {fileID: 118121008}
   - component: {fileID: 118121010}
   m_Layer: 5
@@ -1280,7 +1281,7 @@ MonoBehaviour:
       m_PersistentCalls:
         m_Calls:
         - m_Target: {fileID: 118121010}
-          m_MethodName: BoolInvertFunction
+          m_MethodName: BoolInvertFunctionFalse
           m_Mode: 1
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
@@ -1313,7 +1314,36 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 727850875d775d144a4027a18e7b6501, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mBase: {fileID: 1968090506}
+  switchMat: {fileID: 9059883402130549831}
+--- !u!114 &118121011
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 118121006}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -765806418, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 0.15294118}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  m_Sprite: {fileID: 0}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
 --- !u!1 &128469241
 GameObject:
   m_ObjectHideFlags: 0
