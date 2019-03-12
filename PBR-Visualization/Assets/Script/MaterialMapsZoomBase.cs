@@ -63,7 +63,10 @@ public class MaterialMapsZoomBase : MonoBehaviour
         {
             Next();
         }
-        Debug.Log("zoom = " + zoom);
+
+        //Debug.Log("zoom = " + zoom);
+        Debug.Log(allowRotation);
+
         if (allowRotation)
         {
             Vector3 lookOffset = new Vector3((Input.mousePosition.x - (Screen.width / 2)) / Screen.width, (-Input.mousePosition.y - (Screen.height / 2)) / Screen.height, camRotationOfset);
@@ -97,7 +100,7 @@ public class MaterialMapsZoomBase : MonoBehaviour
         if (b)
         {
             GameObject panel = uiManager.GetComponent<UIManager>().infoAllPbr;
-            panel.SetActive(false); //panel.SetActive(!panel.activeSelf);
+            panel.SetActive(false);
             zoom = true;
             maySwitchSmallBalls = false;
             allowRotation = true;//
@@ -106,7 +109,7 @@ public class MaterialMapsZoomBase : MonoBehaviour
             Debug.Log("panel 2 =" + panel.activeSelf);
 
             GameObject g = uiManager.GetComponent<UIManager>().backToPlayerButton;
-            g.SetActive(!g.activeSelf);
+            g.SetActive(true);
             if (stoppingDis <= 0.01)
             {
                 uiManager.GetComponent<UIManager>().advancedButton.SetActive(true);
@@ -134,7 +137,7 @@ public class MaterialMapsZoomBase : MonoBehaviour
             Debug.Log("panel 1 =" + panel.activeSelf);
 
             GameObject g = uiManager.GetComponent<UIManager>().backToPlayerButton;
-            g.SetActive(!g.activeSelf);
+            g.SetActive(false);
             if (stoppingDis <= 0.01)
             {
                 uiManager.GetComponent<UIManager>().advancedButton.SetActive(true);

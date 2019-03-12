@@ -12,11 +12,6 @@ public class InteractionMaterialChanger : InteractionBase
         interactCamera.SetActive(false);
     }
 
-    private void Update()
-    {
-        Debug.Log(mayMatChange + " maymatchange");
-    }
-
     public override void Interact()
     {
         Debug.Log("MChager");
