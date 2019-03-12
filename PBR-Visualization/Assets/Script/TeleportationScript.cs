@@ -8,31 +8,18 @@ public class TeleportationScript : MonoBehaviour
     public GameObject popUp;
     public string sceneToLoad;
 
-    bool freeMonePlayer;
-
     private void Start()
     {
         popUp.SetActive(false);
-        freeMonePlayer = GameObject.FindWithTag("Player").GetComponent<PlayerMove>().freeMove;
+
     }
 
     private void OnCollisionEnter(Collision c)
     {
         if (c.transform.tag == "Player")
         {
-            Debug.Log("col");
             popUp.SetActive(true);
-            freeMonePlayer = false;
-        }
-    }
-
-    private void OnCollisionExit(Collision c)
-    {
-        if (c.transform.tag == "Player")
-        {
-            Debug.Log("col II");
-            popUp.SetActive(false);
-            
+            GameObject.FindWithTag("Player").GetComponent<PlayerMove>().freeMove = false;
         }
     }
 
@@ -46,6 +33,6 @@ public class TeleportationScript : MonoBehaviour
     {
         Debug.Log("NO PLZ");
         popUp.SetActive(false);
-        freeMonePlayer = false;
+        GameObject.FindWithTag("Player").GetComponent<PlayerMove>().freeMove = true;
     }
 }
