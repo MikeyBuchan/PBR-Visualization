@@ -3,26 +3,20 @@ guid: a5142acc43f057649b8146cac9b34dc5
 ModelImporter:
   serializedVersion: 23
   fileIDToRecycleName:
-    100000: Hallway_Floor_low
+    100000: Hallway_Floor/Pipes_low
     100002: //RootNode
-    100004: Hallway_Pipes_low
-    100006: Hallway_Wall_low
-    400000: Hallway_Floor_low
+    100004: Hallway_Wall_low
+    400000: Hallway_Floor/Pipes_low
     400002: //RootNode
-    400004: Hallway_Pipes_low
-    400006: Hallway_Wall_low
-    2100000: Hallway_Pipes_Light
-    2100002: Hallway_Ground
-    2100004: Hallway_Wall_Roof
-    2300000: Hallway_Floor_low
-    2300002: Hallway_Pipes_low
-    2300004: Hallway_Wall_low
-    3300000: Hallway_Floor_low
-    3300002: Hallway_Pipes_low
-    3300004: Hallway_Wall_low
-    4300000: Hallway_Pipes_low
-    4300002: Hallway_Floor_low
-    4300004: Hallway_Wall_low
+    400004: Hallway_Wall_low
+    2100000: Hallway_Floor_Pipes
+    2100002: Hallway_Wall_Roof
+    2300000: Hallway_Floor/Pipes_low
+    2300002: Hallway_Wall_low
+    3300000: Hallway_Floor/Pipes_low
+    3300002: Hallway_Wall_low
+    4300000: Hallway_Floor/Pipes_low
+    4300002: Hallway_Wall_low
   externalObjects: {}
   materials:
     importMaterials: 1
