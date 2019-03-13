@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.103279755, g: 0.145486, b: 0.2166536, a: 1}
+  m_IndirectSpecularColor: {r: 0.062094186, g: 0.0757145, b: 0.0831682, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -13576,6 +13576,21 @@ PrefabInstance:
       propertyPath: infoObj
       value: You can give objects emission that creates a light effect.
       objectReference: {fileID: 0}
+    - target: {fileID: 4583862333674727839, guid: a2a4252d5eb8269439ffe24e66867baf,
+        type: 3}
+      propertyPath: nameObj
+      value: Emission
+      objectReference: {fileID: 0}
+    - target: {fileID: 4583862333674727839, guid: a2a4252d5eb8269439ffe24e66867baf,
+        type: 3}
+      propertyPath: normalMaterial
+      value: 
+      objectReference: {fileID: 2100000, guid: 8f163530f83e8c946a3655069e050c7d, type: 2}
+    - target: {fileID: 4583862333674727839, guid: a2a4252d5eb8269439ffe24e66867baf,
+        type: 3}
+      propertyPath: hightLightMaterial
+      value: 
+      objectReference: {fileID: 2100000, guid: afef5323857adf1429b0f9d95343d674, type: 2}
     - target: {fileID: 4583862335406566452, guid: a2a4252d5eb8269439ffe24e66867baf,
         type: 3}
       propertyPath: speed
@@ -13607,6 +13622,21 @@ PrefabInstance:
       propertyPath: infoObj
       value: This map controls the sharpness of the reflections.
       objectReference: {fileID: 0}
+    - target: {fileID: 4583862335406566452, guid: a2a4252d5eb8269439ffe24e66867baf,
+        type: 3}
+      propertyPath: nameObj
+      value: Roughness
+      objectReference: {fileID: 0}
+    - target: {fileID: 4583862335406566452, guid: a2a4252d5eb8269439ffe24e66867baf,
+        type: 3}
+      propertyPath: normalMaterial
+      value: 
+      objectReference: {fileID: 2100000, guid: cb24634a3fb661540a467717c1c664bc, type: 2}
+    - target: {fileID: 4583862335406566452, guid: a2a4252d5eb8269439ffe24e66867baf,
+        type: 3}
+      propertyPath: hightLightMaterial
+      value: 
+      objectReference: {fileID: 2100000, guid: a75913d981b9e4540a2cc29a797a86bd, type: 2}
     - target: {fileID: 6684350586981387601, guid: a2a4252d5eb8269439ffe24e66867baf,
         type: 3}
       propertyPath: speed
@@ -13642,6 +13672,21 @@ PrefabInstance:
         surfaces, and the deeper you go inside the tube, the more occluded (and darker)
         the lighting becomes. "
       objectReference: {fileID: 0}
+    - target: {fileID: 6684350586981387601, guid: a2a4252d5eb8269439ffe24e66867baf,
+        type: 3}
+      propertyPath: nameObj
+      value: Ambient Occlusion
+      objectReference: {fileID: 0}
+    - target: {fileID: 6684350586981387601, guid: a2a4252d5eb8269439ffe24e66867baf,
+        type: 3}
+      propertyPath: normalMaterial
+      value: 
+      objectReference: {fileID: 2100000, guid: 4679e4bf24aea834daa6c62031b51ed7, type: 2}
+    - target: {fileID: 6684350586981387601, guid: a2a4252d5eb8269439ffe24e66867baf,
+        type: 3}
+      propertyPath: hightLightMaterial
+      value: 
+      objectReference: {fileID: 2100000, guid: 0eb2006e15958544ca220ad0195157a6, type: 2}
     - target: {fileID: 4583862333491715422, guid: a2a4252d5eb8269439ffe24e66867baf,
         type: 3}
       propertyPath: speed
@@ -13673,6 +13718,21 @@ PrefabInstance:
       propertyPath: infoObj
       value: An Albedo map has all the primary colors of the object.
       objectReference: {fileID: 0}
+    - target: {fileID: 4583862333491715422, guid: a2a4252d5eb8269439ffe24e66867baf,
+        type: 3}
+      propertyPath: nameObj
+      value: Albedo
+      objectReference: {fileID: 0}
+    - target: {fileID: 4583862333491715422, guid: a2a4252d5eb8269439ffe24e66867baf,
+        type: 3}
+      propertyPath: normalMaterial
+      value: 
+      objectReference: {fileID: 2100000, guid: c8b6b6d76795b284e985445bad2c78b8, type: 2}
+    - target: {fileID: 4583862333491715422, guid: a2a4252d5eb8269439ffe24e66867baf,
+        type: 3}
+      propertyPath: hightLightMaterial
+      value: 
+      objectReference: {fileID: 2100000, guid: 3e364bfa17e687646a436cebbedd331c, type: 2}
     - target: {fileID: 4583862333401125348, guid: a2a4252d5eb8269439ffe24e66867baf,
         type: 3}
       propertyPath: speed
@@ -13707,6 +13767,21 @@ PrefabInstance:
         detail such as bumps, grooves, and scratches to a model which catch the light
         as if they are represented by real geometry."
       objectReference: {fileID: 0}
+    - target: {fileID: 4583862333401125348, guid: a2a4252d5eb8269439ffe24e66867baf,
+        type: 3}
+      propertyPath: nameObj
+      value: Normal
+      objectReference: {fileID: 0}
+    - target: {fileID: 4583862333401125348, guid: a2a4252d5eb8269439ffe24e66867baf,
+        type: 3}
+      propertyPath: normalMaterial
+      value: 
+      objectReference: {fileID: 2100000, guid: e4ad935a4dec5f043876903f15097425, type: 2}
+    - target: {fileID: 4583862333401125348, guid: a2a4252d5eb8269439ffe24e66867baf,
+        type: 3}
+      propertyPath: hightLightMaterial
+      value: 
+      objectReference: {fileID: 2100000, guid: 572f9e3854d4c824495dbd5a5cd808f4, type: 2}
     - target: {fileID: 4583862334903639043, guid: a2a4252d5eb8269439ffe24e66867baf,
         type: 3}
       propertyPath: speed
@@ -13739,6 +13814,21 @@ PrefabInstance:
       value: "A  metallic map is used to mimic metal characteristics.\r\nYou can use
         a Metallic map if you want a specific part made out of metal."
       objectReference: {fileID: 0}
+    - target: {fileID: 4583862334903639043, guid: a2a4252d5eb8269439ffe24e66867baf,
+        type: 3}
+      propertyPath: nameObj
+      value: Metallic
+      objectReference: {fileID: 0}
+    - target: {fileID: 4583862334903639043, guid: a2a4252d5eb8269439ffe24e66867baf,
+        type: 3}
+      propertyPath: normalMaterial
+      value: 
+      objectReference: {fileID: 2100000, guid: 112b7a6886461814d889b624ef9210f8, type: 2}
+    - target: {fileID: 4583862334903639043, guid: a2a4252d5eb8269439ffe24e66867baf,
+        type: 3}
+      propertyPath: hightLightMaterial
+      value: 
+      objectReference: {fileID: 2100000, guid: 361a03f8b9870f54ea30b95432701902, type: 2}
     - target: {fileID: 601914993, guid: a2a4252d5eb8269439ffe24e66867baf, type: 3}
       propertyPath: m_IsActive
       value: 1
