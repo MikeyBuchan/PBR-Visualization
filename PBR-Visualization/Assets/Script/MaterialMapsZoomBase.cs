@@ -186,4 +186,6 @@ public class MaterialMapsZoomBase : MonoBehaviour
     {
         Gizmos.DrawSphere(transform.position + baseCamAdjustment, 0.2f);
     }
+
+    
 }

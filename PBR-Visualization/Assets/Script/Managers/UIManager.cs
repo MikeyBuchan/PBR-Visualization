@@ -91,4 +91,13 @@ public class UIManager : MonoBehaviour
         Debug.Log("Clicked Button ModelSwitch");
     }
 
+    public void BackToPlayerButtonV2()
+    {
+        mChange.GetComponent<InteractionMaterialChanger>().interactCamera.SetActive(false);
+        mainCamera.SetActive(true);
+        mChange.GetComponent<InteractionMaterialChanger>().mayMatChange = false;
+        GameObject.FindWithTag("Player").GetComponent<PlayerMove>().freeMove = true;
+        switchValueEmpty.SetActive(false);
+    }
+
 }

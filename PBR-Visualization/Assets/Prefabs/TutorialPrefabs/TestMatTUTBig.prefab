@@ -1,151 +1,5 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &601914993
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 601914997}
-  - component: {fileID: 601914996}
-  - component: {fileID: 601914995}
-  - component: {fileID: 601914994}
-  m_Layer: 0
-  m_Name: InteractCamera
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &601914997
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 601914993}
-  m_LocalRotation: {x: -0.7194915, y: 0, z: -0, w: 0.69450134}
-  m_LocalPosition: {x: 0.09007271, y: -2.7258484, z: -0.12089451}
-  m_LocalScale: {x: 1.6084411, y: 1.6084414, z: 1.6084414}
-  m_Children: []
-  m_Father: {fileID: 3474008412147509231}
-  m_RootOrder: 6
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!20 &601914996
-Camera:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 601914993}
-  m_Enabled: 1
-  serializedVersion: 2
-  m_ClearFlags: 1
-  m_BackGroundColor: {r: 0.19215687, g: 0.3019608, b: 0.4745098, a: 0}
-  m_projectionMatrixMode: 1
-  m_SensorSize: {x: 36, y: 24}
-  m_LensShift: {x: 0, y: 0}
-  m_GateFitMode: 2
-  m_FocalLength: 50
-  m_NormalizedViewPortRect:
-    serializedVersion: 2
-    x: 0
-    y: 0
-    width: 1
-    height: 1
-  near clip plane: 0.3
-  far clip plane: 1000
-  field of view: 60
-  orthographic: 0
-  orthographic size: 5
-  m_Depth: 0
-  m_CullingMask:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_RenderingPath: -1
-  m_TargetTexture: {fileID: 0}
-  m_TargetDisplay: 0
-  m_TargetEye: 3
-  m_HDR: 0
-  m_AllowMSAA: 0
-  m_AllowDynamicResolution: 0
-  m_ForceIntoRT: 0
-  m_OcclusionCulling: 1
-  m_StereoConvergence: 10
-  m_StereoSeparation: 0.022
---- !u!81 &601914995
-AudioListener:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 601914993}
-  m_Enabled: 1
---- !u!114 &601914994
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 601914993}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 23c1ce4fb46143f46bc5cb5224c934f6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Version: 1
-  clearColorMode: 0
-  backgroundColorHDR: {r: 0.025, g: 0.07, b: 0.19, a: 0}
-  clearDepth: 1
-  renderingPath: 0
-  volumeLayerMask:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  volumeAnchorOverride: {fileID: 0}
-  aperture: 8
-  shutterSpeed: 0.005
-  iso: 400
-  m_FrameSettings:
-    overrides: 0
-    enableShadow: 1
-    enableContactShadows: 1
-    enableShadowMask: 1
-    enableSSR: 0
-    enableSSAO: 1
-    enableSubsurfaceScattering: 1
-    enableTransmission: 1
-    enableAtmosphericScattering: 1
-    enableVolumetrics: 1
-    enableReprojectionForVolumetrics: 1
-    enableLightLayers: 1
-    diffuseGlobalDimmer: 1
-    specularGlobalDimmer: 1
-    shaderLitMode: 1
-    enableDepthPrepassWithDeferredRendering: 0
-    enableTransparentPrepass: 1
-    enableMotionVectors: 1
-    enableObjectMotionVectors: 1
-    enableDecals: 1
-    enableRoughRefraction: 1
-    enableTransparentPostpass: 1
-    enableDistortion: 1
-    enablePostprocess: 1
-    enableAsyncCompute: 1
-    enableOpaqueObjects: 1
-    enableTransparentObjects: 1
-    enableRealtimePlanarReflection: 1
-    enableMSAA: 0
-    lightLoopSettings:
-      overrides: 0
-      enableTileAndCluster: 1
-      enableComputeLightEvaluation: 1
-      enableComputeLightVariants: 1
-      enableComputeMaterialVariants: 1
-      enableFptlForForwardOpaque: 1
-      enableBigTilePrepass: 1
-      isFptlEnabled: 1
 --- !u!1 &896188678688876324
 GameObject:
   m_ObjectHideFlags: 0
@@ -254,7 +108,7 @@ MonoBehaviour:
   nameObj: t1
   infoObj: hello
   extraInfoObj: Extra Hello t1
-  normalMaterial: {fileID: 2100000, guid: 1bbbbd3e1cf1cfa49b1e1543097b290f, type: 2}
+  normalMaterial: {fileID: 2100000, guid: ef3ffa55b2cc9b54cae768ba253476f8, type: 2}
   hightLightMaterial: {fileID: 2100000, guid: 2c1ea52ac8718d14b816b4b8cbecad5e, type: 2}
   myNumber: 0
   lerpSpeed: 3
@@ -366,7 +220,7 @@ MonoBehaviour:
   nameObj: test4
   infoObj: hello4
   extraInfoObj: Extra Hello t4
-  normalMaterial: {fileID: 2100000, guid: 1bbbbd3e1cf1cfa49b1e1543097b290f, type: 2}
+  normalMaterial: {fileID: 2100000, guid: ef3ffa55b2cc9b54cae768ba253476f8, type: 2}
   hightLightMaterial: {fileID: 2100000, guid: 2c1ea52ac8718d14b816b4b8cbecad5e, type: 2}
   myNumber: 3
   lerpSpeed: 3
@@ -478,7 +332,7 @@ MonoBehaviour:
   nameObj: t3
   infoObj: hello3
   extraInfoObj: Extra Hello t3
-  normalMaterial: {fileID: 2100000, guid: 1bbbbd3e1cf1cfa49b1e1543097b290f, type: 2}
+  normalMaterial: {fileID: 2100000, guid: ef3ffa55b2cc9b54cae768ba253476f8, type: 2}
   hightLightMaterial: {fileID: 2100000, guid: 2c1ea52ac8718d14b816b4b8cbecad5e, type: 2}
   myNumber: 2
   lerpSpeed: 3
@@ -587,12 +441,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 250
-  nameObj: t5
-  infoObj: hello5
-  extraInfoObj: Extra Hello t5
-  normalMaterial: {fileID: 2100000, guid: 1bbbbd3e1cf1cfa49b1e1543097b290f, type: 2}
+  nameObj: t6
+  infoObj: hello6
+  extraInfoObj: Extra Hello t6
+  normalMaterial: {fileID: 2100000, guid: ef3ffa55b2cc9b54cae768ba253476f8, type: 2}
   hightLightMaterial: {fileID: 2100000, guid: 2c1ea52ac8718d14b816b4b8cbecad5e, type: 2}
-  myNumber: 4
+  myNumber: 5
   lerpSpeed: 3
 --- !u!1 &6944351729213944135
 GameObject:
@@ -702,7 +556,7 @@ MonoBehaviour:
   nameObj: t2
   infoObj: hello2
   extraInfoObj: Extra Hello t2
-  normalMaterial: {fileID: 2100000, guid: 1bbbbd3e1cf1cfa49b1e1543097b290f, type: 2}
+  normalMaterial: {fileID: 2100000, guid: ef3ffa55b2cc9b54cae768ba253476f8, type: 2}
   hightLightMaterial: {fileID: 2100000, guid: 2c1ea52ac8718d14b816b4b8cbecad5e, type: 2}
   myNumber: 1
   lerpSpeed: 3
@@ -811,12 +665,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 250
-  nameObj: t6
-  infoObj: hello6
-  extraInfoObj: Extra Hello t6
-  normalMaterial: {fileID: 2100000, guid: 1bbbbd3e1cf1cfa49b1e1543097b290f, type: 2}
+  nameObj: t5
+  infoObj: hello5
+  extraInfoObj: Extra Hello t5
+  normalMaterial: {fileID: 2100000, guid: ef3ffa55b2cc9b54cae768ba253476f8, type: 2}
   hightLightMaterial: {fileID: 2100000, guid: 2c1ea52ac8718d14b816b4b8cbecad5e, type: 2}
-  myNumber: 5
+  myNumber: 4
   lerpSpeed: 3
 --- !u!1 &8407080364766845623
 GameObject:
@@ -856,7 +710,6 @@ Transform:
   - {fileID: 1640777708041769542}
   - {fileID: 1640777707133854508}
   - {fileID: 1640777707817870983}
-  - {fileID: 601914997}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 90.00001, z: 0}
@@ -931,13 +784,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   adjustCam: {x: 0.5, y: 0, z: -0.7}
-  interactCamera: {fileID: 601914993}
+  interactCamera: {fileID: 0}
   camRotationOfset: -20
   speed: 1
   baseCamAdjustment: {x: 0, y: 0, z: -1.6}
   camRotationAmount: 0.2
   allowRotation: 0
-  mayZoom: 1
+  zoomdIn: 0
   zoom: 1
   myChildNumber: 0
   childList: []

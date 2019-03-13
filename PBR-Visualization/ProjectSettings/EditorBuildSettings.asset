@@ -11,4 +11,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/PBR-JelmerTest.unity
     guid: 2caefd2c74b191043acb1fec6216ebbd
+  - enabled: 1
+    path: Assets/Scenes/PBR-JelmerExampleScene.unity
+    guid: 8bdd0ee7efdcf2b41848de30bbaaa4cc
   m_configObjects: {}
