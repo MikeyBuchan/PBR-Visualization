@@ -6,6 +6,20 @@ public class UIButtonFromTo : MonoBehaviour
 {
     public GameObject[] from;
     public GameObject[] to;
+    public float rotationSpeed;
+    AudioSource soundPlaysource;
+    public string audioSourceTag;
+
+    public void Start()
+    {
+        if (audioSourceTag != "")
+            soundPlaysource = GameObject.FindWithTag(audioSourceTag).GetComponent<AudioSource>();
+    }
+
+    public void PlayUISound(AudioClip audio)
+    {
+        soundPlaysource.PlayOneShot(audio, 1);
+    }
 
     public void OnButtonPress()
     {
@@ -13,5 +27,10 @@ public class UIButtonFromTo : MonoBehaviour
             obj.SetActive(false);
         foreach (GameObject obj in to)
             obj.SetActive(true);
+    }
+
+    public void Update()
+    {
+        transform.Rotate(Vector3.forward * Time.deltaTime * rotationSpeed);
     }
 }
