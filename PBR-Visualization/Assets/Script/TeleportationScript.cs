@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class TeleportationScript : MonoBehaviour
+public class TeleportationScript : InteractionBase
 {
     public GameObject popUp;
     public string sceneToLoad;
@@ -11,16 +11,20 @@ public class TeleportationScript : MonoBehaviour
     private void Start()
     {
         popUp.SetActive(false);
-
     }
 
     private void OnCollisionEnter(Collision c)
     {
         if (c.transform.tag == "Player")
         {
-            popUp.SetActive(true);
-            GameObject.FindWithTag("Player").GetComponent<PlayerMove>().freeMove = false;
+            TeleportInteract();
         }
+    }
+
+    public override void TeleportInteract()
+    {
+        popUp.SetActive(true);
+        base.TeleportInteract();
     }
 
     public void YesSwitch()

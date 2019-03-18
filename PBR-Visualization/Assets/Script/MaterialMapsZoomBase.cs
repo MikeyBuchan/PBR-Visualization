@@ -15,6 +15,7 @@ public class MaterialMapsZoomBase : MonoBehaviour
     Vector3 newPosCamera;
     float camMoveSpeed;
     public Vector3 baseCamAdjustment;
+    public Vector3 baseCamAdjustmentMiddleObject;
     public float camRotationAmount;
 
     [Header("Other")]
@@ -37,12 +38,14 @@ public class MaterialMapsZoomBase : MonoBehaviour
     public GameObject discriptionPanel;
     public GameObject extraDiscriptionPanel;
     public GameObject otherName;
+    public GameObject backButtonMiddleObject;
 
     //set values
     void Start()
     {
         uiManager = GameObject.FindWithTag("UiManager");
         interactCamera.SetActive(false);
+        backButtonMiddleObject.SetActive(false);
 
         cameraBasePos = transform.position + baseCamAdjustment;
         standardcamRotation = interactCamera.transform.rotation;
@@ -63,9 +66,9 @@ public class MaterialMapsZoomBase : MonoBehaviour
         {
             Next();
         }
-
+        Debug.Log(uiManager.GetComponent<UIManager>().zoomOutButton.activeSelf);
         //Debug.Log("zoom = " + zoom);
-        Debug.Log(allowRotation);
+        //Debug.Log(allowRotation);
 
         if (allowRotation)
         {
@@ -103,7 +106,7 @@ public class MaterialMapsZoomBase : MonoBehaviour
             panel.SetActive(false);
             zoom = true;
             maySwitchSmallBalls = false;
-            allowRotation = true;//
+            allowRotation = true;
             zoomdIn = false;
 
             Debug.Log("panel 2 =" + panel.activeSelf);
@@ -132,7 +135,7 @@ public class MaterialMapsZoomBase : MonoBehaviour
             panel.SetActive(true);
             zoom = true;
             maySwitchSmallBalls = true;
-            allowRotation = false;//
+            allowRotation = false;
 
             Debug.Log("panel 1 =" + panel.activeSelf);
 
@@ -159,6 +162,7 @@ public class MaterialMapsZoomBase : MonoBehaviour
         {
             StartCoroutine(Spread(cameraBasePos,true));
             zoom = false;
+            backButtonMiddleObject.SetActive(false);
         }
     }
 
@@ -180,6 +184,32 @@ public class MaterialMapsZoomBase : MonoBehaviour
             }
         }
     }
+
+    private void OnMouseDown()
+    {
+        if (zoom == true)
+        {
+            StartCoroutine(ZoomMiddelObject(transform));
+        }
+    }
+
+    IEnumerator ZoomMiddelObject(Transform transform)
+    {
+        while (Vector3.Distance(interactCamera.transform.position, transform.position + baseCamAdjustmentMiddleObject) >= stoppingDis)
+        {
+            camMoveSpeed = speed * Time.deltaTime;
+            interactCamera.transform.position = Vector3.MoveTowards(interactCamera.transform.position, transform.position + baseCamAdjustmentMiddleObject, camMoveSpeed);
+            yield return null;
+        }
+        GameObject game = uiManager.GetComponent<UIManager>().backToPlayerButton;
+        game.SetActive(false);
+        if (stoppingDis <= 0.1)
+        {
+            backButtonMiddleObject.SetActive(true);
+        }
+
+    }
+
 
     //realtime check wheare the camera is
     public void OnDrawGizmos()
