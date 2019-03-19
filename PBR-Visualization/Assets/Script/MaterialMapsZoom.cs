@@ -59,7 +59,7 @@ public class MaterialMapsZoom : MonoBehaviour
                     baseClass.SeroundPress(myNumber);
                     GetComponent<Renderer>().material = normalMaterial;
                     baseClass.myChildNumber = myNumber;
-                    baseClass.zoomdIn = true;
+                    //baseClass.zoomdIn = true;
                 }
             }
         }

@@ -47,6 +47,10 @@ public class OptionsMenu : MonoBehaviour
         Screen.SetResolution(resol.width, resol.height, Screen.fullScreen);
     }
 
+    public void FullScreenToggle(bool tog)
+    {
+        Screen.fullScreen = tog;
+    }
 
     public void CoppleMasterVolume(float amount)
     {

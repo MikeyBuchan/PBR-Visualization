@@ -66,8 +66,8 @@ public class MaterialMapsZoomBase : MonoBehaviour
         {
             Next();
         }
-        Debug.Log(uiManager.GetComponent<UIManager>().zoomOutButton.activeSelf);
-        //Debug.Log("zoom = " + zoom);
+        //Debug.Log(uiManager.GetComponent<UIManager>().zoomOutButton.activeSelf);
+        Debug.Log("zoomIn = " + zoomdIn);
         //Debug.Log(allowRotation);
 
         if (allowRotation)
@@ -100,6 +100,7 @@ public class MaterialMapsZoomBase : MonoBehaviour
     //zoom in and out
     public IEnumerator Spread(Vector3 v, bool b)
     {
+        zoomdIn = false;
         if (b)
         {
             GameObject panel = uiManager.GetComponent<UIManager>().infoAllPbr;
@@ -136,6 +137,7 @@ public class MaterialMapsZoomBase : MonoBehaviour
             zoom = true;
             maySwitchSmallBalls = true;
             allowRotation = false;
+            zoomdIn = true;
 
             Debug.Log("panel 1 =" + panel.activeSelf);
 
@@ -187,14 +189,19 @@ public class MaterialMapsZoomBase : MonoBehaviour
 
     private void OnMouseDown()
     {
-        if (zoom == true)
+        if (zoomdIn == false)
         {
-            StartCoroutine(ZoomMiddelObject(transform));
+            if (zoom == true)
+            {
+                StartCoroutine(ZoomMiddelObject(transform));
+            }
         }
     }
 
     IEnumerator ZoomMiddelObject(Transform transform)
     {
+        zoomdIn = true;
+        
         while (Vector3.Distance(interactCamera.transform.position, transform.position + baseCamAdjustmentMiddleObject) >= stoppingDis)
         {
             camMoveSpeed = speed * Time.deltaTime;
@@ -207,15 +214,11 @@ public class MaterialMapsZoomBase : MonoBehaviour
         {
             backButtonMiddleObject.SetActive(true);
         }
-
     }
-
 
     //realtime check wheare the camera is
     public void OnDrawGizmos()
     {
         Gizmos.DrawSphere(transform.position + baseCamAdjustment, 0.2f);
-    }
-
-    
+    }    
 }

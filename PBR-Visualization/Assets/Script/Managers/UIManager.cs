@@ -75,9 +75,9 @@ public class UIManager : MonoBehaviour
 
     public void ButtonBackToPlayer()
     {
+        mBase.GetComponent<MaterialMapsZoomBase>().interactCamera.SetActive(false);
         GameObject.FindWithTag("Player").GetComponent<PlayerMove>().freeMove = true;
         interactDisplay.SetActive(false);
-        mBase.GetComponent<MaterialMapsZoomBase>().interactCamera.SetActive(false);
         mBase.GetComponent<MaterialMapsZoomBase>().allowRotation = false;
         mainCamera.SetActive(true);
         infoAllPbr.SetActive(false);
