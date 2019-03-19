@@ -3833,7 +3833,7 @@ GameObject:
   m_Component:
   - component: {fileID: 444489121}
   m_Layer: 0
-  m_Name: GameObject
+  m_Name: TutMat
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -14758,7 +14758,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   mBase: {fileID: 1968090508}
   Sspeed: 250
-  lerpSpeed: 0
+  lerpSpeed: 5
 --- !u!1 &2033849151
 GameObject:
   m_ObjectHideFlags: 0
@@ -17876,6 +17876,42 @@ PrefabInstance:
       propertyPath: m_Name
       value: TestMatTUTBig
       objectReference: {fileID: 0}
+    - target: {fileID: 2141016910, guid: a2a4252d5eb8269439ffe24e66867baf, type: 3}
+      propertyPath: namePanel
+      value: 
+      objectReference: {fileID: 406169100505597979}
+    - target: {fileID: 2141016910, guid: a2a4252d5eb8269439ffe24e66867baf, type: 3}
+      propertyPath: discriptionPanel
+      value: 
+      objectReference: {fileID: 406169100293316880}
+    - target: {fileID: 2141016910, guid: a2a4252d5eb8269439ffe24e66867baf, type: 3}
+      propertyPath: extraDiscriptionPanel
+      value: 
+      objectReference: {fileID: 406169100763332516}
+    - target: {fileID: 2141016910, guid: a2a4252d5eb8269439ffe24e66867baf, type: 3}
+      propertyPath: otherName
+      value: 
+      objectReference: {fileID: 406169100973963511}
+    - target: {fileID: 2141016910, guid: a2a4252d5eb8269439ffe24e66867baf, type: 3}
+      propertyPath: interactCamera
+      value: 
+      objectReference: {fileID: 1991086201}
+    - target: {fileID: 2141016910, guid: a2a4252d5eb8269439ffe24e66867baf, type: 3}
+      propertyPath: backButton
+      value: 
+      objectReference: {fileID: 406169100170408217}
+    - target: {fileID: 2141016910, guid: a2a4252d5eb8269439ffe24e66867baf, type: 3}
+      propertyPath: baseCamAdjustmentMiddleObject.z
+      value: -0.7
+      objectReference: {fileID: 0}
+    - target: {fileID: 2141016910, guid: a2a4252d5eb8269439ffe24e66867baf, type: 3}
+      propertyPath: backButtonMiddleObject
+      value: 
+      objectReference: {fileID: 1985292197}
+    - target: {fileID: 2141016910, guid: a2a4252d5eb8269439ffe24e66867baf, type: 3}
+      propertyPath: Sspeed
+      value: 250
+      objectReference: {fileID: 0}
     - target: {fileID: 3474008412147509231, guid: a2a4252d5eb8269439ffe24e66867baf,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -17945,42 +17981,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalScale.z
       value: 0.6217208
-      objectReference: {fileID: 0}
-    - target: {fileID: 2141016910, guid: a2a4252d5eb8269439ffe24e66867baf, type: 3}
-      propertyPath: namePanel
-      value: 
-      objectReference: {fileID: 406169100505597979}
-    - target: {fileID: 2141016910, guid: a2a4252d5eb8269439ffe24e66867baf, type: 3}
-      propertyPath: discriptionPanel
-      value: 
-      objectReference: {fileID: 406169100293316880}
-    - target: {fileID: 2141016910, guid: a2a4252d5eb8269439ffe24e66867baf, type: 3}
-      propertyPath: extraDiscriptionPanel
-      value: 
-      objectReference: {fileID: 406169100763332516}
-    - target: {fileID: 2141016910, guid: a2a4252d5eb8269439ffe24e66867baf, type: 3}
-      propertyPath: otherName
-      value: 
-      objectReference: {fileID: 406169100973963511}
-    - target: {fileID: 2141016910, guid: a2a4252d5eb8269439ffe24e66867baf, type: 3}
-      propertyPath: interactCamera
-      value: 
-      objectReference: {fileID: 1991086201}
-    - target: {fileID: 2141016910, guid: a2a4252d5eb8269439ffe24e66867baf, type: 3}
-      propertyPath: backButton
-      value: 
-      objectReference: {fileID: 406169100170408217}
-    - target: {fileID: 2141016910, guid: a2a4252d5eb8269439ffe24e66867baf, type: 3}
-      propertyPath: baseCamAdjustmentMiddleObject.z
-      value: -0.7
-      objectReference: {fileID: 0}
-    - target: {fileID: 2141016910, guid: a2a4252d5eb8269439ffe24e66867baf, type: 3}
-      propertyPath: backButtonMiddleObject
-      value: 
-      objectReference: {fileID: 1985292197}
-    - target: {fileID: 2141016910, guid: a2a4252d5eb8269439ffe24e66867baf, type: 3}
-      propertyPath: Sspeed
-      value: 250
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 9209237902453684637, guid: a2a4252d5eb8269439ffe24e66867baf, type: 3}
