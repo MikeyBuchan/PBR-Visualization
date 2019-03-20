@@ -113,7 +113,7 @@ public class UIManager : MonoBehaviour
         {
             Debug.Log("neuhwfbubuwb");
             optionsMenu.SetActive(true);
-            Time.timeScale = 0;
+            GameObject.FindWithTag("Player").GetComponent<PlayerMove>().freeMove = false;
         }
     }
 
@@ -121,7 +121,14 @@ public class UIManager : MonoBehaviour
     {
         Debug.Log("enbubv");
         optionsMenu.SetActive(false);
-        Time.timeScale = 1;
+        if (mBase.GetComponent<MaterialMapsZoomBase>().allowRotation == true || mChange.GetComponent<InteractionMaterialChanger>().mayMatChange == true)
+        {
+            GameObject.FindWithTag("Player").GetComponent<PlayerMove>().freeMove = false;
+        }
+        else
+        {
+            GameObject.FindWithTag("Player").GetComponent<PlayerMove>().freeMove = true;
+        }
     }
 
     public void GoToOptions()

@@ -67,8 +67,8 @@ public class MaterialMapsZoomBase : MonoBehaviour
             Next();
         }
         //Debug.Log(uiManager.GetComponent<UIManager>().zoomOutButton.activeSelf);
-        Debug.Log("zoomIn = " + zoomdIn);
-        //Debug.Log(allowRotation);
+        //Debug.Log("zoomIn = " + zoomdIn);
+        Debug.Log(allowRotation + "allowRotat");
 
         if (allowRotation)
         {
