@@ -21,6 +21,7 @@ public class UIManager : MonoBehaviour
     public GameObject mBase;
     public GameObject mChange;
     GameObject mainCamera;
+    public GameObject optionsMenu;
     bool advancedBool;
 
     private void Start()
@@ -36,6 +37,7 @@ public class UIManager : MonoBehaviour
         mainCamera = GameObject.FindWithTag("MainCamera");
         backToPlayerButton.SetActive(false);
         switchValueEmpty.SetActive(false);
+        optionsMenu.SetActive(false);
     }
 
     private void Update()
@@ -110,7 +112,21 @@ public class UIManager : MonoBehaviour
         if (Input.GetButtonDown("Options"))
         {
             Debug.Log("neuhwfbubuwb");
+            optionsMenu.SetActive(true);
+            Time.timeScale = 0;
         }
+    }
+
+    public void BackOterOptions()
+    {
+        Debug.Log("enbubv");
+        optionsMenu.SetActive(false);
+        Time.timeScale = 1;
+    }
+
+    public void GoToOptions()
+    {
+        Debug.Log("Go TO");
     }
 
 }
