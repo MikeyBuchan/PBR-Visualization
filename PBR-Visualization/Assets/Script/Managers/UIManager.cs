@@ -23,7 +23,7 @@ public class UIManager : MonoBehaviour
     GameObject mainCamera;
     bool advancedBool;
 
-    void Start()
+    private void Start()
     {
         infoAllPbr.SetActive(false);
         infoNormal.SetActive(false);
@@ -36,6 +36,11 @@ public class UIManager : MonoBehaviour
         mainCamera = GameObject.FindWithTag("MainCamera");
         backToPlayerButton.SetActive(false);
         switchValueEmpty.SetActive(false);
+    }
+
+    private void Update()
+    {
+        OtherOptions();
     }
 
     public void ButtomZoomOut()
@@ -98,6 +103,14 @@ public class UIManager : MonoBehaviour
         mChange.GetComponent<InteractionMaterialChanger>().mayMatChange = false;
         GameObject.FindWithTag("Player").GetComponent<PlayerMove>().freeMove = true;
         switchValueEmpty.SetActive(false);
+    }
+
+    public void OtherOptions()
+    {
+        if (Input.GetButtonDown("Options"))
+        {
+            Debug.Log("neuhwfbubuwb");
+        }
     }
 
 }
