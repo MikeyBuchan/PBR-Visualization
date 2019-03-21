@@ -63,6 +63,7 @@ public class UIManager : MonoBehaviour
         normalInfoButton.SetActive(true);
 
         advancedBool = true;
+        mBase.GetComponent<MaterialMapsZoomBase>().zoomdIn = false;
 
         backToPlayerButton.SetActive(false);
     }
@@ -76,6 +77,7 @@ public class UIManager : MonoBehaviour
 
         advancedButton.SetActive(true);
         advancedBool = false;
+        mBase.GetComponent<MaterialMapsZoomBase>().zoomdIn = true;
 
         backToPlayerButton.SetActive(false);
     }
@@ -129,11 +131,6 @@ public class UIManager : MonoBehaviour
         {
             GameObject.FindWithTag("Player").GetComponent<PlayerMove>().freeMove = true;
         }
-    }
-
-    public void GoToOptions()
-    {
-        Debug.Log("Go TO");
     }
 
 }
