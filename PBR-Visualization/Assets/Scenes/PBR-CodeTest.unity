@@ -18480,6 +18480,36 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 0.6217208
       objectReference: {fileID: 0}
+    - target: {fileID: 6684350586981387601, guid: a2a4252d5eb8269439ffe24e66867baf,
+        type: 3}
+      propertyPath: nameHighlight
+      value: Niks Ivullen
+      objectReference: {fileID: 0}
+    - target: {fileID: 4583862333491715422, guid: a2a4252d5eb8269439ffe24e66867baf,
+        type: 3}
+      propertyPath: nameHighlight
+      value: Niks Ivullen
+      objectReference: {fileID: 0}
+    - target: {fileID: 4583862333401125348, guid: a2a4252d5eb8269439ffe24e66867baf,
+        type: 3}
+      propertyPath: nameHighlight
+      value: Niks Ivullen
+      objectReference: {fileID: 0}
+    - target: {fileID: 4583862333674727839, guid: a2a4252d5eb8269439ffe24e66867baf,
+        type: 3}
+      propertyPath: nameHighlight
+      value: Niks Ivullen
+      objectReference: {fileID: 0}
+    - target: {fileID: 4583862334903639043, guid: a2a4252d5eb8269439ffe24e66867baf,
+        type: 3}
+      propertyPath: nameHighlight
+      value: Niks Ivullen
+      objectReference: {fileID: 0}
+    - target: {fileID: 4583862335406566452, guid: a2a4252d5eb8269439ffe24e66867baf,
+        type: 3}
+      propertyPath: nameHighlight
+      value: Niks Ivullen
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 9209237902453684637, guid: a2a4252d5eb8269439ffe24e66867baf, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: a2a4252d5eb8269439ffe24e66867baf, type: 3}

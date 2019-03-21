@@ -69,7 +69,7 @@ public class OptionsMenu : MonoBehaviour
 
     public void SetGraphics(int dropDown)
     {
-        QualitySettings.SetQualityLevel(dropDown);
+        QualitySettings.SetQualityLevel(dropDown, true);
         Debug.Log(dropDown);
     }
 

@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class MaterialMapsZoom : MonoBehaviour
 {
@@ -12,6 +13,8 @@ public class MaterialMapsZoom : MonoBehaviour
     public Material normalMaterial,hightLightMaterial;
     public int myNumber;
 
+    public GameObject nameUI;
+
     public float lerpSpeed;
     Quaternion startRotation;
     
@@ -21,6 +24,9 @@ public class MaterialMapsZoom : MonoBehaviour
         baseClass = gameObject.transform.parent.gameObject.GetComponent<MaterialMapsZoomBase>();
         startRotation = gameObject.transform.rotation;
         normalMaterial = GetComponent<Renderer>().material;
+
+        nameUI.SetActive(false);
+        
     }
 
     void Update()
@@ -40,12 +46,14 @@ public class MaterialMapsZoom : MonoBehaviour
         if (baseClass.allowRotation == true)
         {
             GetComponent<Renderer>().material = hightLightMaterial;
+            nameUI.SetActive(true);
         }
     }
 
     public void OnMouseExit()
     {
         GetComponent<Renderer>().material = normalMaterial;
+        nameUI.SetActive(false);
     }
 
     void OnMouseDown()
