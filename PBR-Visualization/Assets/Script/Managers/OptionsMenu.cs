@@ -16,6 +16,9 @@ public class OptionsMenu : MonoBehaviour
 
     void Start()
     {
+        //int qualityLevel = QualitySettings.GetQualityLevel();
+        //Debug.Log(qualityLevel);
+
         masterVolume.value = PlayerPrefs.GetFloat("MasterVolumeMix", 0);
         ambientNoise.value = PlayerPrefs.GetFloat("AmbientNoise", 4);
         ambientEffect.value = PlayerPrefs.GetFloat("AmbientEffect", 0);
@@ -68,6 +71,7 @@ public class OptionsMenu : MonoBehaviour
 
     public void SetGraphics(int dropDown)
     {
+        //QualitySettings.SetQualityLevel(dropDown);
         QualitySettings.SetQualityLevel(dropDown, true);
         Debug.Log(dropDown);
     }

@@ -42,7 +42,7 @@ public class UIManager : MonoBehaviour
 
     private void Update()
     {
-        OtherOptions();
+        OtherOptionsOpen();
     }
 
     public void ButtomZoomOut()
@@ -109,17 +109,29 @@ public class UIManager : MonoBehaviour
         switchValueEmpty.SetActive(false);
     }
 
-    public void OtherOptions()
+    public void OtherOptionsOpen()
     {
-        if (Input.GetButtonDown("Options"))
+        if (Input.GetButtonDown("Options") && optionsMenu.activeSelf == false)
         {
             Debug.Log("neuhwfbubuwb");
             optionsMenu.SetActive(true);
             GameObject.FindWithTag("Player").GetComponent<PlayerMove>().freeMove = false;
         }
+        else if(Input.GetButtonDown("Options") && optionsMenu.activeSelf == true)
+        {
+            optionsMenu.SetActive(false);
+            if (mBase.GetComponent<MaterialMapsZoomBase>().allowRotation == true || mChange.GetComponent<InteractionMaterialChanger>().mayMatChange == true)
+            {
+                GameObject.FindWithTag("Player").GetComponent<PlayerMove>().freeMove = false;
+            }
+            else
+            {
+                GameObject.FindWithTag("Player").GetComponent<PlayerMove>().freeMove = true;
+            }
+        }
     }
 
-    public void BackOterOptions()
+    public void OterOptionsClose()
     {
         Debug.Log("enbubv");
         optionsMenu.SetActive(false);
