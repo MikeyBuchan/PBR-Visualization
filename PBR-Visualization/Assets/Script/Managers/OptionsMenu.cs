@@ -14,7 +14,6 @@ public class OptionsMenu : MonoBehaviour
     public Dropdown dropDownRes;
     Resolution[] resolutions;
 
-
     void Start()
     {
         masterVolume.value = PlayerPrefs.GetFloat("MasterVolumeMix", 0);
@@ -72,5 +71,4 @@ public class OptionsMenu : MonoBehaviour
         QualitySettings.SetQualityLevel(dropDown, true);
         Debug.Log(dropDown);
     }
-
 }

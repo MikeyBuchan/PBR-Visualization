@@ -18,15 +18,13 @@ public class MaterialMapsZoom : MonoBehaviour
     public float lerpSpeed;
     Quaternion startRotation;
     
-
     void Start()
     {
         baseClass = gameObject.transform.parent.gameObject.GetComponent<MaterialMapsZoomBase>();
         startRotation = gameObject.transform.rotation;
         normalMaterial = GetComponent<Renderer>().material;
 
-        nameUI.SetActive(false);
-        
+        nameUI.SetActive(false);  
     }
 
     void Update()
@@ -60,7 +58,7 @@ public class MaterialMapsZoom : MonoBehaviour
     {
         if (GameObject.FindWithTag("Player").GetComponent<PlayerMove>().freeMove == false)
         {
-            if (baseClass.zoomdIn == false)
+            if (baseClass.zoomdIn == false && GameObject.FindWithTag("UiManager").GetComponent<UIManager>().advancedBool == false)
             {
                 if (Input.GetButtonDown("Fire1"))
                 {

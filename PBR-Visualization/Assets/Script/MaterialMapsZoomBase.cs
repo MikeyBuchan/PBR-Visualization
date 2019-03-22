@@ -67,8 +67,8 @@ public class MaterialMapsZoomBase : MonoBehaviour
             Next();
         }
         //Debug.Log(uiManager.GetComponent<UIManager>().zoomOutButton.activeSelf);
-        //Debug.Log("zoomIn = " + zoomdIn);
-        Debug.Log(allowRotation + "allowRotat");
+        Debug.Log("zoomIn = " + zoomdIn);
+        //Debug.Log(allowRotation + "allowRotat");
 
         if (allowRotation)
         {
@@ -95,7 +95,6 @@ public class MaterialMapsZoomBase : MonoBehaviour
             StartCoroutine(Spread(newPosCamera, false));
             zoom = false;
         }
-
     }
     //zoom in and out
     public IEnumerator Spread(Vector3 v, bool b)
@@ -149,7 +148,6 @@ public class MaterialMapsZoomBase : MonoBehaviour
                 uiManager.GetComponent<UIManager>().infoNormal.SetActive(true);
                 uiManager.GetComponent<UIManager>().zoomOutButton.SetActive(true);
             }
-        
         }
         if (zoom == false)
         {

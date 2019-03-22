@@ -215,5 +215,4 @@ public class MaterialMapsChange : MonoBehaviour
         public List<NamedTexture> alphasList = new List<NamedTexture>();
 
     }
-
 }

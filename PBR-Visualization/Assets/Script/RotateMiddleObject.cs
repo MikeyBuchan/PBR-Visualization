@@ -9,13 +9,13 @@ public class RotateMiddleObject : MonoBehaviour
     public float lerpSpeed;
     Quaternion startRotation;
 
+    private void Start()
+    {
+        startRotation = gameObject.transform.rotation;
+    }
+
     void Update()
     {
-        if (mBase.zoomdIn == true)
-        {
-            RotateObject();
-        }
-
         if (mBase.zoomdIn == true)
         {
             RotateObject();
@@ -28,10 +28,8 @@ public class RotateMiddleObject : MonoBehaviour
 
     void RotateObject()
     {
-        Debug.Log("for if");
         if (Input.GetButton("Fire1"))
         {
-            Debug.Log("TEGDTEGDTGETDGET");
             transform.Rotate(new Vector3(-Input.GetAxis("Mouse Y"), -Input.GetAxis("Mouse X"), 0) * Time.deltaTime * Sspeed, Space.World);
         }
     }

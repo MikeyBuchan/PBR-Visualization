@@ -22,7 +22,7 @@ public class UIManager : MonoBehaviour
     public GameObject mChange;
     GameObject mainCamera;
     public GameObject optionsMenu;
-    bool advancedBool;
+    public bool advancedBool;
 
     private void Start()
     {
