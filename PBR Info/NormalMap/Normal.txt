@@ -1,0 +1,19 @@
+A Normal map is a type of map where you can add a small detail to your object. 
+It is a special kind of texture that allows you to add surface detail such as bumps, grooves, and scratches to a model which catch the light as if they are represented by real geometry.
+
+
+
+
+The best combination is to use AO with screen space reflections.
+It is an RGB map where each component corresponds to the X, Y and Z coordinates of the surface normal.
+It can be used to store the projected details of a high-resolution model to a low-resolution model.
+
+Normal mapping takes this modification of surface normals one step further, by using a texture to store information about how to modify the surface normals across the model. 
+A normal map is an image texture mapped to the surface of a model, similar to regular colour textures, however each pixelin the texture of the normal map (called a texel) 
+represents a deviation in surface normal direction away from the “true” surface normal of the flat (or smooth interpolated) polygon.
+In this diagram, which is again a 2D representation of three polygons on the surface of a 3D model, each orange arrow corresponds to a pixel in the normalmap texture. 
+Below, is a single-pixel slice of a normalmap texture. In the centre, you can see the normals have been modified, giving the appearance of a couple of bumps on the 
+surface of the polygon. These bumps would only be apparent due to the way lighting appears on the surface, because these modified normals are used in the lighting calculations.
+The colours visible in a raw normal map file typically have a blueish hue, and don’t contain any actual light or dark shading - this is because the colours themselves are not 
+intended to be displayed as they are. 
+Instead, the RGB values of each texel represent the X,Y & Z values of a direction vector, and are applied as a modification to the basic interpolated smooth normals of the polygon surfaces.

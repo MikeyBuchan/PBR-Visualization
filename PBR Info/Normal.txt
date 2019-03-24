@@ -1,9 +1,0 @@
-A Normal map is a type of map where you can add a small detail to your object. 
-It is a special kind of texture that allows you to add surface detail such as bumps, grooves, and scratches to a model which catch the light as if they are represented by real geometry.
-
-
-
-
-The best combination is to use AO with screen space reflections.
-It is an RGB map where each component corresponds to the X, Y and Z coordinates of the surface normal.
-It can be used to store the projected details of a high-resolution model to a low-resolution model.
