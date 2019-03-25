@@ -1,21 +1,26 @@
 fileFormatVersion: 2
-guid: bc0cb449cb6b2874fb037dc3db727643
+guid: 0c4fd352d193246448b1cd9f764cbe19
 ModelImporter:
   serializedVersion: 23
   fileIDToRecycleName:
-    100000: PedestalTop_low
-    100002: PedestalTop_low.001
+    100000: CenterWall2_low
+    100002: CenterWall3_low
     100004: //RootNode
-    400000: PedestalTop_low
-    400002: PedestalTop_low.001
+    100006: CenterWall_low
+    400000: CenterWall2_low
+    400002: CenterWall3_low
     400004: //RootNode
-    2100000: No Name
-    2300000: PedestalTop_low
-    2300002: PedestalTop_low.001
-    3300000: PedestalTop_low
-    3300002: PedestalTop_low.001
-    4300000: PedestalTop_low.001
-    4300002: PedestalTop_low
+    400006: CenterWall_low
+    2100000: CenterWall
+    2300000: CenterWall2_low
+    2300002: CenterWall3_low
+    2300004: CenterWall_low
+    3300000: CenterWall2_low
+    3300002: CenterWall3_low
+    3300004: CenterWall_low
+    4300000: CenterWall2_low
+    4300002: CenterWall3_low
+    4300004: CenterWall_low
   externalObjects: {}
   materials:
     importMaterials: 1

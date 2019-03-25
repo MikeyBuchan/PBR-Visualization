@@ -9,14 +9,14 @@ ModelImporter:
     400000: Hallway_Floor/Pipes_low
     400002: //RootNode
     400004: Hallway_Wall_low
-    2100000: Hallway_Floor_Pipes
-    2100002: Hallway_Wall_Roof
+    2100000: Hallway_Wall_Roof
+    2100002: Hallway_Floor_Pipes
     2300000: Hallway_Floor/Pipes_low
     2300002: Hallway_Wall_low
     3300000: Hallway_Floor/Pipes_low
     3300002: Hallway_Wall_low
-    4300000: Hallway_Floor/Pipes_low
-    4300002: Hallway_Wall_low
+    4300000: Hallway_Wall_low
+    4300002: Hallway_Floor/Pipes_low
   externalObjects: {}
   materials:
     importMaterials: 1

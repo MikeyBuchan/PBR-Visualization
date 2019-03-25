@@ -1,14 +1,31 @@
 fileFormatVersion: 2
-guid: ed9ad90d4123dde439c8d68586d216e3
+guid: dd1f19f883479044f8cd5ef8aad4abd9
 ModelImporter:
   serializedVersion: 23
   fileIDToRecycleName:
-    100000: //RootNode
-    400000: //RootNode
-    2100000: Projector
-    2300000: //RootNode
-    3300000: //RootNode
-    4300000: Pedestal_low
+    100000: Screen_Cables_low
+    100002: Screen_Holder_low
+    100004: //RootNode
+    100006: Screen_low
+    100008: Screen_Out_low
+    400000: Screen_Cables_low
+    400002: Screen_Holder_low
+    400004: //RootNode
+    400006: Screen_low
+    400008: Screen_Out_low
+    2100000: Screen
+    2300000: Screen_Cables_low
+    2300002: Screen_Holder_low
+    2300004: Screen_low
+    2300006: Screen_Out_low
+    3300000: Screen_Cables_low
+    3300002: Screen_Holder_low
+    3300004: Screen_low
+    3300006: Screen_Out_low
+    4300000: Screen_Cables_low
+    4300002: Screen_Holder_low
+    4300004: Screen_Out_low
+    4300006: Screen_low
   externalObjects: {}
   materials:
     importMaterials: 1
