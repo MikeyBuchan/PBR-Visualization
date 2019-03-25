@@ -31,6 +31,7 @@ public class TeleportationScript : InteractionBase
     {
         Debug.Log("YES PLZ");
         SceneManager.LoadScene(sceneToLoad);
+        Cursor.lockState = CursorLockMode.None;
     }
 
     public void NoSwitch()
@@ -38,5 +39,6 @@ public class TeleportationScript : InteractionBase
         Debug.Log("NO PLZ");
         popUp.SetActive(false);
         GameObject.FindWithTag("Player").GetComponent<PlayerMove>().freeMove = true;
+        Cursor.lockState = CursorLockMode.Locked;
     }
 }

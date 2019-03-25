@@ -27,6 +27,8 @@ public class UIManager : MonoBehaviour
 
     private void Start()
     {
+        Cursor.lockState = CursorLockMode.Locked;
+
         infoAllPbr.SetActive(false);
         infoNormal.SetActive(false);
         infoPbrAdvanced.SetActive(false);
@@ -93,6 +95,7 @@ public class UIManager : MonoBehaviour
         infoAllPbr.SetActive(false);
 
         backToPlayerButton.SetActive(false);
+        Cursor.lockState = CursorLockMode.Locked;
     }
 
     public void ButtonModelSwitch()
@@ -108,6 +111,7 @@ public class UIManager : MonoBehaviour
         mChange.GetComponent<InteractionMaterialChanger>().mayMatChange = false;
         GameObject.FindWithTag("Player").GetComponent<PlayerMove>().freeMove = true;
         switchValueEmpty.SetActive(false);
+        Cursor.lockState = CursorLockMode.Locked;
     }
 
     public void OtherOptionsOpen()
@@ -116,6 +120,7 @@ public class UIManager : MonoBehaviour
         {
             Debug.Log("neuhwfbubuwb");
             optionsMenu.SetActive(true);
+            Cursor.lockState = CursorLockMode.None;
             GameObject.FindWithTag("Player").GetComponent<PlayerMove>().freeMove = false;
         }
         else if(Input.GetButtonDown("Options") && optionsMenu.activeSelf == true)
@@ -124,10 +129,12 @@ public class UIManager : MonoBehaviour
             if (mBase.GetComponent<MaterialMapsZoomBase>().allowRotation == true || mChange.GetComponent<InteractionMaterialChanger>().mayMatChange == true)
             {
                 GameObject.FindWithTag("Player").GetComponent<PlayerMove>().freeMove = false;
+                Cursor.lockState = CursorLockMode.None;
             }
             else
             {
                 GameObject.FindWithTag("Player").GetComponent<PlayerMove>().freeMove = true;
+                Cursor.lockState = CursorLockMode.Locked;
             }
         }
     }
@@ -139,10 +146,12 @@ public class UIManager : MonoBehaviour
         if (mBase.GetComponent<MaterialMapsZoomBase>().allowRotation == true || mChange.GetComponent<InteractionMaterialChanger>().mayMatChange == true)
         {
             GameObject.FindWithTag("Player").GetComponent<PlayerMove>().freeMove = false;
+            Cursor.lockState = CursorLockMode.None;
         }
         else
         {
             GameObject.FindWithTag("Player").GetComponent<PlayerMove>().freeMove = true;
+            Cursor.lockState = CursorLockMode.Locked;
         }
     }
 

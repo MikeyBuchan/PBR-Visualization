@@ -10,10 +10,12 @@ public class InteractionBase : MonoBehaviour
         GameObject.FindWithTag("Player").GetComponent<PlayerMove>().freeMove = false;
         GameObject.FindWithTag("UiManager").GetComponent<UIManager>().interactDisplay.SetActive(false);
         GameObject.FindWithTag("MainCamera").SetActive(false);
+        Cursor.lockState = CursorLockMode.None;
     }
 
     public virtual void TeleportInteract()
     {
         GameObject.FindWithTag("Player").GetComponent<PlayerMove>().freeMove = false;
+        Cursor.lockState = CursorLockMode.None;
     }
 }
