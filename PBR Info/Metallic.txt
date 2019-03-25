@@ -6,3 +6,8 @@ You can use a Metallic map if you want a specific part made out of metal.
 
 The metallic map is used to define which areas of a material denote raw metal.
 As a grayscale map, it operates in a manner similar to a mask, as it tells the shader how it should interpret data found in the base color.
+The data in the metallic map does not contain real-world data that is directly used as material value.
+It simply describes to the shader which areas in the base color should be interpreted as reflected color and which areas denote metal reflectance values.
+In the metallic map, 0.0(black) represents non-metal and 1.0(white) represents raw metal.
+in terms of defining raw metal and non-metal, this metallic map is often binary: black or white, metal or non-metal.
+In practice, when the shader looks at the metal map sees white, it then checks the corresponding areas in the base color map to get the reflectance values for the metal.
