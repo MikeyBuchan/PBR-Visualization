@@ -9,11 +9,6 @@ public class PlayerMove : MonoBehaviour
     public bool freeMove = true;
     public AudioSource source;
 
-    void Start()
-    {
-
-    }
-
     void FixedUpdate()
     {
         if (Input.GetAxis("Horizontal") != 0 || Input.GetAxis("Vertical") != 0)

@@ -11,15 +11,17 @@ public class PlayerLook : MonoBehaviour
     float rotY;
     public float clampMaxY;
     public float clampMinY;
+    bool magGaanRoteren = false;
 
     void Start()
     {
         player = GameObject.FindWithTag("Player").transform;
+        StartCoroutine(enumerator());
     }
 
     void Update()
     {
-        if (gameObject.transform.parent.GetComponent<PlayerMove>().freeMove == true)
+        if (gameObject.transform.parent.GetComponent<PlayerMove>().freeMove == true && magGaanRoteren == true)
         {
             rotX = Input.GetAxis("Mouse X") * sensitivityX * Time.deltaTime;
             player.transform.Rotate(Vector3.up * rotX);
@@ -39,5 +41,11 @@ public class PlayerLook : MonoBehaviour
         {
             Debug.Log("FreeMove == false");
         }
+    }
+
+    IEnumerator enumerator()
+    {
+        yield return null;
+        magGaanRoteren = true;
     }
 }
