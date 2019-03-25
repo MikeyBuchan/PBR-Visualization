@@ -14,7 +14,7 @@ public class PlayerMove : MonoBehaviour
 
     }
 
-    void Update()
+    void FixedUpdate()
     {
         if (Input.GetAxis("Horizontal") != 0 || Input.GetAxis("Vertical") != 0)
         {
