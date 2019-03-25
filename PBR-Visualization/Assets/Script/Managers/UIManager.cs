@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class UIManager : MonoBehaviour
 {
@@ -143,6 +144,12 @@ public class UIManager : MonoBehaviour
         {
             GameObject.FindWithTag("Player").GetComponent<PlayerMove>().freeMove = true;
         }
+    }
+
+    public void YesQuit()
+    {
+        Debug.Log("Player Quit");
+        Application.Quit();
     }
 
 }
