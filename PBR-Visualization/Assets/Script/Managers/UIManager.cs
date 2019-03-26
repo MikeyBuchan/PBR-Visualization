@@ -152,7 +152,6 @@ public class UIManager : MonoBehaviour
 
     public void OterOptionsClose()
     {
-        Debug.Log("enbubv");
         optionsMenu.SetActive(false);
         if (mBase.GetComponent<MaterialMapsZoomBase>().allowRotation == true || mChange.GetComponent<InteractionMaterialChanger>().mayMatChange == true)
         {
