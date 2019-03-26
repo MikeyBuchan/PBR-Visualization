@@ -1,1 +1,5 @@
 You can give objects emission that creates a light effect.
+
+A emission map is a map that receives no lighting, so the pixels are shown at full intensity. 
+Also called a Fullbright Map, Glow Map, Incandescence Map, or Self-Illumination Map
+This is used for a glow in the dark effect, but does not emit light onto adjacent surfaces.

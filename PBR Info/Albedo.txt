@@ -1,1 +1,5 @@
-An Albedo map has all the primary colors of the object.
+Albedo is the base color input, commonly known as a diffuse map.
+
+An albedo map defines the color of diffused light. 
+One of the biggest differences between an albedo map in a PBR system and a traditional diffuse map is the lack of directional light or ambient occlusion. 
+Directional light will look incorrect in certain lighting conditions, and ambient occlusion should be added in the separate AO slot.
