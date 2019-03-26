@@ -11,15 +11,15 @@ ModelImporter:
     400002: CenterCorner2_low
     400004: //RootNode
     400006: CenterCorner_low
-    2100000: CenterCorner
+    2100000: CenterCorner.001
     2300000: CenterCorner1_low
     2300002: CenterCorner2_low
     2300004: CenterCorner_low
     3300000: CenterCorner1_low
     3300002: CenterCorner2_low
     3300004: CenterCorner_low
-    4300000: CenterCorner1_low
-    4300002: CenterCorner2_low
+    4300000: CenterCorner2_low
+    4300002: CenterCorner1_low
     4300004: CenterCorner_low
   externalObjects: {}
   materials:
