@@ -378,6 +378,7 @@ GameObject:
   m_Component:
   - component: {fileID: 11095481}
   - component: {fileID: 11095482}
+  - component: {fileID: 11095483}
   m_Layer: 8
   m_Name: Tutorial interactDisplay
   m_TagString: Untagged
@@ -413,6 +414,22 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 11095480}
   m_CullTransparentMesh: 0
+--- !u!114 &11095483
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 11095480}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b5fa531d67f25de4abccea40b3cf0388, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  panelTutUi: {fileID: 970647415}
+  textTutUi: {fileID: 1213177356}
+  fadeDis: 1
+  vector: {x: 4.5, y: 8}
 --- !u!1 &12481207
 GameObject:
   m_ObjectHideFlags: 0
@@ -2179,6 +2196,8 @@ GameObject:
   - component: {fileID: 75940064}
   - component: {fileID: 75940066}
   - component: {fileID: 75940065}
+  - component: {fileID: 75940067}
+  - component: {fileID: 75940068}
   m_Layer: 5
   m_Name: Information
   m_TagString: Untagged
@@ -2249,6 +2268,67 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 75940063}
   m_CullTransparentMesh: 0
+--- !u!114 &75940067
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 75940063}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 727850875d775d144a4027a18e7b6501, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  switchMat: {fileID: 1244155270}
+--- !u!114 &75940068
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 75940063}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -1862395651, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates:
+  - eventID: 0
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 75940067}
+          m_MethodName: BoolInvertFunction
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+      m_TypeName: UnityEngine.EventSystems.EventTrigger+TriggerEvent, UnityEngine.UI,
+        Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  - eventID: 1
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 75940067}
+          m_MethodName: BoolInvertFunctionFalse
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+      m_TypeName: UnityEngine.EventSystems.EventTrigger+TriggerEvent, UnityEngine.UI,
+        Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  delegates: []
 --- !u!1 &76047649
 GameObject:
   m_ObjectHideFlags: 0
@@ -20582,6 +20662,7 @@ GameObject:
   m_Component:
   - component: {fileID: 696301179}
   - component: {fileID: 696301180}
+  - component: {fileID: 696301181}
   m_Layer: 8
   m_Name: Tutorial interactDisplay (1)
   m_TagString: Untagged
@@ -20617,6 +20698,22 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 696301178}
   m_CullTransparentMesh: 0
+--- !u!114 &696301181
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 696301178}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b5fa531d67f25de4abccea40b3cf0388, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  panelTutUi: {fileID: 2128475477}
+  textTutUi: {fileID: 830114359}
+  fadeDis: 1
+  vector: {x: 4.5, y: 8}
 --- !u!1 &701070047 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 100004, guid: 0c4fd352d193246448b1cd9f764cbe19,
@@ -23553,7 +23650,7 @@ GameObject:
   - component: {fileID: 830114362}
   - component: {fileID: 830114361}
   m_Layer: 8
-  m_Name: Text
+  m_Name: Text1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -64872,7 +64969,7 @@ GameObject:
   - component: {fileID: 2128475480}
   - component: {fileID: 2128475479}
   m_Layer: 8
-  m_Name: Panel
+  m_Name: Panel1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
