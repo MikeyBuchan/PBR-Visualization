@@ -11,7 +11,7 @@ public class InteractionTutorial : InteractionBase
 
         gameObject.GetComponent<MaterialMapsZoomBase>().interactCamera.SetActive(true);
         gameObject.GetComponent<MaterialMapsZoomBase>().allowRotation = true;
-
+        gameObject.GetComponent<Animator>().SetTrigger("Toggle");
         GameObject.FindWithTag("UiManager").GetComponent<UIManager>().backToPlayerButton.SetActive(true);
         base.Interact();
     }

@@ -20,16 +20,15 @@ public class MaterialMapsZoom : MonoBehaviour
     
     void Start()
     {
-        baseClass = gameObject.transform.parent.gameObject.GetComponent<MaterialMapsZoomBase>();
+        baseClass = transform.parent.parent.GetComponent<MaterialMapsZoomBase>();
         startRotation = gameObject.transform.rotation;
         normalMaterial = GetComponent<Renderer>().material;
-
         nameUI.SetActive(false);  
     }
 
     void Update()
     {
-        if (baseClass.zoomdIn == true)
+        if (baseClass != null && baseClass.zoomdIn == true)
         {
             RotateObject();
         }

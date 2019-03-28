@@ -394,7 +394,7 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 11095480}
   m_LocalRotation: {x: -0, y: -0.7071062, z: -0, w: 0.7071075}
-  m_LocalPosition: {x: 0, y: 0, z: -648.579}
+  m_LocalPosition: {x: 0, y: 0, z: -646.72}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 970647416}
@@ -403,7 +403,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: -90.00001, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -336.24744, y: 103.3}
+  m_AnchoredPosition: {x: -334.6, y: 102.67}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &11095482
@@ -5829,7 +5829,7 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 169257255}
   m_LocalRotation: {x: -0, y: 1, z: -0, w: 0.0000021010635}
-  m_LocalPosition: {x: 0, y: 0, z: 1.42}
+  m_LocalPosition: {x: 0, y: 0, z: -0.9800805}
   m_LocalScale: {x: 0.1, y: 0.1, z: 0.1}
   m_Children: []
   m_Father: {fileID: 927342953}
@@ -5837,7 +5837,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 180.00002, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 15.8, y: -30.27}
+  m_AnchoredPosition: {x: 13.71, y: -29.3}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &169257257
@@ -8757,7 +8757,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &278206754
 Transform:
   m_ObjectHideFlags: 0
@@ -9728,8 +9728,9 @@ GameObject:
   - component: {fileID: 329751128}
   - component: {fileID: 329751127}
   - component: {fileID: 329751126}
+  - component: {fileID: 329751129}
   m_Layer: 8
-  m_Name: Sphere
+  m_Name: Metallic
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -9779,7 +9780,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 73c176f402d2c2f4d929aa5da7585d17, type: 2}
+  - {fileID: 2100000, guid: 112b7a6886461814d889b624ef9210f8, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -9807,6 +9808,37 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 329751124}
   m_Mesh: {fileID: 4300000, guid: d936d38471cc54d4e9863d7241017c15, type: 3}
+--- !u!114 &329751129
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 329751124}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eaaa643ccad4e0943bb6da55e6c208b1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 225
+  nameObj: Metallic
+  infoObj: You can use a Metallic map if you want a specific part made out of metal.
+  extraInfoObj: "The metallic map is used to define which areas of a material denote
+    raw metal.\r\nAs a grayscale map, it operates in a manner similar to a mask, as
+    it tells the shader how it should interpret data found in the base color.\r\nThe
+    data in the metallic map does not contain real-world data that is directly used
+    as material value.\r\nIt simply describes to the shader which areas in the base
+    color should be interpreted as reflected color and which areas denote metal reflectance
+    values.\r\nIn the metallic map, 0.0(black) represents non-metal and 1.0(white)
+    represents raw metal.\r\nin terms of defining raw metal and non-metal, this metallic
+    map is often binary: black or white, metal or non-metal.\r\nIn practice, when
+    the shader looks at the metal map sees white, it then checks the corresponding
+    areas in the base color map to get the reflectance values for the metal."
+  normalMaterial: {fileID: 2100000, guid: 112b7a6886461814d889b624ef9210f8, type: 2}
+  hightLightMaterial: {fileID: 2100000, guid: 361a03f8b9870f54ea30b95432701902, type: 2}
+  myNumber: 1
+  nameUI: {fileID: 1935683754}
+  lerpSpeed: 2
 --- !u!1 &331788998
 GameObject:
   m_ObjectHideFlags: 0
@@ -12671,7 +12703,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 461691161}
   m_LocalRotation: {x: -0, y: 1, z: -0, w: 0.0000028014183}
-  m_LocalPosition: {x: -10.046, y: 3.024798, z: -17.724}
+  m_LocalPosition: {x: -10.046, y: 2.98, z: -17.635}
   m_LocalScale: {x: 0.62172, y: 0.62172, z: 0.62172}
   m_Children:
   - {fileID: 1888076529}
@@ -13066,7 +13098,7 @@ Transform:
   - {fileID: 944516617}
   - {fileID: 819039419}
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &476101460
 GameObject:
@@ -22136,9 +22168,9 @@ MonoBehaviour:
     m_Font: {fileID: 12800000, guid: 86a1b549960b91c4fbc5f8d49abd3484, type: 3}
     m_FontSize: 14
     m_FontStyle: 0
-    m_BestFit: 0
-    m_MinSize: 10
-    m_MaxSize: 40
+    m_BestFit: 1
+    m_MinSize: 2
+    m_MaxSize: 14
     m_Alignment: 0
     m_AlignByGeometry: 0
     m_RichText: 1
@@ -22218,7 +22250,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &766136740
 GameObject:
@@ -23585,7 +23617,7 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 828992355}
   m_LocalRotation: {x: -0, y: 1, z: -0, w: 0.0000021010635}
-  m_LocalPosition: {x: 0, y: 0, z: -4.61}
+  m_LocalPosition: {x: 0, y: 0, z: -2}
   m_LocalScale: {x: 0.1, y: 0.1, z: 0.1}
   m_Children: []
   m_Father: {fileID: 927342953}
@@ -23593,7 +23625,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 180.00002, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 28.33, y: -10}
+  m_AnchoredPosition: {x: 26.4, y: -10}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &828992357
@@ -25014,8 +25046,9 @@ GameObject:
   - component: {fileID: 913530685}
   - component: {fileID: 913530684}
   - component: {fileID: 913530683}
+  - component: {fileID: 913530686}
   m_Layer: 8
-  m_Name: Sphere
+  m_Name: Emission
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -25065,7 +25098,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 73c176f402d2c2f4d929aa5da7585d17, type: 2}
+  - {fileID: 2100000, guid: 8f163530f83e8c946a3655069e050c7d, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -25093,6 +25126,30 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 913530681}
   m_Mesh: {fileID: 4300000, guid: d936d38471cc54d4e9863d7241017c15, type: 3}
+--- !u!114 &913530686
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 913530681}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eaaa643ccad4e0943bb6da55e6c208b1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 225
+  nameObj: Emission
+  infoObj: "You can give objects emission that creates a light effect.\r"
+  extraInfoObj: "A emission map is a map that receives no lighting, so the pixels
+    are shown at full intensity. \r\nAlso called a Fullbright Map, Glow Map, Incandescence
+    Map, or Self-Illumination Map\r\nThis is used for a glow in the dark effect, but
+    does not emit light onto adjacent surfaces."
+  normalMaterial: {fileID: 2100000, guid: 8f163530f83e8c946a3655069e050c7d, type: 2}
+  hightLightMaterial: {fileID: 2100000, guid: afef5323857adf1429b0f9d95343d674, type: 2}
+  myNumber: 5
+  nameUI: {fileID: 1676275091}
+  lerpSpeed: 2
 --- !u!1 &914275321
 GameObject:
   m_ObjectHideFlags: 0
@@ -25581,6 +25638,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Layer
       value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 8407080364766845623, guid: a2a4252d5eb8269439ffe24e66867baf,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2141016910, guid: a2a4252d5eb8269439ffe24e66867baf, type: 3}
       propertyPath: interactCamera
@@ -26248,25 +26310,50 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 8
       objectReference: {fileID: 0}
+    - target: {fileID: 6944351729213944135, guid: a2a4252d5eb8269439ffe24e66867baf,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6944351729716593008, guid: a2a4252d5eb8269439ffe24e66867baf,
         type: 3}
       propertyPath: m_Layer
       value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 6944351729716593008, guid: a2a4252d5eb8269439ffe24e66867baf,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6944351727984985307, guid: a2a4252d5eb8269439ffe24e66867baf,
         type: 3}
       propertyPath: m_Layer
       value: 8
       objectReference: {fileID: 0}
+    - target: {fileID: 6944351727984985307, guid: a2a4252d5eb8269439ffe24e66867baf,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6944351727667834906, guid: a2a4252d5eb8269439ffe24e66867baf,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 6944351727667834906, guid: a2a4252d5eb8269439ffe24e66867baf,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6944351727713336480, guid: a2a4252d5eb8269439ffe24e66867baf,
         type: 3}
       propertyPath: m_Layer
       value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 6944351727713336480, guid: a2a4252d5eb8269439ffe24e66867baf,
         type: 3}
-      propertyPath: m_Layer
-      value: 8
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 896188678688876324, guid: a2a4252d5eb8269439ffe24e66867baf,
         type: 3}
@@ -26453,7 +26540,7 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 927342952}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -632.4}
+  m_LocalPosition: {x: 0, y: 0, z: -638.9}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 828992356}
@@ -26859,8 +26946,9 @@ GameObject:
   - component: {fileID: 947011405}
   - component: {fileID: 947011404}
   - component: {fileID: 947011403}
+  - component: {fileID: 947011406}
   m_Layer: 8
-  m_Name: Sphere
+  m_Name: Roughness
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -26910,7 +26998,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 73c176f402d2c2f4d929aa5da7585d17, type: 2}
+  - {fileID: 2100000, guid: cb24634a3fb661540a467717c1c664bc, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -26938,6 +27026,32 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 947011401}
   m_Mesh: {fileID: 4300000, guid: d936d38471cc54d4e9863d7241017c15, type: 3}
+--- !u!114 &947011406
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 947011401}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eaaa643ccad4e0943bb6da55e6c208b1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 225
+  nameObj: Roughness
+  infoObj: This map controls the sharpness of the reflections.
+  extraInfoObj: "The roughness map describes the surface irregularites that cause
+    light diffusion.\r\nThe reflected direction will vary randomly based on the surface
+    roughness.\r\nThis changes light direction, but the light intensity remains constant.\r\nRougher
+    surfaces will have larger and dimmer-looking highlights.\r\nSmoother surfaces
+    will keep specular reflections focused, which can appear to look brighter or more
+    intense even though the same total amount of light is reflected."
+  normalMaterial: {fileID: 2100000, guid: cb24634a3fb661540a467717c1c664bc, type: 2}
+  hightLightMaterial: {fileID: 2100000, guid: a75913d981b9e4540a2cc29a797a86bd, type: 2}
+  myNumber: 4
+  nameUI: {fileID: 169257255}
+  lerpSpeed: 2
 --- !u!1 &947293338 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 100004, guid: 0c4fd352d193246448b1cd9f764cbe19,
@@ -27667,7 +27781,7 @@ GameObject:
   - component: {fileID: 964754640}
   - component: {fileID: 964754643}
   - component: {fileID: 964754642}
-  - component: {fileID: 964754641}
+  - component: {fileID: 964754644}
   m_Layer: 8
   m_Name: Sphere
   m_TagString: Untagged
@@ -27682,26 +27796,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 964754639}
-  m_LocalRotation: {x: 0, y: 0.7071068, z: 0.7071068, w: 0}
+  m_LocalRotation: {x: -0.7071068, y: 0, z: 0, w: 0.7071068}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1757839186}
   m_RootOrder: 6
-  m_LocalEulerAnglesHint: {x: -90.00001, y: 0, z: 180}
---- !u!135 &964754641
-SphereCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 964754639}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 0.5
-  m_Center: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: -90.00001, y: 0, z: 0}
 --- !u!23 &964754642
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -27719,7 +27820,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 73c176f402d2c2f4d929aa5da7585d17, type: 2}
+  - {fileID: 2100000, guid: e173d3812a14193449a44e905a3f39c7, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -27747,6 +27848,21 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 964754639}
   m_Mesh: {fileID: 4300000, guid: d936d38471cc54d4e9863d7241017c15, type: 3}
+--- !u!114 &964754644
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 964754639}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 52186c793fa178d4281e03029c7b0415, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mBase: {fileID: 2141016910}
+  Sspeed: 250
+  lerpSpeed: 5
 --- !u!1 &965953412
 GameObject:
   m_ObjectHideFlags: 0
@@ -28079,8 +28195,9 @@ GameObject:
   - component: {fileID: 968768233}
   - component: {fileID: 968768232}
   - component: {fileID: 968768231}
+  - component: {fileID: 968768234}
   m_Layer: 8
-  m_Name: Sphere
+  m_Name: Normal
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -28130,7 +28247,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 73c176f402d2c2f4d929aa5da7585d17, type: 2}
+  - {fileID: 2100000, guid: e4ad935a4dec5f043876903f15097425, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -28158,6 +28275,45 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 968768229}
   m_Mesh: {fileID: 4300000, guid: d936d38471cc54d4e9863d7241017c15, type: 3}
+--- !u!114 &968768234
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 968768229}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eaaa643ccad4e0943bb6da55e6c208b1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 225
+  nameObj: Normal
+  infoObj: "A Normal map is a type of map where you can add a small detail to your
+    object. \r\nIt is a special kind of texture that allows you to add surface detail
+    such as bumps, grooves, and scratches to a model which catch the light as if they
+    are represented by real geometry.\nIt is a special kind of texture that allows
+    you to add surface detail such as bumps, grooves, and scratches to a model which
+    catch the light as if they are represented by real geometry."
+  extraInfoObj: "Normal mapping takes this modification of surface normals one step
+    further, by using a texture to store information about how to modify the surface
+    normals across the model. \r\nA normal map is an image texture mapped to the surface
+    of a model, similar to regular colour textures, however each pixelin the texture
+    of the normal map (called a texel) \r\nrepresents a deviation in surface normal
+    direction away from the \u201Ctrue\u201D surface normal of the flat (or smooth
+    interpolated) polygon.\r\nThese bumps would only be apparent due to the way lighting
+    appears on the surface, because these modified normals are used in the lighting
+    calculations.\r\nThe colours visible in a raw normal map file typically have a
+    blueish hue, and don\u2019t contain any actual light or dark shading - this is
+    because the colours themselves are not \r\nintended to be displayed as they are.
+    \r\nInstead, the RGB values of each texel represent the X,Y & Z values of a direction
+    vector, and are applied as a modification to the basic interpolated smooth normals
+    of the polygon surfaces.\r"
+  normalMaterial: {fileID: 2100000, guid: e4ad935a4dec5f043876903f15097425, type: 2}
+  hightLightMaterial: {fileID: 2100000, guid: 572f9e3854d4c824495dbd5a5cd808f4, type: 2}
+  myNumber: 2
+  nameUI: {fileID: 1481760812}
+  lerpSpeed: 2
 --- !u!1 &969489747
 GameObject:
   m_ObjectHideFlags: 0
@@ -28431,7 +28587,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0, g: 0, b: 0, a: 0.5294118}
+  m_Color: {r: 0, g: 0, b: 0, a: 0.7607843}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -33696,7 +33852,7 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1130698960}
   m_LocalRotation: {x: -0, y: 1, z: -0, w: 0.0000021010635}
-  m_LocalPosition: {x: 0, y: 0, z: 0.5}
+  m_LocalPosition: {x: 0, y: 0, z: -1.6000805}
   m_LocalScale: {x: 0.1, y: 0.1, z: 0.1}
   m_Children: []
   m_Father: {fileID: 927342953}
@@ -33704,7 +33860,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 180.00002, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -33.09, y: -7.58}
+  m_AnchoredPosition: {x: -32.11, y: -8.9}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1130698962
@@ -44572,7 +44728,7 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1481760812}
   m_LocalRotation: {x: -0, y: 1, z: -0, w: 0.0000021010635}
-  m_LocalPosition: {x: 0, y: 0, z: -11.79}
+  m_LocalPosition: {x: 0, y: 0, z: -3.7}
   m_LocalScale: {x: 0.1, y: 0.1, z: 0.1}
   m_Children: []
   m_Father: {fileID: 927342953}
@@ -44580,7 +44736,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 180.00002, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 12.82, y: 16.13}
+  m_AnchoredPosition: {x: 14.6, y: 17.1}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1481760814
@@ -46555,8 +46711,9 @@ GameObject:
   - component: {fileID: 1537856151}
   - component: {fileID: 1537856150}
   - component: {fileID: 1537856149}
+  - component: {fileID: 1537856152}
   m_Layer: 8
-  m_Name: Sphere
+  m_Name: AO
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -46606,7 +46763,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 73c176f402d2c2f4d929aa5da7585d17, type: 2}
+  - {fileID: 2100000, guid: 4679e4bf24aea834daa6c62031b51ed7, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -46634,6 +46791,44 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1537856147}
   m_Mesh: {fileID: 4300000, guid: d936d38471cc54d4e9863d7241017c15, type: 3}
+--- !u!114 &1537856152
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1537856147}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eaaa643ccad4e0943bb6da55e6c208b1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 225
+  nameObj: Ambient Occlusion
+  infoObj: "Ambient Occlusion(AO) is a shading and rendering technique used to calculate
+    how exposed each point in the scene is to the world light.\r\nThe interior of
+    a tube is typically more occluded (and hence darker) than the exposed outer surfaces,
+    and the deeper you go inside the tube, the more occluded (and darker) the lighting
+    becomes. "
+  extraInfoObj: "The occlusion map is used to provide information about which areas
+    of the model should receive high or low indirect lighting. \r\nIndirect lighting
+    comes from ambient lighting and reflections, and so steep concave parts of your
+    model such as a crack or fold would not realistically receive much indirect light.\r\nOcclusion
+    texture maps are normally calculated by 3D applications directly from the 3D model
+    using the modeller or third party software.\r\nAn occlusion map is a greyscale
+    image, with white indicating areas that should receive full indirect lighting,
+    and black indicating no indirect lighting. \r\nSometimes this is as simple as
+    a greyscale heightmap, for simple surfaces.\r\n\r\nAt other times, generating
+    the correct occlusion texture is slightly more complex. For example, if a character
+    in your scene\r\nis wearing a hood, the inside edges of the hood should be set
+    to very low indirect lighting, or none at all. In these situations, \r\nocclusion
+    maps will be often be produced by artists, using 3D applications to automatically
+    generate an occlusion map based on the model."
+  normalMaterial: {fileID: 2100000, guid: 4679e4bf24aea834daa6c62031b51ed7, type: 2}
+  hightLightMaterial: {fileID: 2100000, guid: 0eb2006e15958544ca220ad0195157a6, type: 2}
+  myNumber: 0
+  nameUI: {fileID: 1130698960}
+  lerpSpeed: 2
 --- !u!1 &1539549744
 GameObject:
   m_ObjectHideFlags: 0
@@ -47497,8 +47692,9 @@ GameObject:
   - component: {fileID: 1566677690}
   - component: {fileID: 1566677689}
   - component: {fileID: 1566677688}
+  - component: {fileID: 1566677691}
   m_Layer: 8
-  m_Name: Sphere
+  m_Name: Albedo
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -47548,7 +47744,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 73c176f402d2c2f4d929aa5da7585d17, type: 2}
+  - {fileID: 2100000, guid: c8b6b6d76795b284e985445bad2c78b8, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -47576,6 +47772,31 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1566677686}
   m_Mesh: {fileID: 4300000, guid: d936d38471cc54d4e9863d7241017c15, type: 3}
+--- !u!114 &1566677691
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1566677686}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eaaa643ccad4e0943bb6da55e6c208b1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 225
+  nameObj: Albedo
+  infoObj: "Albedo is the base color input, commonly known as a diffuse map.\r"
+  extraInfoObj: "An albedo map defines the color of diffused light. \r\nOne of the
+    biggest differences between an albedo map in a PBR system and a traditional diffuse
+    map is the lack of directional light or ambient occlusion. \r\nDirectional light
+    will look incorrect in certain lighting conditions, and ambient occlusion should
+    be added in the separate AO slot."
+  normalMaterial: {fileID: 2100000, guid: c8b6b6d76795b284e985445bad2c78b8, type: 2}
+  hightLightMaterial: {fileID: 2100000, guid: 3e364bfa17e687646a436cebbedd331c, type: 2}
+  myNumber: 3
+  nameUI: {fileID: 828992355}
+  lerpSpeed: 2
 --- !u!1 &1567449726
 GameObject:
   m_ObjectHideFlags: 0
@@ -51123,7 +51344,7 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1676275091}
   m_LocalRotation: {x: -0, y: 1, z: -0, w: 0.0000021010635}
-  m_LocalPosition: {x: 0, y: 0, z: -1.35}
+  m_LocalPosition: {x: 0, y: 0, z: -3.7500806}
   m_LocalScale: {x: 0.1, y: 0.1, z: 0.1}
   m_Children: []
   m_Father: {fileID: 927342953}
@@ -51131,7 +51352,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 180.00002, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -17.8, y: -31.16}
+  m_AnchoredPosition: {x: -18.36, y: -30.7}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1676275093
@@ -54190,9 +54411,12 @@ GameObject:
   m_Component:
   - component: {fileID: 1757839186}
   - component: {fileID: 1757839185}
+  - component: {fileID: 1757839189}
+  - component: {fileID: 1757839188}
+  - component: {fileID: 1757839187}
   m_Layer: 8
-  m_Name: AnimationTest
-  m_TagString: Untagged
+  m_Name: AnimatedMatBig
+  m_TagString: Interaction
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -54224,7 +54448,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1757839184}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.03957715, y: 6.99, z: 0.083}
+  m_LocalPosition: {x: -10.053, y: 3.12, z: -19.32}
   m_LocalScale: {x: 0.62172025, y: 0.6217203, z: 0.6217202}
   m_Children:
   - {fileID: 543193385}
@@ -54235,8 +54459,62 @@ Transform:
   - {fileID: 1560319817}
   - {fileID: 964754640}
   m_Father: {fileID: 0}
-  m_RootOrder: 9
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1757839187
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1757839184}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: be25784cd3a8ddd4f82a4b7de3d6be63, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1757839188
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1757839184}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 523adfdf4e793154e8747c1d2abd4413, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  adjustCam: {x: -0.3, y: 0, z: 0.47}
+  interactCamera: {fileID: 461691161}
+  camRotationOfset: 20
+  speed: 1
+  baseCamAdjustment: {x: 0, y: -0.16, z: 1.69}
+  baseCamAdjustmentMiddleObject: {x: 0, y: 0, z: 0.7}
+  camRotationAmount: 1
+  allowRotation: 0
+  zoomdIn: 0
+  zoom: 1
+  myChildNumber: 0
+  childList: []
+  namePanel: {fileID: 311242889}
+  discriptionPanel: {fileID: 749331935}
+  extraDiscriptionPanel: {fileID: 1807288014}
+  otherName: {fileID: 1823103956}
+  backButtonMiddleObject: {fileID: 1631386921}
+--- !u!135 &1757839189
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1757839184}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.5
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &1760715758
 GameObject:
   m_ObjectHideFlags: 0
@@ -55219,7 +55497,7 @@ RectTransform:
   - {fileID: 11095481}
   - {fileID: 696301179}
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -55815,9 +56093,9 @@ MonoBehaviour:
     m_Font: {fileID: 12800000, guid: 86a1b549960b91c4fbc5f8d49abd3484, type: 3}
     m_FontSize: 12
     m_FontStyle: 0
-    m_BestFit: 0
-    m_MinSize: 10
-    m_MaxSize: 40
+    m_BestFit: 1
+    m_MinSize: 2
+    m_MaxSize: 12
     m_Alignment: 0
     m_AlignByGeometry: 0
     m_RichText: 1
@@ -59607,7 +59885,7 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1935683754}
   m_LocalRotation: {x: -0, y: 1, z: -0, w: 0.0000021010635}
-  m_LocalPosition: {x: 0, y: 0, z: -9.04}
+  m_LocalPosition: {x: 0, y: 0, z: -1.65}
   m_LocalScale: {x: 0.1, y: 0.1, z: 0.1}
   m_Children: []
   m_Father: {fileID: 927342953}
@@ -59615,7 +59893,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 180.00002, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -19.36, y: 17.21}
+  m_AnchoredPosition: {x: -17.4, y: 16.4}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1935683756
@@ -65566,19 +65844,13 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2138787644}
   m_CullTransparentMesh: 0
---- !u!1 &2141016908 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 8407080364766845623, guid: a2a4252d5eb8269439ffe24e66867baf,
-    type: 3}
-  m_PrefabInstance: {fileID: 925698018}
-  m_PrefabAsset: {fileID: 0}
 --- !u!114 &2141016910 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 2141016910, guid: a2a4252d5eb8269439ffe24e66867baf,
     type: 3}
   m_PrefabInstance: {fileID: 925698018}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2141016908}
+  m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 523adfdf4e793154e8747c1d2abd4413, type: 3}
@@ -67430,7 +67702,7 @@ MonoBehaviour:
   backToPlayerButton: {fileID: 1149260904}
   switchValueEmpty: {fileID: 1978992633}
   interactDisplay: {fileID: 259273112}
-  mBase: {fileID: 2141016908}
+  mBase: {fileID: 1757839184}
   mChange: {fileID: 1244155270}
   optionsMenu: {fileID: 1355744368}
   advancedBool: 0

@@ -53,9 +53,9 @@ public class MaterialMapsZoomBase : MonoBehaviour
 
         foreach (Transform item in transform)
         {
-            if (item.GetComponent<MaterialMapsZoom>())
+            if (item.childCount != 0 && item.GetChild(0).GetComponent<MaterialMapsZoom>())
             {
-                childList.Add(item);
+                childList.Add(item.GetChild(0));
             }
         }
     }
