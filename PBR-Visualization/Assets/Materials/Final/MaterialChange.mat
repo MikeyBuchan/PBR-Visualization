@@ -258,9 +258,9 @@ Material:
     - _ZTestModeDistortion: 4
     - _ZWrite: 1
     m_Colors:
-    - Color_6416DE66: {r: 0.49056602, g: 0.49056602, b: 0.49056602, a: 1}
-    - Color_86E9141: {r: 1, g: 1, b: 1, a: 0}
-    - Color_D2C589B7: {r: 1, g: 1, b: 1, a: 1}
+    - Color_6416DE66: {r: 1, g: 0, b: 0, a: 1}
+    - Color_86E9141: {r: 1, g: 0, b: 0, a: 0}
+    - Color_D2C589B7: {r: 1, g: 0, b: 0, a: 1}
     - _BaseColor: {r: 1, g: 1, b: 1, a: 1}
     - _Color: {r: 1, g: 1, b: 1, a: 1}
     - _DoubleSidedConstants: {r: 1, g: 1, b: -1, a: 0}
