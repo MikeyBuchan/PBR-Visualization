@@ -11,13 +11,15 @@ public class InteractionExempleScene : InteractionBase
         interactionCam.SetActive(false);
     }
 
+    public void Update()
+    {
+        Interact();
+    }
 
     public override void Interact()
     {
+        Debug.Log("TEst instraj");
         interactionCam.SetActive(true);
         base.Interact();
     }
-
-
-
 }
