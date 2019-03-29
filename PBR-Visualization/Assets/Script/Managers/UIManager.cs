@@ -115,6 +115,7 @@ public class UIManager : MonoBehaviour
         mChange.GetComponent<InteractionMaterialChanger>().mayMatChange = false;
         GameObject.FindWithTag("Player").GetComponent<PlayerMove>().freeMove = true;
         switchValueEmpty.SetActive(false);
+        mChange.GetComponent<MaterialMapsChange>().resetRotBack = true;
 
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;

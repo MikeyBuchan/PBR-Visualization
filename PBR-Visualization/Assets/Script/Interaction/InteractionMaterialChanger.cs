@@ -17,6 +17,7 @@ public class InteractionMaterialChanger : InteractionBase
         Debug.Log("MChager");
         interactCamera.SetActive(true);
         mayMatChange = true;
+        GetComponent<MaterialMapsChange>().resetRotBack = false;
         GameObject.FindWithTag("UiManager").GetComponent<UIManager>().switchValueEmpty.SetActive(true);
         base.Interact();
     }

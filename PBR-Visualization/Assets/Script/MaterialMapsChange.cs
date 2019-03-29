@@ -7,6 +7,7 @@ public class MaterialMapsChange : MonoBehaviour
     Renderer mesh;
     MeshRenderer RMesh;
     int currIndex;
+    public bool resetRotBack = true;
 
     [Header("Rotation")]
     public float speed;
@@ -54,7 +55,7 @@ public class MaterialMapsChange : MonoBehaviour
         {
             RotateObject();
         }
-        else if (gameObject.transform.rotation != startRot)
+        else if (gameObject.transform.rotation != startRot && resetRotBack == true)
         {
             transform.rotation = Quaternion.Lerp(transform.rotation, startRot, Time.deltaTime * lerpSpeed);
         }
