@@ -168,7 +168,7 @@ public class MaterialMapsZoomBase : MonoBehaviour
     //switch whit the button or arrow keys
     void Next()
     {
-        if (maySwitchSmallBalls == true)
+        if (maySwitchSmallBalls == true && uiManager.GetComponent<UIManager>().advancedBool == false)
         {
             if (Input.GetButtonDown("Horizontal"))
             {

@@ -57,8 +57,10 @@ public class MaterialMapsZoom : MonoBehaviour
     {
         if (GameObject.FindWithTag("Player").GetComponent<PlayerMove>().freeMove == false)
         {
-            if (baseClass.zoomdIn == false && GameObject.FindWithTag("UiManager").GetComponent<UIManager>().advancedBool == false && GameObject.FindWithTag("UiManager").GetComponent<UIManager>().extrab == false)//moet nog iets achter
+            UIManager ui = GameObject.FindWithTag("UiManager").GetComponent<UIManager>();
+            if (baseClass.zoomdIn == false && ui.advancedBool == false && ui.extrab == false)
             {
+                Debug.Log("extraBBB" + ui.extrab);
                 if (Input.GetButtonDown("Fire1"))
                 {
                     baseClass.SeroundPress(myNumber);
