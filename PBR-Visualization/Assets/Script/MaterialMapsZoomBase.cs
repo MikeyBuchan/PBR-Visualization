@@ -83,7 +83,6 @@ public class MaterialMapsZoomBase : MonoBehaviour
     {
         newPosCamera = childList[t].transform.position + adjustCam;
         MaterialMapsZoom MMZ = childList[t].GetComponent<MaterialMapsZoom>();
-        Debug.Log(newPosCamera);
 
         namePanel.GetComponentInChildren<Text>().text = MMZ.nameObj;
         discriptionPanel.GetComponentInChildren<Text>().text = MMZ.infoObj;

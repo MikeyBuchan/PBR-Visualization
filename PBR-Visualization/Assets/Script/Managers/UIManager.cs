@@ -24,6 +24,7 @@ public class UIManager : MonoBehaviour
     GameObject mainCamera;
     public GameObject optionsMenu;
     public bool advancedBool;
+    public bool extrab = false;
 
     private void Start()
     {
@@ -47,6 +48,7 @@ public class UIManager : MonoBehaviour
     private void Update()
     {
         OtherOptionsOpen();
+        Debug.Log("ExtraB + " + extrab);
     }
 
     public void ButtomZoomOut()
@@ -67,6 +69,7 @@ public class UIManager : MonoBehaviour
         normalInfoButton.SetActive(true);
 
         advancedBool = true;
+        extrab = true;
         mBase.GetComponent<MaterialMapsZoomBase>().zoomdIn = false;
 
         backToPlayerButton.SetActive(false);
@@ -81,6 +84,7 @@ public class UIManager : MonoBehaviour
 
         advancedButton.SetActive(true);
         advancedBool = false;
+        extrab = false;
         mBase.GetComponent<MaterialMapsZoomBase>().zoomdIn = true;
 
         backToPlayerButton.SetActive(false);

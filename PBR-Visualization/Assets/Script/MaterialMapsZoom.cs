@@ -57,14 +57,13 @@ public class MaterialMapsZoom : MonoBehaviour
     {
         if (GameObject.FindWithTag("Player").GetComponent<PlayerMove>().freeMove == false)
         {
-            if (baseClass.zoomdIn == false && GameObject.FindWithTag("UiManager").GetComponent<UIManager>().advancedBool == false)
+            if (baseClass.zoomdIn == false && GameObject.FindWithTag("UiManager").GetComponent<UIManager>().advancedBool == false && GameObject.FindWithTag("UiManager").GetComponent<UIManager>().extrab == false)//moet nog iets achter
             {
                 if (Input.GetButtonDown("Fire1"))
                 {
                     baseClass.SeroundPress(myNumber);
                     GetComponent<Renderer>().material = normalMaterial;
                     baseClass.myChildNumber = myNumber;
-                    //baseClass.zoomdIn = true;
                 }
             }
         }
