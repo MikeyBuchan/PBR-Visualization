@@ -53,7 +53,7 @@ public class TutorialUiFate : MonoBehaviour
                 value = (1f / fadeDis * distancey) * -1 + 1;
             else
                 value = (1f / fadeDis * distancey) * -1 + 4.5f;
-            Debug.Log(value = (1f / fadeDis * distancey) * -1 + 4.5f);
+
         }
         colorHolder = panelTutUi.GetComponent<Image>().color;
         colorHolder.a = value;
