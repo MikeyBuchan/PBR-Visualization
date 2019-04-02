@@ -7,10 +7,12 @@ public class TeleportationScript : InteractionBase
 {
     public GameObject popUp;
     public string sceneToLoad;
+    UIManager uimanager;
 
     private void Start()
     {
         popUp.SetActive(false);
+        uimanager = GameObject.FindWithTag("UiManager").GetComponent<UIManager>();
     }
 
     private void OnCollisionEnter(Collision c)
@@ -34,6 +36,7 @@ public class TeleportationScript : InteractionBase
 
         Cursor.lockState = CursorLockMode.None;
         Cursor.visible = true;
+        uimanager.crosHair.SetActive(false);
     }
 
     public void NoSwitch()
@@ -44,5 +47,6 @@ public class TeleportationScript : InteractionBase
 
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
+        uimanager.crosHair.SetActive(true);
     }
 }

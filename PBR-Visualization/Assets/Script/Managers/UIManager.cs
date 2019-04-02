@@ -25,6 +25,7 @@ public class UIManager : MonoBehaviour
     public GameObject optionsMenu;
     public bool advancedBool;
     public bool extrab = false;
+    public GameObject crosHair;
 
     private void Start()
     {
@@ -43,6 +44,7 @@ public class UIManager : MonoBehaviour
         backToPlayerButton.SetActive(false);
         switchValueEmpty.SetActive(false);
         optionsMenu.SetActive(false);
+        crosHair.SetActive(true);
     }
 
     private void Update()
@@ -104,6 +106,7 @@ public class UIManager : MonoBehaviour
 
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
+        crosHair.SetActive(true);
     }
 
     public void ButtonModelSwitch()
@@ -123,6 +126,7 @@ public class UIManager : MonoBehaviour
 
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
+        crosHair.SetActive(true);
     }
 
     public void OtherOptionsOpen()
@@ -135,6 +139,7 @@ public class UIManager : MonoBehaviour
 
             Cursor.lockState = CursorLockMode.None;
             Cursor.visible = true;
+            crosHair.SetActive(false);
         }
         else if(Input.GetButtonDown("Options") && optionsMenu.activeSelf == true)
         {
@@ -145,11 +150,13 @@ public class UIManager : MonoBehaviour
 
                 Cursor.lockState = CursorLockMode.None;
                 Cursor.visible = true;
+                crosHair.SetActive(false);
             }
             else
             {
                 Cursor.visible = false;
                 Cursor.lockState = CursorLockMode.Locked;
+                crosHair.SetActive(true);
 
                 GameObject.FindWithTag("Player").GetComponent<PlayerMove>().freeMove = true;
             }
@@ -164,6 +171,7 @@ public class UIManager : MonoBehaviour
             GameObject.FindWithTag("Player").GetComponent<PlayerMove>().freeMove = false;
             Cursor.lockState = CursorLockMode.None;
             Cursor.visible = true;
+            crosHair.SetActive(false);
         }
         else
         {
@@ -171,6 +179,7 @@ public class UIManager : MonoBehaviour
 
             Cursor.lockState = CursorLockMode.Locked;
             Cursor.visible = false;
+            crosHair.SetActive(true);
         }
     }
 
