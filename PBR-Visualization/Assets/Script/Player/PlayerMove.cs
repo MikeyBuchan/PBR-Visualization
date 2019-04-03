@@ -18,9 +18,9 @@ public class PlayerMove : MonoBehaviour
             {
                 PLayerMovement();
             }
-            if (Input.GetButtonDown("Horizontal") || Input.GetButtonDown("Vertical"))
+            if (Input.GetButton("Horizontal") || Input.GetButton("Vertical"))
                 source.enabled = true;
-            else if (Input.GetButtonUp("Horizontal") && !Input.GetButton("Vertical") || Input.GetButtonUp("Vertical") && !Input.GetButton("Horizontal"))
+            else
                 source.enabled = false;
         }
     }

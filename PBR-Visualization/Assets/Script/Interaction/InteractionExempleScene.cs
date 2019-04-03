@@ -6,6 +6,7 @@ public class InteractionExempleScene : InteractionBase
 {
     public GameObject interactionCam;
 
+
     private void Start()
     {
         interactionCam.SetActive(false);

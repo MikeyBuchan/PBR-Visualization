@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class RotateMiddleObject : MonoBehaviour
 {
-    public MaterialMapsZoomBase mBase;
+    public MaterialMapsZoomBase baseClass;
     public float Sspeed;
     public float lerpSpeed;
     Quaternion startRotation;
@@ -16,7 +16,7 @@ public class RotateMiddleObject : MonoBehaviour
 
     void Update()
     {
-        if (mBase.zoomdIn == true)
+        if (baseClass.zoomdIn == true)
         {
             RotateObject();
         }

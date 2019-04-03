@@ -26,6 +26,9 @@ public class MaterialMapsZoomBase : MonoBehaviour
     public bool zoomdIn = false;
     Quaternion standardcamRotation;
 
+    public Material normalMaterial;
+    public Material hightLightMaterial;
+    public GameObject ownRotObj;
     public bool zoom = true;
     bool maySwitchSmallBalls = false;
 
@@ -211,6 +214,23 @@ public class MaterialMapsZoomBase : MonoBehaviour
         {
             backButtonMiddleObject.SetActive(true);
         }
+    }
+
+    public void OnMouseEnter()
+    {
+        Debug.Log("Etnter");
+
+        if (zoomdIn == false && GetComponent<InteractionTutorial>().interBool == true)
+        {
+            ownRotObj.GetComponent<Renderer>().material = hightLightMaterial;
+            Debug.Log("hehhfhdbhf");
+        }
+    }
+
+    public void OnMouseExit()
+    {
+        Debug.Log("exitnvndn");
+        ownRotObj.GetComponent<Renderer>().material = normalMaterial;
     }
 
     //realtime check wheare the camera is

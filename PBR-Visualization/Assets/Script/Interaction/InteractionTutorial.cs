@@ -4,7 +4,8 @@ using UnityEngine;
 
 public class InteractionTutorial : InteractionBase
 {
-    
+    public bool interBool = false;
+
     public override void Interact()
     {
         Debug.Log("Interaction Tutorial");
@@ -13,6 +14,7 @@ public class InteractionTutorial : InteractionBase
         gameObject.GetComponent<MaterialMapsZoomBase>().allowRotation = true;
         gameObject.GetComponent<Animator>().SetTrigger("Toggle");
         GameObject.FindWithTag("UiManager").GetComponent<UIManager>().backToPlayerButton.SetActive(true);
+        interBool = true;
         base.Interact();
     }
     
