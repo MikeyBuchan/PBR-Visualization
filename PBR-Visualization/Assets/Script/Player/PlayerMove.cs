@@ -9,10 +9,11 @@ public class PlayerMove : MonoBehaviour
     public bool freeMove = true;
     public AudioSource source;
     public MaterialMapsZoomBase materialMapsZoomBase;
-        
+
     void FixedUpdate()
     {
-        if (freeMove == true && materialMapsZoomBase.zoomdIn == false)
+        bool allowedToMove = (materialMapsZoomBase) ? (freeMove == true && materialMapsZoomBase.zoomdIn == false) ? true : false : freeMove;
+        if (allowedToMove)
         {
             if (Input.GetAxis("Horizontal") != 0 || Input.GetAxis("Vertical") != 0)
             {

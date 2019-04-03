@@ -134,7 +134,6 @@ public class UIManager : MonoBehaviour
     {
         if (Input.GetButtonDown("Options") && optionsMenu.activeSelf == false)
         {
-            Debug.Log("neuhwfbubuwb");
             optionsMenu.SetActive(true);
             GameObject.FindWithTag("Player").GetComponent<PlayerMove>().freeMove = false;
 
@@ -145,7 +144,9 @@ public class UIManager : MonoBehaviour
         else if(Input.GetButtonDown("Options") && optionsMenu.activeSelf == true)
         {
             optionsMenu.SetActive(false);
-            if (mBase.GetComponent<MaterialMapsZoomBase>().allowRotation == true || mChange.GetComponent<InteractionMaterialChanger>().mayMatChange == true || mBase.GetComponent<MaterialMapsZoomBase>().zoomdIn == true)
+            bool exists = (mBase && mChange) ? true : false;
+            if ((exists)? mBase.GetComponent<MaterialMapsZoomBase>().allowRotation == true || mChange.GetComponent<InteractionMaterialChanger>().mayMatChange == true 
+                || mBase.GetComponent<MaterialMapsZoomBase>().zoomdIn == true : false)
             {
                 GameObject.FindWithTag("Player").GetComponent<PlayerMove>().freeMove = false;
 
@@ -167,7 +168,9 @@ public class UIManager : MonoBehaviour
     public void OterOptionsClose()
     {
         optionsMenu.SetActive(false);
-        if (mBase.GetComponent<MaterialMapsZoomBase>().allowRotation == true || mChange.GetComponent<InteractionMaterialChanger>().mayMatChange == true || mBase.GetComponent<MaterialMapsZoomBase>().zoomdIn == true)
+        bool exists = (mBase && mChange) ? true : false;
+        if ((exists)?mBase.GetComponent<MaterialMapsZoomBase>().allowRotation == true || mChange.GetComponent<InteractionMaterialChanger>().mayMatChange == true 
+            || mBase.GetComponent<MaterialMapsZoomBase>().zoomdIn == true : false)
         {
             GameObject.FindWithTag("Player").GetComponent<PlayerMove>().freeMove = false;
             Cursor.lockState = CursorLockMode.None;
