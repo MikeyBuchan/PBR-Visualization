@@ -5,18 +5,23 @@ ModelImporter:
   fileIDToRecycleName:
     100000: //RootNode
     100002: HallwayFloor_low
-    100004: HallwayWall_low
+    100004: HallwayFloorLight_low
+    100006: HallwayWall_low
     400000: //RootNode
     400002: HallwayFloor_low
-    400004: HallwayWall_low
-    2100000: Wall
-    2100002: Floor
+    400004: HallwayFloorLight_low
+    400006: HallwayWall_low
+    2100000: Floor
+    2100002: Wall
     2300000: HallwayFloor_low
-    2300002: HallwayWall_low
+    2300002: HallwayFloorLight_low
+    2300004: HallwayWall_low
     3300000: HallwayFloor_low
-    3300002: HallwayWall_low
-    4300000: HallwayWall_low
-    4300002: HallwayFloor_low
+    3300002: HallwayFloorLight_low
+    3300004: HallwayWall_low
+    4300000: HallwayFloorLight_low
+    4300002: HallwayWall_low
+    4300004: HallwayFloor_low
   externalObjects: {}
   materials:
     importMaterials: 1
