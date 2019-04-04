@@ -19,7 +19,7 @@ public class PlayerLook : MonoBehaviour
         StartCoroutine(enumerator());
     }
 
-    void Update()
+    void FixedUpdate()
     {
         if (gameObject.transform.parent.GetComponent<PlayerMove>().freeMove == true && magGaanRoteren == true)
         {
