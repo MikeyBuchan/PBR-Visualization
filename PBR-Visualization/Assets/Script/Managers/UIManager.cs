@@ -50,7 +50,6 @@ public class UIManager : MonoBehaviour
     private void Update()
     {
         OtherOptionsOpen();
-        Debug.Log("ExtraB + " + extrab);
     }
 
     public void ButtomZoomOut()
