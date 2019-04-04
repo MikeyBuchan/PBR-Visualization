@@ -200,6 +200,85 @@ MonoBehaviour:
   textTutUi: {fileID: 1213177356}
   fadeDis: 1
   vector: {x: 4.5, y: 8}
+--- !u!1 &29831242
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 29831243}
+  - component: {fileID: 29831245}
+  - component: {fileID: 29831244}
+  m_Layer: 5
+  m_Name: Text (3)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &29831243
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 29831242}
+  m_LocalRotation: {x: 0.21944204, y: -0.67219156, z: -0.21943963, w: -0.6721979}
+  m_LocalPosition: {x: 0, y: 0, z: 686.4}
+  m_LocalScale: {x: 0.2, y: 0.2, z: 1}
+  m_Children: []
+  m_Father: {fileID: 797792598}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: -36.159, y: 449.999, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -362.9, y: 87.83001}
+  m_SizeDelta: {x: 245.842, y: 86.78}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &29831244
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 29831242}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 708705254, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0.7877358, g: 1, b: 0.99571025, a: 1}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  m_FontData:
+    m_Font: {fileID: 12800000, guid: 86a1b549960b91c4fbc5f8d49abd3484, type: 3}
+    m_FontSize: 14
+    m_FontStyle: 0
+    m_BestFit: 1
+    m_MinSize: 10
+    m_MaxSize: 112
+    m_Alignment: 4
+    m_AlignByGeometry: 0
+    m_RichText: 1
+    m_HorizontalOverflow: 0
+    m_VerticalOverflow: 0
+    m_LineSpacing: 1
+  m_Text: Tutorial
+--- !u!222 &29831245
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 29831242}
+  m_CullTransparentMesh: 0
 --- !u!1001 &33630203
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -11360,6 +11439,85 @@ PrefabInstance:
       objectReference: {fileID: 2100000, guid: 1596c4cfd74a812438fec7fdc836e6d5, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0c4fd352d193246448b1cd9f764cbe19, type: 3}
+--- !u!1 &228662257
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 228662258}
+  - component: {fileID: 228662260}
+  - component: {fileID: 228662259}
+  m_Layer: 5
+  m_Name: Text (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &228662258
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 228662257}
+  m_LocalRotation: {x: -0.00000046193594, y: 0.95062685, z: 0.31033614, w: 0.0000010132788}
+  m_LocalPosition: {x: 0, y: 0, z: 522.58}
+  m_LocalScale: {x: 0.2, y: 0.2, z: 1}
+  m_Children: []
+  m_Father: {fileID: 797792598}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: -36.159, y: 180.00002, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 1, y: 87.83001}
+  m_SizeDelta: {x: 245.842, y: 86.78}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &228662259
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 228662257}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 708705254, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0.7877358, g: 1, b: 0.99571025, a: 1}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  m_FontData:
+    m_Font: {fileID: 12800000, guid: 86a1b549960b91c4fbc5f8d49abd3484, type: 3}
+    m_FontSize: 14
+    m_FontStyle: 0
+    m_BestFit: 1
+    m_MinSize: 10
+    m_MaxSize: 112
+    m_Alignment: 4
+    m_AlignByGeometry: 0
+    m_RichText: 1
+    m_HorizontalOverflow: 0
+    m_VerticalOverflow: 0
+    m_LineSpacing: 1
+  m_Text: Explenation
+--- !u!222 &228662260
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 228662257}
+  m_CullTransparentMesh: 0
 --- !u!114 &236795872 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 3212581055296396567, guid: e3adcd8301b30f94baec49d898623a4c,
@@ -11724,18 +11882,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 225
   nameObj: Metallic
-  infoObj: You can use a Metallic map if you want a specific part made out of metal.
+  infoObj: You can use a metallic map if you want a specific part to be made out of
+    metal.
   extraInfoObj: "The metallic map is used to define which areas of a material denote
     raw metal.\r\nAs a grayscale map, it operates in a manner similar to a mask, as
-    it tells the shader how it should interpret data found in the base color.\r\nThe
-    data in the metallic map does not contain real-world data that is directly used
-    as material value.\r\nIt simply describes to the shader which areas in the base
-    color should be interpreted as reflected color and which areas denote metal reflectance
-    values.\r\nIn the metallic map, 0.0(black) represents non-metal and 1.0(white)
-    represents raw metal.\r\nin terms of defining raw metal and non-metal, this metallic
-    map is often binary: black or white, metal or non-metal.\r\nIn practice, when
-    the shader looks at the metal map sees white, it then checks the corresponding
-    areas in the base color map to get the reflectance values for the metal."
+    it tells the shader how it should interpret data found in the base color.\r\nIt
+    describes to the shader which areas in the base color should be interpreted as
+    reflected color and which areas denote metal reflectance values.\r\nIn the metallic
+    map, 0.0 (black) represents non-metal and 1.0 (white) represents raw metal.\r\nin
+    terms of defining raw metal and non-metal, this metallic map is often binary:
+    black or white, metal or non-metal.\r\nIn practice, when the shader is looking
+    at the metal map and sees white, it then checks the corresponding areas in the
+    base color map to get the reflectance values for the metal."
   normalMaterial: {fileID: 2100000, guid: 112b7a6886461814d889b624ef9210f8, type: 2}
   hightLightMaterial: {fileID: 2100000, guid: 361a03f8b9870f54ea30b95432701902, type: 2}
   myNumber: 1
@@ -11828,10 +11986,10 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "Physically Based Rendering(PBR) is a method of shading, rendering and lighting.\r\n\nIt
-    is a method that provides a more accurate representation of how light interacts
-    with surfaces.\r\n\r\nIn this showcase we will try to explain the basics of PBR
-    the best we can."
+  m_Text: "Physically Based Rendering (PBR) is a method of shading, rendering and
+    lighting in 3D enviroments.\r\n\nIt is a method that provides a more accurate
+    representation of how light interacts with surfaces.\r\n\r\nIn this showcase we
+    will explain the basics of PBR."
 --- !u!222 &335261055
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -12087,6 +12245,85 @@ PrefabInstance:
       objectReference: {fileID: 2100000, guid: 1596c4cfd74a812438fec7fdc836e6d5, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0c4fd352d193246448b1cd9f764cbe19, type: 3}
+--- !u!1 &357823259
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 357823260}
+  - component: {fileID: 357823262}
+  - component: {fileID: 357823261}
+  m_Layer: 5
+  m_Name: Text (2)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &357823260
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 357823259}
+  m_LocalRotation: {x: 0.21944016, y: 0.6721962, z: 0.21944141, w: -0.6721932}
+  m_LocalPosition: {x: 0, y: 0, z: 686.45}
+  m_LocalScale: {x: 0.2, y: 0.2, z: 1}
+  m_Children: []
+  m_Father: {fileID: 797792598}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: -36.159, y: 270, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -163.71, y: 87.83001}
+  m_SizeDelta: {x: 245.842, y: 86.78}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &357823261
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 357823259}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 708705254, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0.7877358, g: 1, b: 0.99571025, a: 1}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  m_FontData:
+    m_Font: {fileID: 12800000, guid: 86a1b549960b91c4fbc5f8d49abd3484, type: 3}
+    m_FontSize: 14
+    m_FontStyle: 0
+    m_BestFit: 1
+    m_MinSize: 10
+    m_MaxSize: 112
+    m_Alignment: 4
+    m_AlignByGeometry: 0
+    m_RichText: 1
+    m_HorizontalOverflow: 0
+    m_VerticalOverflow: 0
+    m_LineSpacing: 1
+  m_Text: Material maker
+--- !u!222 &357823262
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 357823259}
+  m_CullTransparentMesh: 0
 --- !u!1 &363955811
 GameObject:
   m_ObjectHideFlags: 0
@@ -15026,11 +15263,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 400004, guid: dd1f19f883479044f8cd5ef8aad4abd9, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 4.871628
+      value: 4.825
       objectReference: {fileID: 0}
     - target: {fileID: 400004, guid: dd1f19f883479044f8cd5ef8aad4abd9, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 4.935339
+      value: 4.906
       objectReference: {fileID: 0}
     - target: {fileID: 400004, guid: dd1f19f883479044f8cd5ef8aad4abd9, type: 3}
       propertyPath: m_LocalPosition.z
@@ -16430,6 +16667,55 @@ Light:
   m_UseColorTemperature: 0
   m_ShadowRadius: 0
   m_ShadowAngle: 0
+--- !u!1 &797792597
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 797792598}
+  - component: {fileID: 797792599}
+  m_Layer: 5
+  m_Name: AreaNames
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &797792598
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 797792597}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 2126318055}
+  - {fileID: 228662258}
+  - {fileID: 357823260}
+  - {fileID: 29831243}
+  - {fileID: 2068353499}
+  m_Father: {fileID: 1732929049}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!222 &797792599
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 797792597}
+  m_CullTransparentMesh: 0
 --- !u!1 &798599976
 GameObject:
   m_ObjectHideFlags: 0
@@ -17103,7 +17389,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 907244830}
   m_LocalRotation: {x: 0.70710677, y: -0, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: 3.4499998, y: 4.71, z: -6.28}
+  m_LocalPosition: {x: 3.4499998, y: 4.486, z: -6.844}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1659829120}
@@ -17344,11 +17630,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 225
   nameObj: Emission
-  infoObj: "You can give objects emission that creates a light effect.\r"
+  infoObj: "You can give objects emission value that creates a light effect.\r"
   extraInfoObj: "A emission map is a map that receives no lighting, so the pixels
-    are shown at full intensity. \r\nAlso called a Fullbright Map, Glow Map, Incandescence
-    Map, or Self-Illumination Map\r\nThis is used for a glow in the dark effect, but
-    does not emit light onto adjacent surfaces."
+    are shown at full intensity. Also called a Fullbright Map, Glow Map, Incandescence
+    Map, or Self-Illumination Map.\r\nThis is used for a glow in the dark effect,
+    but does not emit light onto adjacent surfaces."
   normalMaterial: {fileID: 2100000, guid: 8f163530f83e8c946a3655069e050c7d, type: 2}
   hightLightMaterial: {fileID: 2100000, guid: afef5323857adf1429b0f9d95343d674, type: 2}
   myNumber: 5
@@ -22509,7 +22795,7 @@ MonoBehaviour:
   nameObj: Roughness
   infoObj: This map controls the sharpness of the reflections.
   extraInfoObj: "The roughness map describes the surface irregularites that cause
-    light diffusion.\r\nThe reflected direction will vary randomly based on the surface
+    light diffusion.\r The reflected direction will vary randomly based on the surface
     roughness.\r\nThis changes light direction, but the light intensity remains constant.\r\nRougher
     surfaces will have larger and dimmer-looking highlights.\r\nSmoother surfaces
     will keep specular reflections focused, which can appear to look brighter or more
@@ -22984,26 +23270,23 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 225
   nameObj: Normal
-  infoObj: "A Normal map is a type of map where you can add a small detail to your
+  infoObj: "A normal map is a type of map where you can add a small detail to your
     object. \r\nIt is a special kind of texture that allows you to add surface detail
     such as bumps, grooves, and scratches to a model which catch the light as if they
-    are represented by real geometry.\nIt is a special kind of texture that allows
-    you to add surface detail such as bumps, grooves, and scratches to a model which
-    catch the light as if they are represented by real geometry."
+    are represented by real geometry."
   extraInfoObj: "Normal mapping takes this modification of surface normals one step
     further, by using a texture to store information about how to modify the surface
     normals across the model. \r\nA normal map is an image texture mapped to the surface
-    of a model, similar to regular colour textures, however each pixelin the texture
-    of the normal map (called a texel) \r\nrepresents a deviation in surface normal
-    direction away from the \u201Ctrue\u201D surface normal of the flat (or smooth
-    interpolated) polygon.\r\nThese bumps would only be apparent due to the way lighting
-    appears on the surface, because these modified normals are used in the lighting
-    calculations.\r\nThe colours visible in a raw normal map file typically have a
-    blueish hue, and don\u2019t contain any actual light or dark shading - this is
-    because the colours themselves are not \r\nintended to be displayed as they are.
-    \r\nInstead, the RGB values of each texel represent the X,Y & Z values of a direction
-    vector, and are applied as a modification to the basic interpolated smooth normals
-    of the polygon surfaces.\r"
+    of a model, similar to regular colour textures. Each pixel in the texture of the
+    normal map (called a texel) represents a deviation in surface normal direction
+    away from the \u201Ctrue\u201D surface normal of the flat (or smooth interpolated)
+    polygon.\r\nThese bumps would only be apparent due to the way lighting appears
+    on the surface, because these modified normals are used in the lighting calculations.\r\nThe
+    colours visible in a raw normal map typically have a blueish hue, and don\u2019t
+    contain any actual light or dark shading - this is because the colours themselves
+    are not intended to be displayed as they are. \r\nInstead, the RGB values of each
+    texel represent the X, Y and Z values of a direction vector and are applied as
+    a modification to the basic interpolated smooth normals of the polygon surfaces.\r"
   normalMaterial: {fileID: 2100000, guid: e4ad935a4dec5f043876903f15097425, type: 2}
   hightLightMaterial: {fileID: 2100000, guid: 572f9e3854d4c824495dbd5a5cd808f4, type: 2}
   myNumber: 2
@@ -23646,7 +23929,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: What can you do
+  m_Text: What you can do
 --- !u!222 &1028463368
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -32617,15 +32900,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 225
   nameObj: Ambient Occlusion
-  infoObj: "Ambient Occlusion(AO) is a shading and rendering technique used to calculate
+  infoObj: "Ambient Occlusion (AO) is a shading and rendering technique used to calculate
     how exposed each point in the scene is to the world light.\r\nThe interior of
     a tube is typically more occluded (and hence darker) than the exposed outer surfaces,
     and the deeper you go inside the tube, the more occluded (and darker) the lighting
     becomes. "
   extraInfoObj: "The occlusion map is used to provide information about which areas
     of the model should receive high or low indirect lighting. \r\nIndirect lighting
-    comes from ambient lighting and reflections, and so steep concave parts of your
-    model such as a crack or fold would not realistically receive much indirect light.\r\nOcclusion
+    comes from ambient lighting, reflections, and so steep concave parts of your model
+    such as a crack or fold would not realistically receive much indirect light.\r\nOcclusion
     texture maps are normally calculated by 3D applications directly from the 3D model
     using the modeller or third party software.\r\nAn occlusion map is a greyscale
     image, with white indicating areas that should receive full indirect lighting,
@@ -32633,7 +32916,7 @@ MonoBehaviour:
     a greyscale heightmap, for simple surfaces.\r\n\r\nAt other times, generating
     the correct occlusion texture is slightly more complex. For example, if a character
     in your scene\r\nis wearing a hood, the inside edges of the hood should be set
-    to very low indirect lighting, or none at all. In these situations, \r\nocclusion
+    to very low indirect lighting, or none at all. In these situations, occlusion
     maps will be often be produced by artists, using 3D applications to automatically
     generate an occlusion map based on the model."
   normalMaterial: {fileID: 2100000, guid: 4679e4bf24aea834daa6c62031b51ed7, type: 2}
@@ -32879,7 +33162,7 @@ MonoBehaviour:
   extraInfoObj: "An albedo map defines the color of diffused light. \r\nOne of the
     biggest differences between an albedo map in a PBR system and a traditional diffuse
     map is the lack of directional light or ambient occlusion. \r\nDirectional light
-    will look incorrect in certain lighting conditions, and ambient occlusion should
+    will look incorrect in certain lighting conditions and ambient occlusion should
     be added in the separate AO slot."
   normalMaterial: {fileID: 2100000, guid: c8b6b6d76795b284e985445bad2c78b8, type: 2}
   hightLightMaterial: {fileID: 2100000, guid: 3e364bfa17e687646a436cebbedd331c, type: 2}
@@ -33328,8 +33611,8 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "Learn about certain maps that are related to PBR.\r\n\nCreate your own
-    material with the given alpha maps and models.\r\n\nWalk around in an example
+  m_Text: "Learn about certain texture maps that are related to PBR.\r\n\nCreate your
+    own material with the given alpha maps and models.\r\n\nWalk around in an example
     scene that makes use of PBR."
 --- !u!222 &1685265822
 CanvasRenderer:
@@ -33564,6 +33847,11 @@ PrefabInstance:
         type: 3}
       propertyPath: oneSliderList.Array.data[4].nameShader
       value: Vector1_9452DAB3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4992920941300016793, guid: c9d842e457f0aa94f9833cb46be6fdb8,
+        type: 3}
+      propertyPath: modelList.Array.data[0].alphasList.Array.data[1].name
+      value: Wallpaper
       objectReference: {fileID: 0}
     - target: {fileID: 5187992604952021383, guid: c9d842e457f0aa94f9833cb46be6fdb8,
         type: 3}
@@ -34099,6 +34387,7 @@ RectTransform:
   - {fileID: 1092881207}
   - {fileID: 152755030}
   - {fileID: 162022465}
+  - {fileID: 797792598}
   m_Father: {fileID: 1798684878}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 90.00001, z: 0}
@@ -36889,6 +37178,164 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2058298410}
   m_CullTransparentMesh: 0
+--- !u!1 &2068353498
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2068353499}
+  - component: {fileID: 2068353501}
+  - component: {fileID: 2068353500}
+  m_Layer: 5
+  m_Name: Text (4)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &2068353499
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2068353498}
+  m_LocalRotation: {x: -0.11875831, y: -0.87826717, z: -0.28671432, w: 0.36378294}
+  m_LocalPosition: {x: 0, y: 0, z: 573.8}
+  m_LocalScale: {x: 0.2, y: 0.2, z: 1}
+  m_Children: []
+  m_Father: {fileID: 797792598}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: -36.159, y: 584.999, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -641.6, y: 88.9}
+  m_SizeDelta: {x: 245.842, y: 86.78}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &2068353500
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2068353498}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 708705254, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0.7877358, g: 1, b: 0.99571025, a: 1}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  m_FontData:
+    m_Font: {fileID: 12800000, guid: 86a1b549960b91c4fbc5f8d49abd3484, type: 3}
+    m_FontSize: 14
+    m_FontStyle: 0
+    m_BestFit: 1
+    m_MinSize: 10
+    m_MaxSize: 112
+    m_Alignment: 4
+    m_AlignByGeometry: 0
+    m_RichText: 1
+    m_HorizontalOverflow: 0
+    m_VerticalOverflow: 0
+    m_LineSpacing: 1
+  m_Text: Example scene
+--- !u!222 &2068353501
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2068353498}
+  m_CullTransparentMesh: 0
+--- !u!1 &2126318054
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2126318055}
+  - component: {fileID: 2126318057}
+  - component: {fileID: 2126318056}
+  m_Layer: 5
+  m_Name: Text
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &2126318055
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2126318054}
+  m_LocalRotation: {x: -0.31033602, y: -0.0000001192093, z: 0.000000014901163, w: 0.95062697}
+  m_LocalPosition: {x: 0, y: 0, z: 141.2}
+  m_LocalScale: {x: 0.2, y: 0.2, z: 1}
+  m_Children: []
+  m_Father: {fileID: 797792598}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: -36.159, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0.654, y: 87.83}
+  m_SizeDelta: {x: 245.842, y: 86.78}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &2126318056
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2126318054}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 708705254, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0.7877358, g: 1, b: 0.99571025, a: 1}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  m_FontData:
+    m_Font: {fileID: 12800000, guid: 86a1b549960b91c4fbc5f8d49abd3484, type: 3}
+    m_FontSize: 14
+    m_FontStyle: 0
+    m_BestFit: 1
+    m_MinSize: 10
+    m_MaxSize: 112
+    m_Alignment: 4
+    m_AlignByGeometry: 0
+    m_RichText: 1
+    m_HorizontalOverflow: 0
+    m_VerticalOverflow: 0
+    m_LineSpacing: 1
+  m_Text: Tutorial
+--- !u!222 &2126318057
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2126318054}
+  m_CullTransparentMesh: 0
 --- !u!4 &2128263512 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2224108276602825487, guid: 02c54fcf444a8f245bd1feb89bb88f4a,
@@ -37600,17 +38047,17 @@ PrefabInstance:
     - target: {fileID: 3212581054120422670, guid: e3adcd8301b30f94baec49d898623a4c,
         type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3212581054678229479, guid: e3adcd8301b30f94baec49d898623a4c,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -0.0000019073486
+      value: 0.00038146973
       objectReference: {fileID: 0}
     - target: {fileID: 3212581054678229479, guid: e3adcd8301b30f94baec49d898623a4c,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 0
+      value: 0.00050354004
       objectReference: {fileID: 0}
     - target: {fileID: 3212581054678229479, guid: e3adcd8301b30f94baec49d898623a4c,
         type: 3}
@@ -37622,6 +38069,31 @@ PrefabInstance:
       propertyPath: m_SizeDelta.y
       value: 1.27
       objectReference: {fileID: 0}
+    - target: {fileID: 3212581054678229479, guid: e3adcd8301b30f94baec49d898623a4c,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3212581054678229479, guid: e3adcd8301b30f94baec49d898623a4c,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3212581054678229479, guid: e3adcd8301b30f94baec49d898623a4c,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0.00000078976143
+      objectReference: {fileID: 0}
+    - target: {fileID: 3212581054678229479, guid: e3adcd8301b30f94baec49d898623a4c,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3212581054678229479, guid: e3adcd8301b30f94baec49d898623a4c,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: -360
+      objectReference: {fileID: 0}
     - target: {fileID: 9181805704927441705, guid: e3adcd8301b30f94baec49d898623a4c,
         type: 3}
       propertyPath: m_IsActive
@@ -37630,7 +38102,17 @@ PrefabInstance:
     - target: {fileID: 3212581054678229478, guid: e3adcd8301b30f94baec49d898623a4c,
         type: 3}
       propertyPath: m_Text
-      value: i
+      value: '?'
+      objectReference: {fileID: 0}
+    - target: {fileID: 3212581054678229478, guid: e3adcd8301b30f94baec49d898623a4c,
+        type: 3}
+      propertyPath: m_FontData.m_FontSize
+      value: 36
+      objectReference: {fileID: 0}
+    - target: {fileID: 3212581054678229478, guid: e3adcd8301b30f94baec49d898623a4c,
+        type: 3}
+      propertyPath: m_FontData.m_MaxSize
+      value: 59
       objectReference: {fileID: 0}
     - target: {fileID: 3212581054818600159, guid: e3adcd8301b30f94baec49d898623a4c,
         type: 3}
@@ -37738,6 +38220,96 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 21300000, guid: e98c9a3bf13000b45959dbe8f2d18847,
         type: 3}
+    - target: {fileID: 9181805704878404341, guid: e3adcd8301b30f94baec49d898623a4c,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3212581054601122043, guid: e3adcd8301b30f94baec49d898623a4c,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 108.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3212581054601122043, guid: e3adcd8301b30f94baec49d898623a4c,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -113.9
+      objectReference: {fileID: 0}
+    - target: {fileID: 3212581054601122043, guid: e3adcd8301b30f94baec49d898623a4c,
+        type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 41.89
+      objectReference: {fileID: 0}
+    - target: {fileID: 3212581054601122043, guid: e3adcd8301b30f94baec49d898623a4c,
+        type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 41.89
+      objectReference: {fileID: 0}
+    - target: {fileID: 3212581054601122044, guid: e3adcd8301b30f94baec49d898623a4c,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3212581055434461006, guid: e3adcd8301b30f94baec49d898623a4c,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3212581055434461006, guid: e3adcd8301b30f94baec49d898623a4c,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0.0000021458
+      objectReference: {fileID: 0}
+    - target: {fileID: 3212581055434461006, guid: e3adcd8301b30f94baec49d898623a4c,
+        type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 77.91
+      objectReference: {fileID: 0}
+    - target: {fileID: 3212581055434461006, guid: e3adcd8301b30f94baec49d898623a4c,
+        type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 77.91
+      objectReference: {fileID: 0}
+    - target: {fileID: 3212581054367141589, guid: e3adcd8301b30f94baec49d898623a4c,
+        type: 3}
+      propertyPath: challengeList.Array.data[0]
+      value: Make a sphere with an old wallpaper
+      objectReference: {fileID: 0}
+    - target: {fileID: 3212581054367141589, guid: e3adcd8301b30f94baec49d898623a4c,
+        type: 3}
+      propertyPath: challengeList.Array.data[6]
+      value: Make a sphere with scratches that have a different color in the dark.
+      objectReference: {fileID: 0}
+    - target: {fileID: 3212581054678229496, guid: e3adcd8301b30f94baec49d898623a4c,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3212581053966867616, guid: e3adcd8301b30f94baec49d898623a4c,
+        type: 3}
+      propertyPath: m_Text
+      value: Strength
+      objectReference: {fileID: 0}
+    - target: {fileID: 3212581054376577993, guid: e3adcd8301b30f94baec49d898623a4c,
+        type: 3}
+      propertyPath: m_Text
+      value: Strength
+      objectReference: {fileID: 0}
+    - target: {fileID: 3212581054399929005, guid: e3adcd8301b30f94baec49d898623a4c,
+        type: 3}
+      propertyPath: m_Text
+      value: Strength
+      objectReference: {fileID: 0}
+    - target: {fileID: 3212581054565446590, guid: e3adcd8301b30f94baec49d898623a4c,
+        type: 3}
+      propertyPath: m_Text
+      value: Strength
+      objectReference: {fileID: 0}
+    - target: {fileID: 3212581055466132022, guid: e3adcd8301b30f94baec49d898623a4c,
+        type: 3}
+      propertyPath: m_Text
+      value: Strength
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e3adcd8301b30f94baec49d898623a4c, type: 3}
 --- !u!1001 &3449951464548205059
