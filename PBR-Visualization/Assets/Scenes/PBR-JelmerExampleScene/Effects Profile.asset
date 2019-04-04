@@ -305,7 +305,7 @@ MonoBehaviour:
     min: 1
   baseHeight:
     m_OverrideState: 1
-    m_Value: 12
+    m_Value: 15
   meanHeight:
     m_OverrideState: 1
     m_Value: 10
