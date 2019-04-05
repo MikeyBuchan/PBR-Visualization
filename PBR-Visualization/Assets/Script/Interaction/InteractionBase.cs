@@ -13,6 +13,7 @@ public class InteractionBase : MonoBehaviour
 
         Cursor.lockState = CursorLockMode.None;
         Cursor.visible = true;
+        GameObject.FindWithTag("UiManager").GetComponent<UIManager>().crosHair.SetActive(false);
     }
 
     public virtual void TeleportInteract()
@@ -21,5 +22,6 @@ public class InteractionBase : MonoBehaviour
 
         Cursor.lockState = CursorLockMode.None;
         Cursor.visible = true;
+        GameObject.FindWithTag("UiManager").GetComponent<UIManager>().crosHair.SetActive(false);
     }
 }
