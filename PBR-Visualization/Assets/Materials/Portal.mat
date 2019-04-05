@@ -20,7 +20,7 @@ Material:
     serializedVersion: 3
     m_TexEnvs:
     - Texture2D_7FFAB:
-        m_Texture: {fileID: 2800000, guid: 375a63229d9e7c640b960da50a895870, type: 3}
+        m_Texture: {fileID: 2800000, guid: aa18d69653b7e1240b68af7e965b8365, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _AnisotropyMap:
@@ -108,7 +108,8 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     m_Floats:
-    - Vector1_3B41624B: 0.09
+    - Vector1_3B41624B: 0.07
+    - Vector1_BF1052DC: 3.11
     - _AORemapMax: 1
     - _AORemapMin: 0
     - _ATDistance: 1
@@ -220,7 +221,7 @@ Material:
     - _ZWrite: 1
     m_Colors:
     - Color_49BEF708: {r: 1, g: 1, b: 1, a: 0}
-    - Color_B396596C: {r: 0.74463826, g: 2.287874, b: 2.2379386, a: 0}
+    - Color_B396596C: {r: 0.50016093, g: 0.8027793, b: 0.764952, a: 0}
     - _BaseColor: {r: 1, g: 1, b: 1, a: 1}
     - _Color: {r: 1, g: 1, b: 1, a: 1}
     - _DoubleSidedConstants: {r: 1, g: 1, b: -1, a: 0}
